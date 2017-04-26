@@ -1,0 +1,57 @@
+body {
+	background-color: #eeeeee;
+}
+
+footer {
+	display: block;
+}
+
+.navbar {
+	background-color: #f59f08;
+	border: 0;
+	border-radius: 0;
+}
+
+.t-content {
+	max-width: 1200px;
+}
+
+.t-logo_nav {
+	width: 147px;
+	height: 40px;
+	margin: 5px;
+}
+
+.t-inline {
+	display: inline-block;
+}
+
+.t-footer {
+	position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+	background-image: url(../../assets/images/app/bg_footer.png);
+	background-repeat: repeat-x;
+	background-size: 740px 220px;
+	height: 220px;
+	color: white;
+}
+
+.t-footer .container {
+	padding-top: 180px; 
+}
+
+.t-avatar-navbar {
+	height: 30px;
+	width: 30px;
+	margin: -5px 5px;
+	border-radius: 50%;
+}
+
+@media (min-width: 1200px) {
+	.t-search-box {
+		width: 500px;
+	}
+}
+
