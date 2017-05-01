@@ -27,7 +27,7 @@ footer {
 }
 
 .t-footer {
-	position: absolute;
+	position: relative;
     left: 0;
     right: 0;
     bottom: 0;
@@ -55,3 +55,134 @@ footer {
 	}
 }
 
+.t-wrapper{
+	background-color: #f6f6f6;
+	margin: 10px auto 0px auto;
+	border-color: #dadada;
+}
+.t-body{
+    max-width: 100%;
+    margin: 0px auto 0px auto;
+    background-color: #ffffff;
+    display: flex;
+}
+#t-col-9{
+    background-color: #f9f9f9;
+    margin: 30px 25px 0px 10px;
+}
+ul{
+    list-style-type: none;
+    padding-left: 10px;
+}
+.t-input{
+    width: 100%;
+    margin: 10px auto 25px auto;
+    padding-left: 10px;
+    height: 35px;
+    border: solid 1px;
+    border-color: #eae9e9;
+}
+
+#t-taodiadiem{
+	padding: 10px 10px 0px 10px;
+}
+#t-tendiadiem{
+    padding-top: 35px;
+}
+#t-danhmuchinhanh{
+	padding-top: 35px;
+	padding-left: 20px;
+}
+.t-giomocua{
+    width: 90%;
+}
+.t-giodongcua{
+    width: 90%;
+    margin-left: 20px;
+}
+
+.t-col-6{
+    float: left;
+    margin: 0px 0px 0px 0px;
+    width: 50%;
+
+}
+
+#t-motadiadiem{
+	width: 100%;
+    margin: 10px auto 25px auto;
+    padding-left: 10px;
+    height: 90px;
+}
+
+#t-btntaodiadiem{
+	background: url(../../assets/images/app/backgroundOrange.PNG) repeat scroll left ;
+	color: #ffffff;
+	padding: 5px 19px;
+	margin-top: 15px;
+	margin-bottom: 20px;
+	margin-left: 16px;
+	
+}
+
+#t-btndatlai{
+	background: url(../../assets/images/app/backgroundDatlai.PNG) repeat scroll left ;
+	padding: 5px 15px;
+	margin-top: 15px;
+	margin-left: 10px;
+	margin-bottom: 20px;
+	width: 118px;
+}
+.t-avartar{
+	margin: 30px 20px 0px 25px;
+	border: 1px solid #e6e6e6;
+	background-color: #e6e6e6;
+	width: 80%;
+	height: 26%;
+	position: relative;
+}
+#t-lbthemavartar{
+	font-size: 13px;
+	padding-left: 44px;
+	padding-top: 7px;
+}
+ .t-imgavartar{
+ 	width: 35px;
+ 	height: 35px;
+ 	position: absolute;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    left: 0;
+    right: 0;
+ 	
+ }
+ .t-listImg{
+ 	margin: 0px 20px 0px 23px;
+	border: 1px solid #e6e6e6;
+	background-color: #ffffff;
+	width: 292px;
+	height: 300px;
+	position: relative;
+ }
+ .t-btn{
+ 	max-width: 100%;
+    margin: 0px auto 0px auto;
+    background-color: #ffffff;
+    padding-left: 74%;
+    display: flex;
+ }
+
+ .t-diadiemcho{
+ 	border: 1px solid #f2f2f2;
+ 	box-shadow: 2px 2px #eeeeee;
+ 	width: 95%;
+ 	margin: 10px auto 0px auto;
+ }
+
+#t-diadiemcho1{
+	margin-top: 30px;
+}
+.t-imgdiadiemcho{
+	margin-top: 20px;
+}
