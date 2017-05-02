@@ -186,3 +186,22 @@ ul{
 .t-imgdiadiemcho{
 	margin-top: 20px;
 }
+
+/* phần của tuấn*/
+.t-logo_middle {
+	margin: 15px;
+}
+
+.t-register-panel {
+	max-width: 850px;
+	background-color: rgba(250,250,250, 0.9);
+}
+.t-footer-register {
+	background-image: none !important;
+}
+
+.t-bg-register {
+	background: url(../../assets/images/app/bg_register_login.jpg) no-repeat fixed center;
+}
+
+/* hết phần của tuấn*/
