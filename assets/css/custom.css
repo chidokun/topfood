@@ -1,5 +1,6 @@
-body {
+﻿body {
 	background-color: #eeeeee;
+	position: flex;
 }
 
 footer {
@@ -27,7 +28,7 @@ footer {
 }
 
 .t-footer {
-	position: relative;
+	position: flex;
     left: 0;
     right: 0;
     bottom: 0;
@@ -57,8 +58,9 @@ footer {
 
 .t-wrapper{
 	background-color: #f6f6f6;
-	margin: 10px auto 0px auto;
+	margin: 10px auto 140px auto;
 	border-color: #dadada;
+	height: 100%;
 }
 .t-body{
     max-width: 100%;
@@ -66,66 +68,35 @@ footer {
     background-color: #ffffff;
     display: flex;
 }
-#t-col-9{
+.t-col-9{
     background-color: #f9f9f9;
     margin: 30px 25px 0px 10px;
-}
-ul{
-    list-style-type: none;
-    padding-left: 10px;
-}
-.t-input{
-    width: 100%;
-    margin: 10px auto 25px auto;
-    padding-left: 10px;
-    height: 35px;
-    border: solid 1px;
-    border-color: #eae9e9;
+    padding-top: 30px;
 }
 
-#t-taodiadiem{
+.t-panel-header{
 	padding: 10px 10px 0px 10px;
+	font-weight: bold;
 }
-#t-tendiadiem{
-    padding-top: 35px;
-}
-#t-danhmuchinhanh{
-	padding-top: 35px;
+
+.t-danhmuchinhanh{
 	padding-left: 20px;
 }
-.t-giomocua{
-    width: 90%;
-}
-.t-giodongcua{
-    width: 90%;
-    margin-left: 20px;
+.t-gio{
+    padding-left: 0px;
 }
 
-.t-col-6{
-    float: left;
-    margin: 0px 0px 0px 0px;
-    width: 50%;
-
-}
-
-#t-motadiadiem{
-	width: 100%;
-    margin: 10px auto 25px auto;
-    padding-left: 10px;
-    height: 90px;
-}
-
-#t-btntaodiadiem{
+.t-btn-default{
 	background: url(../../assets/images/app/backgroundOrange.PNG) repeat scroll left ;
 	color: #ffffff;
 	padding: 5px 19px;
 	margin-top: 15px;
 	margin-bottom: 20px;
-	margin-left: 16px;
-	
+	margin-left: 10px;
+	font-weight: bold;
 }
 
-#t-btndatlai{
+.t-btn{
 	background: url(../../assets/images/app/backgroundDatlai.PNG) repeat scroll left ;
 	padding: 5px 15px;
 	margin-top: 15px;
@@ -133,7 +104,7 @@ ul{
 	margin-bottom: 20px;
 	width: 118px;
 }
-.t-avartar{
+.t-avatar{
 	margin: 30px 20px 0px 25px;
 	border: 1px solid #e6e6e6;
 	background-color: #e6e6e6;
@@ -141,12 +112,12 @@ ul{
 	height: 26%;
 	position: relative;
 }
-#t-lbthemavartar{
+.t-lbavatar{
 	font-size: 13px;
 	padding-left: 44px;
 	padding-top: 7px;
 }
- .t-imgavartar{
+ .t-imgavatar{
  	width: 35px;
  	height: 35px;
  	position: absolute;
@@ -157,7 +128,7 @@ ul{
     right: 0;
  	
  }
- .t-listImg{
+ .t-listimg{
  	margin: 0px 20px 0px 23px;
 	border: 1px solid #e6e6e6;
 	background-color: #ffffff;
@@ -165,9 +136,8 @@ ul{
 	height: 300px;
 	position: relative;
  }
- .t-btn{
+ .t-div-btn{
  	max-width: 100%;
-    margin: 0px auto 0px auto;
     background-color: #ffffff;
     padding-left: 74%;
     display: flex;
@@ -177,14 +147,40 @@ ul{
  	border: 1px solid #f2f2f2;
  	box-shadow: 2px 2px #eeeeee;
  	width: 95%;
- 	margin: 10px auto 0px auto;
+ 	margin: 28px auto 10px auto;
  }
 
-#t-diadiemcho1{
-	margin-top: 30px;
-}
 .t-imgdiadiemcho{
-	margin-top: 20px;
+	margin-top: 15px;
+	height: 120px;
+	width: 100%;
+	clear: both;
+	position: absolute;
+}
+
+.t-user{
+	border-radius: 18px;
+	width: 40px;
+	height: 40px;
+	margin: 7px 7px 10px 15px;
+}
+
+.t-col-3{
+	width: 25%;
+	float: left;
+}
+.t-username{
+	color: #0569c7;
+}
+.t-telephone{
+	color: #2f7bb8;
+}
+.t-infodiadiemcho{
+	margin-left: 10px;
+	margin-top: 15px;
+}
+.t-btndiadiemcho{
+	padding-left: 7%;
 }
 
 /* phần của tuấn*/

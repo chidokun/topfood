@@ -67,58 +67,25 @@
 	</nav>
     <div class="container">
      	<div class="t-wrapper">
-     		<p class="t-panel-header">Tạo địa điểm mới</p>
-    		<div class="t-body">
-    			<div class="col-md-3">
-    				<div class="t-avatar"><img src="<?php echo base_url(); ?>/assets/images/app/Picture.png" class="t-imgavatar"></div>
-    				<p class="t-lbavatar"><i>Nhấn để thêm ảnh đại diện</i></p>
-    			</div>
-    			<div class="col-md-9 t-col-9" >
-    				<div class="col-md-6">
-    					<div class="form-group ">
-  							<label for="usr">Tên địa điểm:</label>
-  							<input type="text" class="form-control" id="usr" placeholder="Không quá 100 ký tự">
-						</div>
-						<div class="form-group">
-  							<label for="usr">Địa chỉ:</label>
-  							<input type="text" class="form-control" id="usr">
-						</div>
-						<div class="form-group">
-  							<label for="usr">Số điện thoại:</label>
-  							<input type="text" class="form-control" id="usr">
-						</div>
-						<div class="form-group">
-  							<label for="usr">Email:</label>
-  							<input type="text" class="form-control" id="usr">
-						</div>
-						<div class="form-group">
-  							<label for="usr">Website:</label>
-  							<input type="text" class="form-control" id="usr">
-						</div>
-						<div class="col-md-6 form-group t-gio">
-							<label for="usr">Giờ mở cửa:</label>
-  							<input type="text" class="form-control" id="usr" placeholder="hh:mm">
-						</div>
-						<div class="col-md-6 form-group t-gio">
-							<label for="usr">Giờ đóng cửa:</label>
-  							<input type="text" class="form-control" id="usr" placeholder="hh:mm">
-						</div>
-						<div class="form-group">
- 							<label for="comment">Comment:</label>
-  							<textarea class="form-control" rows="5" id="comment"></textarea>
-						</div>
+     		<p class="t-panel-header"><b>Kết quả tìm kiếm cho <span>"thúi"</span></b></p>
+    		<div class="t-body row">
+    			<div class="t-diadiemcho " id="t-diadiemcho1">
+    				<div class="col-md-2">
+    					<img src="<?php echo base_url(); ?>/assets/images/db/diadiemcho1.png" class="t-imgdiadiemcho">
     				</div>
-    				<div class="col-md-6">
-    					<label class="t-danhmuchinhanh">Danh mục hình ảnh</label>
-    					<div class="t-listimg"><img src="<?php echo base_url(); ?>/assets/images/app/Picture.png" class="t-imgavatar"></div>
+    				<div class="col-md-10">
+    					<div class="t-infodiadiemcho">
+    						<span><b>Quán Đậu Hủ Thúi</b></span><br>
+    						<span>Nhìn là ghê, ăn là mê</span><br>
+    						<span>Làng Đại Học Thủ Đức</span><br>
+    						<span>Giờ mở cửa 16:00 - 21:00</span><br>
+    						<span>15.000đ - 30.000đ</span><br>
+    						<span class="t-telephone">(+84) 965 23 45 67</span>
+    					</div>
     				</div>
     			</div>
     		</div>
-    		<div class="t-div-btn">
-    			<button type="button" class="btn btn-default t-btn-default"><b>Tạo địa điểm</b></button>
-    			<button type="button" class="btn btn-default t-btn"><b>Đặt lại</b></button>
-    		</div>
-     	</div>
+    	</div>		
     <!-- nội dung -->
     </div> <!-- /container -->
 
