@@ -70,6 +70,7 @@
     <div class="container">
      
     <!-- nội dung -->
+    <?php $this->load->view($main_content); ?>
       
     </div> <!-- /container -->
 
