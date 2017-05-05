@@ -96,7 +96,7 @@ footer {
 	font-weight: bold;
 }
 
-.t-btn{
+.t-btn {
 	background: url(../../assets/images/app/backgroundDatlai.PNG) repeat scroll left ;
 	padding: 5px 15px;
 	margin-top: 15px;
@@ -193,11 +193,24 @@ footer {
 	background-color: rgba(250,250,250, 0.9);
 }
 .t-footer-register {
+	position: relative;
+    left: 0;
+    right: 0;
+    bottom: 0;
 	background-image: none !important;
+	color: white;
 }
 
 .t-bg-register {
 	background: url(../../assets/images/app/bg_register_login.jpg) no-repeat fixed center;
 }
 
+.t-login-panel {
+	padding: 40px;
+}
+
+h1, h2 {
+	color: white;
+	text-align: center;
+}
 /* hết phần của tuấn*/
