@@ -24,8 +24,8 @@
     					<span><b class="t-username">Vương đẹp trai nhất thế gian </b> đã tạo địa điểm này.</span>
     				</div>
     			</div>
-    			<div class="col-md-4 t-btndiadiemcho">
-    				<div>
+    			<div class="col-md-4">
+    				<div class="t-btndiadiemcho">
     					<button type="button" class="btn btn-default t-btn-default">Duyệt ngay</button>
     					<button type="button" class="btn btn-default t-btn">Xóa địa điểm</button>
     				</div>
@@ -56,14 +56,14 @@
     					<span><b class="t-username">@nH CkOàng kHO@i pÉ xÝu</b> đã tạo địa điểm này.</span>
     				</div>
     			</div>
-    			<div class="col-md-4 t-btndiadiemcho">
-    				<div>
+    			<div class="col-md-4">
+    				<div class="t-btndiadiemcho">
     					<button type="button" class="btn btn-default t-btn-default">Duyệt ngay</button>
     					<button type="button" class="btn btn-default t-btn">Xóa địa điểm</button>
     				</div>
     			</div>
     		</div>
-    		<!--Tạo đại điểm 2-->	
-    	</div>	
-     </div>
-    <!-- nội dung -->
+    	<!--Tạo đại điểm 2-->	
+    </div>	
+</div>
+<!-- nội dung -->

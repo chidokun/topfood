@@ -1,7 +1,8 @@
 <?php
-class DuyetDiaDiemCho extends CI_Controller {
+class TaoDiaDiem extends CI_Controller {
 	public function index() {
-		$this->load->view("taoDiaDiem");
+		$data["main_content"] = "taoDiaDiem";
+		$this->load->view("layouts/main", $data);
 	}
 }
 ?>
