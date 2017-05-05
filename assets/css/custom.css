@@ -28,7 +28,7 @@ footer {
 }
 
 .t-footer {
-	position: flex;
+	position: relative;
     left: 0;
     right: 0;
     bottom: 0;
@@ -58,7 +58,7 @@ footer {
 
 .t-wrapper{
 	background-color: #f6f6f6;
-	margin: 10px auto 140px auto;
+	margin: 10px auto;
 	border-color: #dadada;
 	height: 100%;
 }
@@ -78,31 +78,30 @@ footer {
 	padding: 10px 10px 0px 10px;
 	font-weight: bold;
 }
-
 .t-danhmuchinhanh{
 	padding-left: 20px;
 }
-.t-gio{
-    padding-left: 0px;
+
+.t-btn-default, .t-btn-default:visited {
+	background: url(../../assets/images/app/backgroundOrange.PNG) repeat scroll left ;
+	color: #ffffff !important;
+	font-weight: bold; 
 }
 
-.t-btn-default{
-	background: url(../../assets/images/app/backgroundOrange.PNG) repeat scroll left ;
-	color: #ffffff;
-	padding: 5px 19px;
-	margin-top: 15px;
-	margin-bottom: 20px;
-	margin-left: 10px;
-	font-weight: bold;
+.t-btn-default:hover {
+	background: url(../../assets/images/app/backgroundOrangeHover.PNG) repeat scroll left ;
+	color: #ffffff !important;
+}
+
+.t-btn-default:active {
+	background: url(../../assets/images/app/backgroundOrangePress.PNG) repeat scroll left ;
+	color: #ffffff !important;
 }
 
 .t-btn {
 	background: url(../../assets/images/app/backgroundDatlai.PNG) repeat scroll left ;
-	padding: 5px 15px;
-	margin-top: 15px;
 	margin-left: 10px;
-	margin-bottom: 20px;
-	width: 118px;
+	padding: 6px 34px;
 }
 .t-avatar{
 	margin: 30px 20px 0px 25px;
@@ -136,10 +135,10 @@ footer {
 	height: 300px;
 	position: relative;
  }
- .t-div-btn{
- 	max-width: 100%;
+ .t-div-btntaodiadiem{
+    max-width: 100%;
     background-color: #ffffff;
-    padding-left: 74%;
+    padding: 15px 2% 15px 77%;
     display: flex;
  }
 
@@ -180,7 +179,8 @@ footer {
 	margin-top: 15px;
 }
 .t-btndiadiemcho{
-	padding-left: 7%;
+	float: right;
+	padding: 15px 0;
 }
 
 /* phần của tuấn*/

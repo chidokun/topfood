@@ -3,7 +3,7 @@
 </div>
 <div class="container t-register-panel" style="overflow: auto;">
 <div class="col-md-4" style="margin: 30px 15px;">
-	<div class="t-avartar"><img src="<?php echo base_url(); ?>/assets/images/app/Picture.png" class="t-imgavartar"></div>
+	<div class="t-avatar"><img src="<?php echo base_url(); ?>/assets/images/app/Picture.png" class="t-imgavartar"></div>
     <p id="t-lbthemavartar"><i>Nhấn để thêm ảnh đại diện</i></p>	
 </div>
 <div class="col-md-6" style="margin: 30px 15px">
