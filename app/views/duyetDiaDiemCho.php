@@ -1,6 +1,6 @@
  <div class="container">
      <div class="t-wrapper">
-     	<p class="t-panel-header">Duyệt các địa điểm chờ</p>
+     	<div class="t-panel-header">Duyệt các địa điểm chờ</div>
     	<div class="t-body row">
     		<div class="t-diadiemcho " >
     			<div class="col-md-8">
