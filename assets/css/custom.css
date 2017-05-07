@@ -320,6 +320,14 @@ td{
 	width: 58.33333333%;
 	height: 100%;
 	padding-left: 10%;
+	margin-top: 15px;
+}
+
+.t-editpassword{
+	width: 58.33333333%;
+	height: 100%;
+	padding-left: 30%;
+	margin-top: 15px;
 }
 
 /* phần của tuấn*/

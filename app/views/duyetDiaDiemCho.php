@@ -6,7 +6,7 @@
     		<div class="col-md-8">
     			<div class="row">
     				<div class="col-md-2">
-    					<img src="<?php echo base_url(); ?>/assets/images/db/diadiemcho1.png" class="t-imgdiadiemch">
+    					<img src="<?php echo base_url(); ?>/assets/images/db/diadiemcho1.png" class="t-imgdiadiemcho">
     				</div>
     				<div class="col-md-10">
     					<div class="t-infodiadiemcho">
@@ -24,6 +24,7 @@
     				<span><b class="t-username">Vương đẹp trai nhất thế gian </b> đã tạo địa điểm này.</span>
     			</div>
     		</div>
+            <!--Button-->
     		<div class="col-md-4">
     			<div class="t-btndiadiemcho">
     				<button type="button" class="btn btn-default t-btn-default">Duyệt ngay</button>
@@ -57,6 +58,7 @@
     				<span><b class="t-username">@nH CkOàng kHO@i pÉ xÝu</b> đã tạo địa điểm này.</span>
     			</div>
     		</div>
+            <!--Button-->
     		<div class="col-md-4">
     			<div class="t-btndiadiemcho">
     				<button type="button" class="btn btn-default t-btn-default">Duyệt ngay</button>

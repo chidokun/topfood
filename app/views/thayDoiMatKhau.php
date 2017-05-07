@@ -22,33 +22,22 @@
   </div>
 <!--Ảnh bìa và mô tả-->
   <div class="t-wrapper">
-    <p class="t-panel-header">Chỉnh sửa thông tin ngươi dùng</p>
+    <p class="t-panel-header">Thay đổi mật khẩu</p>
     <div class="t-body">
-      <div class="t-editinfor">
+      <div class="t-editpassword">
         <div class="form-group">
-          <label for="usr">Tên người dùng</label>
+          <label for="matKhauCu">Mật khẩu cũ</label>
           <input type="text" class="form-control" id="tenDangNhap">
         </div>
         <div class="form-group">
-          <label for="ngaySinh">Ngày sinh</label>
-          <input type="date" class="form-control" id="ngaySinh">
-        </div>
-        <div class="form-group">
-          <label>Giới tính</label>
-          <div class="btn-group btn-group-justified">
-            <a href="#" class="btn btn-default t-btn-default">Nam</a>
-            <a href="#" class="btn btn-default">Nữ</a>
-            <a href="#" class="btn btn-default">Khác</a>
-          </div>
-        </div>
-        <div class="form-group">
-          <label for="email">Email</label>
+          <label for="matKhauMoi">Mật khẩu mới</label>
           <input type="text" class="form-control" id="tenNguoiDung">
         </div>
         <div class="form-group">
-          <label for="gioiThieuBanThan">Giới thiệu bản thân</label>
-          <textarea class="form-control" rows="5" id="introduce"></textarea>
+          <label for="nhapLaiMatKhauMoi">Nhập lại mật khẩu mới</label>
+          <input type="text" class="form-control" id="tenNguoiDung">
         </div>
+        
       </div>
     </div>
     <!--Button-->
