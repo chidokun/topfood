@@ -1,5 +1,5 @@
 <div class="t-wrapper">
-  <p class="t-panel-header">Tạo địa điểm mới</p>
+  <div class="t-panel-header">Tạo địa điểm mới</div>
   <div class="t-body row">
     <div class="col-md-3">
     		<div class="t-avatar">

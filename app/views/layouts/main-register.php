@@ -73,7 +73,7 @@
       
     </div> <!-- /container -->
 
-    <footer class="t-footer t-footer-register">
+    <footer class="t-footer-register">
     <div class="container">
         <p class="pull-left">&copy; 2017 TopFood. Mọi quyền được bảo vệ.</p>
         <p class="pull-right">Giới thiệu | Liên hệ | Điều khoản sử dụng | Chính sách bảo mật</p>

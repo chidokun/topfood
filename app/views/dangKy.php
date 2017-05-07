@@ -30,9 +30,9 @@
 	<div class="form-group">
   		<label>Giới tính</label>
   		<div class="btn-group btn-group-justified">
-		  <a href="#" class="btn btn-primary">Nam</a>
-		  <a href="#" class="btn btn-primary">Nữ</a>
-		  <a href="#" class="btn btn-primary">Khác</a>
+		  <a href="#" class="btn btn-default t-btn-default">Nam</a>
+		  <a href="#" class="btn btn-default">Nữ</a>
+		  <a href="#" class="btn btn-default">Khác</a>
 		</div>
 	</div>
 	<div class="form-group">
@@ -47,7 +47,7 @@
   		<label><input type="checkbox" id="agree" unchecked> Tôi đồng ý với điều khoản sử dụng.</label>
 	</div>
 	<div class="form-group">
-		<button class="btn btn-default" style="float: right;">Đăng ký tài khoản</button>
+		<button class="btn t-btn-default" style="float: right;">Đăng ký tài khoản</button>
 	</div>	
 </div>	
 </div>

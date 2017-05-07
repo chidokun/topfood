@@ -55,7 +55,7 @@ footer {
 		width: 500px;
 	}
 }
-
+/* phần của Vương*/
 .t-wrapper{
 	background-color: #f6f6f6;
 	margin: 10px auto;
@@ -75,7 +75,7 @@ footer {
 }
 
 .t-panel-header{
-	padding: 10px 10px 0px 10px;
+	padding: 10px;
 	font-weight: bold;
 }
 .t-danhmuchinhanh{
@@ -85,7 +85,8 @@ footer {
 .t-btn-default, .t-btn-default:visited {
 	background: url(../../assets/images/app/backgroundOrange.PNG) repeat scroll left ;
 	color: #ffffff !important;
-	font-weight: bold; 
+	font-weight: bold;
+	border-color: #F59F08 !important;
 }
 
 .t-btn-default:hover {
@@ -100,8 +101,6 @@ footer {
 
 .t-btn {
 	background: url(../../assets/images/app/backgroundDatlai.PNG) repeat scroll left ;
-	margin-left: 10px;
-	padding: 6px 34px;
 }
 
 .t-btnxoa {
@@ -172,46 +171,32 @@ footer {
 	width: 25%;
 	float: left;
 }
+
 .t-username{
 	color: #0569c7;
 }
+
 .t-telephone{
 	color: #2f7bb8;
 }
+
 .t-infodiadiemcho{
 	margin-left: 10px;
 	margin-top: 15px;
 }
+
 .t-btndiadiemcho{
 	float: right;
 	padding: 15px 0;
 }
 
-/* phần của tuấn*/
-.t-logo_middle {
-	margin: 15px;
-}
-
-.t-register-panel {
-	max-width: 850px;
-	background-color: rgba(250,250,250, 0.9);
-}
-.t-footer-register {
-	background-image: none !important;
-}
-
-.t-bg-register {
-	background: url(../../assets/images/app/bg_register_login.jpg) no-repeat fixed center;
-}
-
-/* hết phần của tuấn*/
 .t-divanhbia{
 	background: url(../../assets/images/app/bg_register_login.jpg) no-repeat scroll center;
 	max-width: 100%;
 	height: 200px;
 	margin-bottom: 20px;
 }
-.t-col-md-2{
+.t-col-2{
 	width: 16.66666667%;
 	height: 100%;
 	float: left;
@@ -229,14 +214,19 @@ footer {
 	font-size: 23px;
 }
 
-.t-col-md-7{
+.t-panel-infor{
+	width: 90%;
+	font-size: 23px;
+}
+
+.t-col-7{
 	width: 58.33333333%;
 	height: 100%;
 	float: left;
 	padding-left: 10px;
 }
 
-.t-col-md-3{
+.t-col-3{
 	width: 25%;
 	height: 100%;
 	float: left;
@@ -265,6 +255,7 @@ footer {
 	height: 80%;
 	padding: 10px 15px 0px 15px;
 }
+/* Chia thành từng phần mà không cần margin*/
 .t-bottom{
 	width: 100%;
 	padding: 10px 15px 0px 15px;
@@ -279,15 +270,14 @@ footer {
 .t-infordetail{
 	padding-left: 10%;
 }
-td, tr{
-	padding: 5px;
+td{
+	padding: 5px 20px;
 	font-size: 17px;
 }
 .t-editinfor, .t-editinfor:visited{
-	background: url(../../assets/images/app/backgroundOrangePress.PNG) repeat scroll left ;
+	background: url(../../assets/images/app/backgroundOrange.PNG) repeat scroll left ;
 	color: #ffffff !important;
 	font-weight: bold; 
-	padding:5px 5px;
 }
 .t-editinfor:hover {
 	background: url(../../assets/images/app/backgroundOrangeHover.PNG) repeat scroll left ;
@@ -298,3 +288,250 @@ td, tr{
 	background: url(../../assets/images/app/backgroundOrangePress.PNG) repeat scroll left ;
 	color: #ffffff !important;
 }
+
+.t-resetpassword, .t-resetpassword:visited{
+	background: url(../../assets/images/app/backgroundOrange.PNG) repeat scroll left ;
+	color: #ffffff !important;
+	font-weight: bold; 
+	padding:6px 35px 6px 35px;
+	margin-left: 3px;
+}
+
+.t-resetpassword:hover {
+	background: url(../../assets/images/app/backgroundOrangeHover.PNG) repeat scroll left ;
+	color: #ffffff !important;
+}
+
+.t-resetpassword:active {
+	background: url(../../assets/images/app/backgroundOrangePress.PNG) repeat scroll left ;
+	color: #ffffff !important;
+}
+
+.t-divbtntrangcanhan{
+	max-width: 100%;
+    background-color: #ffffff;
+    padding: 15px 2% 15px 70%;
+    display: flex;
+}
+
+/* phần của tuấn*/
+.t-logo_middle {
+	margin: 15px;
+}
+
+.t-register-panel {
+	max-width: 850px;
+	background-color: rgba(250,250,250, 0.9);
+}
+.t-footer-register {
+	position: relative;
+    left: 0;
+    right: 0;
+    bottom: 0;
+	background-image: none !important;
+	color: white;
+}
+
+.t-bg-register {
+	background: url(../../assets/images/app/bg_register_login.jpg) no-repeat fixed center;
+}
+
+.t-login-panel {
+	padding: 40px;
+}
+
+h1, h2 {
+	color: white;
+	text-align: center;
+}
+
+.t-diadiem-wrapper {
+	background-color: #fafafa;
+	display: table;
+	margin-top: -20px;
+	border: 1px solid #eeeeee;
+}
+
+.t-diadiem-img-avatar {
+	height: 180px;
+	width: 180px;
+	background-color: #aaa;
+	margin: 0px 30px;
+}
+.t-diadiem-info {
+	margin: 30px 0 20px 0;
+	padding: 0;
+}
+.t-diadiem-info-panel {
+	background-color: white;
+	height: 180px;
+	padding: 15px 25px;
+	border: 1px solid #ddd;
+}
+.t-diadiem-info-panel-left {
+	float: left;
+}
+.t-diadiem-info-panel-right {
+	float: right;
+}
+.t-diadiem-avescore {
+	border: 10px solid #f59f08;
+	border-radius: 50%;
+	color: #f59f08;
+	font-size: 60px;
+	font-weight: bold;
+	height: 120px;
+	width: 120px;
+	text-align: center;
+	line-height: 100px;
+}
+.t-diadiem-avescore-description {
+	font-style: italic;
+	text-align: center;
+	font-size: 13px;
+	margin-top: 10px;
+}
+.t-diadiem-name {
+	font-size: 26px;
+	font-weight: bold;
+}
+.t-diadiem-name ~ div {
+	margin: 5px 0;
+}
+.t-diadiem-menu {
+	margin: 0px 45px 20px;
+	width: 180px;
+	padding: 0;
+}
+.t-diadiem-menu a{
+	color: #474747;
+}
+.t-diadiem-menu .active {
+	background-color: #f2f1f1;
+	border-left: 5px solid #f59f08;
+	font-weight: bold;
+}
+.t-diadiem-content {
+	padding: 0;
+}
+.t-danhgia-count {
+	margin: 10px 0;
+}
+.t-diadiem-content-right {
+	padding-right: 0;
+}
+.t-danhgia-tieuchi {
+	margin: 10px 0;
+}
+.t-danhgia-tieuchi-header {
+	overflow: auto;
+	margin-bottom: 5px;
+}
+.t-danhgia-tieuchi-header-score {
+	color: #f59f08;
+}
+.t-danhgia-progress {
+	height: 9px !important;
+	background-color: #f4f4f4 !important;
+	border-radius: 0 !important;
+}
+.t-danhgia-progressbar {
+	background-color: #f59f08 !important;
+}
+.t-danhgia-diemtb {
+	font-size: 45px;
+	font-weight: bold;
+	color: #f59f08;
+}
+.t-danhgia-item-avatar {
+	width: 40px;
+}
+.t-danhgia-item-avatar img {
+	width: 40px;
+	height: 40px;
+	border-radius: 50%;
+}
+.t-danhgia-item-heading {
+	margin: 0 10px;
+}
+.t-danhgia-username {
+	font-weight: bold;
+}
+.t-danhgia-date {
+	font-size: 90%;
+	color: #919191;
+}
+.t-danhgia-diem {
+	background-color: #f59f08;
+	border-radius: 50%;
+	vertical-align: middle;
+	text-align: center;
+	height: 35px;
+	width: 35px;
+}
+.t-danhgia-diem > div {
+	line-height: 35px;
+	vertical-align: middle;
+	text-align: center;
+	color: white;
+}
+.t-danhgia-item-content-heading {
+	font-weight: bold;
+	margin-bottom: 5px;
+}
+.t-danhgia-item-content-body {
+	margin: 10px 0;
+}
+.t-like-count {
+	color: #5890ff;
+}
+.t-like-panel{
+	overflow: auto;
+	vertical-align: middle;
+}
+.t-like-count > img {
+	height: 16px;
+	width: 16px;
+}
+.t-comment {
+
+}
+.t-comment-avatar {
+	width: 40px;
+	height: 40px;
+	border-radius: 50%;
+}
+.t-comment-heading {
+	overflow: auto;
+	margin: 0 10px 10px;
+}
+.t-comment-body {
+	margin: 10px 0;
+}
+.t-map {
+	width: 100%;
+	height: 500px;
+}
+.t-thucdon-item {
+	margin: 10px;
+	border: 1px solid #ddd;
+	overflow: auto;
+}
+.t-thucdon-item-avatar {
+	margin: 10px;
+}
+.t-thucdon-item-avatar img {
+	height: 120px;
+	width: 120px;
+}
+.t-thucdon-item-content {
+	margin: 10px;
+}
+.t-thucdon-item-content div {
+	margin: 5px 0;
+}
+.t-thucdon-item-monan {
+	font-weight: bold;
+	font-size: 24px;
+}
+/* hết phần của tuấn*/

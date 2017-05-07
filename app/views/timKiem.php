@@ -1,4 +1,4 @@
-<div class="container">
+
      <div class="t-wrapper">
      	<p class="t-panel-header"><b>Kết quả tìm kiếm cho <span>"thúi"</span></b></p>
     	<div class="t-body row">
@@ -19,5 +19,4 @@
     		</div>
     	</div>
     </div>		
-    <!-- nội dung -->
-</div> <!-- /container -->
+ 
