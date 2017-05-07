@@ -75,7 +75,7 @@ footer {
 }
 
 .t-panel-header{
-	padding: 10px;
+	padding: 10px 10px 7px 10px;
 	font-weight: bold;
 }
 .t-danhmuchinhanh{
@@ -101,6 +101,8 @@ footer {
 
 .t-btn {
 	background: url(../../assets/images/app/backgroundDatlai.PNG) repeat scroll left ;
+	margin-left: 5px;
+	padding: 6px 20px;
 }
 
 .t-btnxoa {
@@ -274,22 +276,22 @@ td{
 	padding: 5px 20px;
 	font-size: 17px;
 }
-.t-editinfor, .t-editinfor:visited{
+.t-btn-editinfor, .t-btn-editinfor:visited{
 	background: url(../../assets/images/app/backgroundOrange.PNG) repeat scroll left ;
 	color: #ffffff !important;
 	font-weight: bold; 
 }
-.t-editinfor:hover {
+.t-btn-editinfor:hover {
 	background: url(../../assets/images/app/backgroundOrangeHover.PNG) repeat scroll left ;
 	color: #ffffff !important;
 }
 
-.t-editinfor:active {
+.t-btn-editinfor:active {
 	background: url(../../assets/images/app/backgroundOrangePress.PNG) repeat scroll left ;
 	color: #ffffff !important;
 }
 
-.t-resetpassword, .t-resetpassword:visited{
+.t-btn-resetpassword, .t-btn-resetpassword:visited{
 	background: url(../../assets/images/app/backgroundOrange.PNG) repeat scroll left ;
 	color: #ffffff !important;
 	font-weight: bold; 
@@ -297,12 +299,12 @@ td{
 	margin-left: 3px;
 }
 
-.t-resetpassword:hover {
+.t-btn-resetpassword:hover {
 	background: url(../../assets/images/app/backgroundOrangeHover.PNG) repeat scroll left ;
 	color: #ffffff !important;
 }
 
-.t-resetpassword:active {
+.t-btn-resetpassword:active {
 	background: url(../../assets/images/app/backgroundOrangePress.PNG) repeat scroll left ;
 	color: #ffffff !important;
 }
@@ -312,6 +314,12 @@ td{
     background-color: #ffffff;
     padding: 15px 2% 15px 70%;
     display: flex;
+}
+
+.t-editinfor{
+	width: 58.33333333%;
+	height: 100%;
+	padding-left: 10%;
 }
 
 /* phần của tuấn*/

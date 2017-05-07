@@ -15,7 +15,7 @@
     </div>
     <div class="t-col-3">
       <div class="t-top"></div>
-      <div class="t-bottom">
+      <div>
         <button type="button" class="t-btn-moreinfor">Xem thông tin</button>
       </div>
     </div>
@@ -49,8 +49,8 @@
       </div>
     </div>
     <div class="t-divbtntrangcanhan">
-      <button type="button" class="btn t-editinfor">Chỉnh sửa thông tin</button>
-      <button type="button" class="btn t-resetpassword">Đổi mật khẩu</button>
+      <button type="button" class="btn t-btn-editinfor">Chỉnh sửa thông tin</button>
+      <button type="button" class="btn t-btn-resetpassword">Đổi mật khẩu</button>
     </div>
   </div>
 </div>
