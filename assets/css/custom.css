@@ -103,6 +103,10 @@ footer {
 	margin-left: 10px;
 	padding: 6px 34px;
 }
+
+.t-btnxoa {
+	background: url(../../assets/images/app/backgroundDatlai.PNG) repeat scroll left ;
+}
 .t-avatar{
 	margin: 30px 20px 0px 25px;
 	border: 1px solid #e6e6e6;
@@ -201,3 +205,96 @@ footer {
 }
 
 /* hết phần của tuấn*/
+.t-divanhbia{
+	background: url(../../assets/images/app/bg_register_login.jpg) no-repeat scroll center;
+	max-width: 100%;
+	height: 200px;
+	margin-bottom: 20px;
+}
+.t-col-md-2{
+	width: 16.66666667%;
+	height: 100%;
+	float: left;
+}
+.t-infoavatar{
+	border-radius: 70%;
+	width: 80%;
+	height: 80%;
+	margin: 20px;
+}
+.t-header-infor{
+	padding-top: 5%;
+	padding-bottom: 20px;
+	color: #ffffff;
+	font-size: 23px;
+}
+
+.t-col-md-7{
+	width: 58.33333333%;
+	height: 100%;
+	float: left;
+	padding-left: 10px;
+}
+
+.t-col-md-3{
+	width: 25%;
+	height: 100%;
+	float: left;
+}
+
+.t-body-infor{
+	color: #ffffff;
+	font-size: 18px;
+}
+
+.t-btn-moreinfor, .t-btn-moreinfor:visited{
+	background-color: #7f4e0c;
+	opacity: 0.4;
+	border-color: #ffffff;
+	color: #ffffff !important;
+	padding: 5px 15px;
+	margin-left: 50%;
+}
+
+.t-btn-moreinfor:active {
+	background-color: #583e04;
+	color: #ffffff !important;
+}
+.t-top{
+	width: 100%;
+	height: 80%;
+	padding: 10px 15px 0px 15px;
+}
+.t-bottom{
+	width: 100%;
+	padding: 10px 15px 0px 15px;
+}
+
+.t-header-infordetail{
+	padding-top: 10px;
+	padding-left: 10%;
+	padding-bottom: 20px;
+	font-size: 23px;
+}
+.t-infordetail{
+	padding-left: 10%;
+}
+td, tr{
+	padding: 5px;
+	font-size: 17px;
+}
+.t-editinfor, .t-editinfor:visited{
+	background: url(../../assets/images/app/backgroundOrangePress.PNG) repeat scroll left ;
+	color: #ffffff !important;
+	font-weight: bold; 
+	padding:5px 5px;
+}
+.t-editinfor:hover {
+	background: url(../../assets/images/app/backgroundOrangeHover.PNG) repeat scroll left ;
+	color: #ffffff !important;
+}
+
+.t-editinfor:active {
+	background: url(../../assets/images/app/backgroundOrangePress.PNG) repeat scroll left ;
+	color: #ffffff !important;
+}
