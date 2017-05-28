@@ -1,0 +1,42 @@
+<?php
+class Nguoidung_model extends CI_Model
+{
+    public $tenDangNhap;
+    public $tenNguoiDung;
+    public $ngaySinh;
+    public $gioiTinh;
+    public $matKhau;
+    public $email;
+    public $gioiThieuBanThan;
+    public $anhDaiDien;
+    public $maQH;
+
+    public function insert()
+    {
+        $this->tenDangNhap = $_POST['tenDangNhap'];
+        $this->tenNguoiDung = $_POST['tenNguoiDung'];
+        $this->ngaySinh = $_POST['ngaySinh'];
+        $this->gioiTinh = $_POST['gioiTinh'];
+        $this->matKhau = $_POST['matKhau'];
+        $this->email = $_POST['email'];
+        $this->gioiThieuBanThan = $_POST['gioiThieuBanThan'];
+        $this->anhDaiDien = $_POST['anhDaiDien'];
+        $this->maQH = $_POST['maQH'];
+
+        $inserted = $this->db->insert('NGUOIDUNG', $this);
+        return $inserted;
+    }
+
+	public function login($tenDangNhap, $matKhau) {
+		$enc_matKhau = md5($matKhau);
+
+		$this->db->where('tenDangNhap', $tenDangNhap);
+		$this->db->where('matKhau', $enc_matKhau);
+
+		$result = $this->db->get('NGUOIDUNG');
+		if($result->num_rows == 1)
+			return TRUE;
+		else
+			return FALSE;
+	}
+}
