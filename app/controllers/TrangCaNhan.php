@@ -1,8 +1,7 @@
 <?php
 class TrangCaNhan extends CI_Controller {
-	public function index() {
-		$data["anhbia"] = "anhBia";
-		$data["main_content"] = "trangCaNhan";
+	public function index() {;
+		$data["main_content"] = "layouts/trangCaNhan";
 		$this->load->view("layouts/main", $data);
 	}
 }

@@ -2,7 +2,7 @@
      <p class="t-panel-header">Duyệt các địa điểm chờ</p>
     <!--Tạo địa điểm chờ 1-->
     <div class="t-body row">
-    	<div class="t-diadiemcho " >
+    	<div class="t-diadiemcho">
     		<div class="col-md-8">
     			<div class="row">
     				<div class="col-md-2">

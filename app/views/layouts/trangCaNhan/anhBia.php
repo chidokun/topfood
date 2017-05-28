@@ -15,10 +15,9 @@
     </div>
     <div class="t-col-3">
       <div class="t-top"></div>
-      <div>
-        <button type="button" class="t-btn-moreinfor">Xem thông tin</button>
+      <div >
+        <button type="button" class="btn btn-default pull-right">Xem thông tin</button>
       </div>
-    </div>
   </div>
 <!--Ảnh bìa và mô tả-->
 </div>

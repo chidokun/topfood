@@ -151,7 +151,7 @@ footer {
  	border: 1px solid #f2f2f2;
  	box-shadow: 2px 2px #eeeeee;
  	width: 95%;
- 	margin: 28px auto 10px auto;
+ 	margin: 14px auto 5px auto;
  }
 
 .t-imgdiadiemcho{
@@ -207,13 +207,14 @@ footer {
 	border-radius: 70%;
 	width: 80%;
 	height: 80%;
-	margin: 20px;
+	margin: 20px 20px 20px 15px;
 }
 .t-header-infor{
 	padding-top: 5%;
 	padding-bottom: 20px;
 	color: #ffffff;
 	font-size: 30px;
+	text-shadow:  2px 2px 2px #dddddd;
 }
 
 .t-panel-infor{
@@ -237,6 +238,7 @@ footer {
 .t-body-infor{
 	color: #ffffff;
 	font-size: 18px;
+	text-shadow: 1px 1px 1px #dddddd;
 }
 
 .t-btn-moreinfor, .t-btn-moreinfor:visited{
@@ -328,6 +330,45 @@ td{
 	height: 100%;
 	padding-left: 30%;
 	margin-top: 15px;
+}
+/*CSS Mon an*/
+/*div avartar cua info monan*/
+.t-divavartarmonan{
+	width: 18%;
+	height: 100%;
+	float: left;
+}
+/*imageavartar cua info monan*/
+.t-imgavatarmonan{
+	border-radius: 65%;
+	width: 100%;
+	height: 100%;
+	margin-top: 5px;
+}
+/*detail infor cua info monan*/
+.t-detailmonan{
+	margin-top: 20px;
+	margin-left: 20px;
+	color: white;
+}
+/*dtb của info monan*/
+.t-monan-avescore{
+	border: 10px solid #f59f08;
+	border-radius: 50%;
+	color: white;
+	background-color: #f59f08;
+	font-size: 30px;
+	font-weight: bold;
+	height: 60px;
+	width: 60px;
+	text-align: center;
+	line-height: 45px;
+}
+/*avartar của suamonan*/
+.t-imgsuamonan{
+	width: 60%;
+	height: 40%;
+	background-color: #dddddd;
 }
 
 /* phần của tuấn*/
