@@ -1,4 +1,5 @@
-<div >
-  <?php $this->load->view("layouts/trangCaNhan/anhbia"); ?>
-  <?php $this->load->view("layouts/trangCaNhan/trangCaNhan-review"); ?>
+
+  <?php $this->load->view($trangCaNhan_anhBia); ?>
+<div>
+  <?php $this->load->view($trangCaNhan_content); ?>
 </div>

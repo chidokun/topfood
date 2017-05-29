@@ -137,7 +137,7 @@ footer {
 
  .t-diadiemcho{
  	border: 1px solid #f2f2f2;
- 	box-shadow: 2px 2px #eeeeee;
+ 	box-shadow: 2px#eeeeee;
  	width: 95%;
  	margin: 14px auto 5px auto;
  }
@@ -202,7 +202,7 @@ footer {
 	padding-bottom: 20px;
 	color: #ffffff;
 	font-size: 30px;
-	text-shadow:  2px 2px 2px #dddddd;
+	text-shadow:  2px 3px 3px black;
 }
 
 .t-panel-infor{
@@ -226,7 +226,7 @@ footer {
 .t-body-infor{
 	color: #ffffff;
 	font-size: 18px;
-	text-shadow: 1px 1px 1px #dddddd;
+	text-shadow: 2px 2px 2px #000000;
 }
 
 .t-btn-moreinfor, .t-btn-moreinfor:visited{
