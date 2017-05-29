@@ -9,6 +9,6 @@
 		</ul>
 	</div>
 	<div class="col-md-9 t-diadiem-content">
-		<?php $this->load->view($main_monAn_suaMonAn); ?>
+		<?php $this->load->view($main_monAn_vietDanhGiaMonAn); ?>
 	</div>
 </div>

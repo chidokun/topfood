@@ -5,10 +5,12 @@ class MonAn extends CI_Controller {
 		$data['monAn_info'] = 'layouts/monAn/monAn-info';
 		$data['monAn_bangDanhGia'] = 'layouts/monAn/monAn-bangDanhGia';
 		$data['monAn_cacDanhGia'] = 'layouts/diaDiem/danhGia-cacDanhGia';
-		$data['main_monAn_content'] = 'layouts/monAn/monAn-page';
-		$data['monAn_suaDanhGia'] = 'layouts/monAn/suaDanhGia';
-		$data['main_monAn_suaDanhGia'] = 'layouts/monAn/suaDanhGiaMonAn-page';
+		$data['main_monAn_dsBaiDanhGiaMonAn'] = 'layouts/monAn/monAn-page';
 		$data['main_monAn_suaMonAn'] = 'layouts/monAn/suaMonAn';
+		$data['monAn_vietDanhGiaMonAn'] = 'layouts/monAn/vietDanhGiaMonAn';
+		$data['main_monAn_vietDanhGiaMonAn'] = 'layouts/monAn/vietDanhGiaMonAn-page';
+		$data['monAn_suaDanhGiaMonAn'] = 'layouts/monAn/suaDanhGiaMonAN';
+		$data['main_monAn_suaDanhGiaMonAn'] = 'layouts/monAn/suaDanhGiaMonAn-page';
 		$this->load->view('layouts/main',$data);
 	}
 }
