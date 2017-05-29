@@ -109,29 +109,22 @@ footer {
 	background: url(../../assets/images/app/backgroundDatlai.PNG) repeat scroll left ;
 }
 .t-avatar{
-	margin: 30px 20px 0px 25px;
+	margin: 0 auto;
 	border: 1px solid #e6e6e6;
-	background-color: #e6e6e6;
-	width: 80%;
-	height: 26%;
-	position: relative;
+	background-color: white;
+	width: 200px;
+	height: 200px;
+	background: url(../../assets/images/app/img.PNG) no-repeat center;
+	cursor: pointer;
+	
 }
 .t-lbavatar{
 	font-size: 13px;
-	padding-left: 44px;
-	padding-top: 7px;
+	padding-top: 5px;
+	font-style: italic;
+	text-align: center;
 }
- .t-imgavatar{
- 	width: 35px;
- 	height: 35px;
- 	position: absolute;
-    top: 0;
-    bottom: 0;
-    margin: auto;
-    left: 0;
-    right: 0;
- 	
- }
+
  .t-listimg{
  	margin: 0px 20px 0px 23px;
 	border: 1px solid #e6e6e6;
@@ -379,6 +372,7 @@ td{
 .t-register-panel {
 	max-width: 850px;
 	background-color: rgba(250,250,250, 0.9);
+	border-radius: 10px;
 }
 .t-footer-register {
 	position: relative;
@@ -590,5 +584,8 @@ h1, h2 {
 .t-thucdon-item-monan {
 	font-weight: bold;
 	font-size: 24px;
+}
+#ex1Slider .slider-selection {
+	background: #BABABA;
 }
 /* hết phần của tuấn*/
