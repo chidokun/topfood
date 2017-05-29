@@ -19,7 +19,7 @@
 
         <div class="form-group">
             <label for="usr">Tên đăng nhập</label>
-            <input type="text" class="form-control" id="tenDangNhap" name="tenDangNhap" value=<?php echo set_value( 'tenDangNhap'); ?>>
+            <input type="text" class="form-control" id="tenDangNhap" name="tenDangNhap" value=<?php echo set_value('tenDangNhap'); ?>>
         </div>
 
         <div class="form-group">
@@ -40,7 +40,7 @@
 
         <div class="form-group">
             <label for="ngaySinh">Ngày sinh</label>
-            <input type="date" class="form-control" id="ngaySinh" name="ngaySinh" value=<?php echo set_value( 'ngaySinh'); ?>>
+            <input type="date" class="form-control" id="ngaySinh" name="ngaySinh" value=<?php echo set_value('ngaySinh'); ?>>
         </div>
 
         <div class="form-group">
@@ -71,7 +71,7 @@
         </div>
 
         <div class="form-group">
-            <button id="register" class="btn t-btn-default pull-right" data-toggle="modal" data-target="#myModal">Đăng ký tài khoản</button>
+            <button id="register" type="submit" class="btn t-btn-default pull-right">Đăng ký tài khoản</button>
         </div>
         <?php echo form_close(); ?>
 
