@@ -17,11 +17,11 @@ class Nguoidung_model extends CI_Model
         $this->tenNguoiDung = $_POST['tenNguoiDung'];
         $this->ngaySinh = $_POST['ngaySinh'];
         $this->gioiTinh = $_POST['gioiTinh'];
-        $this->matKhau = $_POST['matKhau'];
+        $this->matKhau = md5($_POST['matKhau']);
         $this->email = $_POST['email'];
         $this->gioiThieuBanThan = $_POST['gioiThieuBanThan'];
         $this->anhDaiDien = $_POST['anhDaiDien'];
-        $this->maQH = $_POST['maQH'];
+        $this->maQH = 1;
 
         $inserted = $this->db->insert('NGUOIDUNG', $this);
         return $inserted;
@@ -33,8 +33,8 @@ class Nguoidung_model extends CI_Model
 		$this->db->where('tenDangNhap', $tenDangNhap);
 		$this->db->where('matKhau', $enc_matKhau);
 
-		$result = $this->db->get('NGUOIDUNG');
-		if($result->num_rows == 1)
+		$query = $this->db->get('NGUOIDUNG');
+		if($query->num_rows() === 1)
 			return TRUE;
 		else
 			return FALSE;

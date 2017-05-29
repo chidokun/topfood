@@ -9,16 +9,18 @@
     <div class="col-md-4 t-register-panel t-login-panel">
         <?php if ($this->session->flashdata('registered')) {
                     echo "<p class='alert alert-dismissable alert-success'>";
+                    echo "<a href='#' class='close' data-dismiss='alert' aria-label='close'>×</a>";
                     echo $this->session->flashdata('registered');
                     echo "</p>";
 				} elseif ($this->session->flashdata('login_failed')) {
-					echo "<p class='alert alert-dismissable alert-success'>";
+					echo "<p class='alert alert-dismissable alert-danger'>";
+                    echo "<a href='#' class='close' data-dismiss='alert' aria-label='close'>×</a>";
 					echo $this->session->flashdata('login_failed');
 					echo "</p>";
 				}
             ?>
-		<?php echo validation_errors("<p class='alert alert-dismissable alert-danger'>"); ?>
-        <?php form_open('dangNhap'); ?>
+		<?php echo validation_errors("<p class='alert alert-dismissable alert-warning'><a href='#' class='close' data-dismiss='alert' aria-label='close'>×</a>"); ?>
+        <?php echo form_open('DangNhap'); ?>
 
             <div class="form-group">
                 <label for="usr">Tên đăng nhập</label>
@@ -31,9 +33,9 @@
             </div>
 
             <div class="form-group">
-                <button type="submit" name="submit" class="btn btn-default t-btn-default pull-right">Đăng nhập</button>
+                <button type="submit" name="submit" class="btn btn-default t-btn-default pull-right" value="submit">Đăng nhập</button>
             </div>
-        <?php form_close(); ?>
+        <?php echo form_close(); ?>
 
         <div class="form-group" style="clear: right;">
             <span style="font-size: 26px; display: block;">Chưa có tài khoản?</span>

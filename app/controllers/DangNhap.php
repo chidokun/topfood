@@ -1,6 +1,12 @@
 <?php
 class DangNhap extends CI_Controller
 {
+    public function __construct() {
+        parent::__construct();
+        if($this->session->userdata('logged_in'))
+            redirect(base_url());
+    }
+
     public function index()
     {
         $this->form_validation->set_rules('tenDangNhap', 'Tên đăng nhập', 'trim|required|max_length[100]|min_length[2]');
@@ -19,7 +25,7 @@ class DangNhap extends CI_Controller
             if ($user) {
                 $userdata = array(
                 'tenDangNhap' => $tenDangNhap,
-                'logged_in' => true
+                'logged_in' => TRUE
                     );
                 $this->session->set_userdata($userdata);
                 redirect('Home');
