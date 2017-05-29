@@ -1,10 +1,12 @@
 <?php
 class DangKy extends CI_Controller
 {
-    public function __construct() {
+    public function __construct()
+    {
         parent::__construct();
-        if($this->session->userdata('logged_in'))
+        if ($this->session->userdata('logged_in')) {
             redirect(base_url());
+        }
     }
     
     public function index()
@@ -20,14 +22,14 @@ class DangKy extends CI_Controller
             $data['main_content'] = 'dangKy';
             $this->load->view('layouts/main-register', $data);
         } else {
+            //upload avatar
+            $this->upload();
 
-			//upload avatar
-			$this->upload();
-
-			//insert information
+            //insert information
             $this->load->model('NguoiDung_model');
-            $this->session->set_flashdata('registered', 'Bạn đã đăng ký thành công. Giờ bạn có thể đăng nhập.');
+            
             if ($this->NguoiDung_model->insert()) {
+                $this->session->set_flashdata('registered', 'Bạn đã đăng ký thành công. Giờ bạn có thể đăng nhập.');
                 redirect('DangNhap');
             }
         }
@@ -37,7 +39,7 @@ class DangKy extends CI_Controller
     {
         $config['upload_path']          = "./assets/images/db";
         $config['allowed_types']        = 'gif|jpg|png';
-        $config['overwrite']            = TRUE;
+        $config['overwrite']            = true;
         $config['file_name']            = "user_avatar_".$_POST["tenDangNhap"];
 
         $this->load->library('upload', $config);
@@ -46,6 +48,9 @@ class DangKy extends CI_Controller
             $this->session->set_flashdata('upload_error', $this->upload->display_errors());
         }
 
-		$_POST['anhDaiDien'] = $this->upload->data('file_name');
+        //lỗi up hình bị null
+        if (isset($_POST['anhDaiDien'])) {
+            $_POST['anhDaiDien'] = $this->upload->data('file_name');
+        }
     }
 }
