@@ -1,54 +1,59 @@
-<div class="t-wrapper">
-  <div class="t-panel-header">Tạo địa điểm mới</div>
-  <div class="t-body row">
+<script src=<?php echo base_url( "assets/js/taoDiaDiem_js.js"); ?>></script>
+
+<div class="panel panel-default">
+  <div class="panel-heading t-panel-header">Tạo địa điểm mới</div>
+  <?php echo form_open_multipart('taoDiaDiem'); ?>
+  <div class="panel-body">
     <div class="col-md-3">
-    		<div class="t-avatar">
-          <img src="<?php echo base_url(); ?>/assets/images/app/Picture.png" class="t-imgavatar">
-        </div>
-    		<p class="t-lbavatar"><i>Nhấn để thêm ảnh đại diện</i></p>
+        <div class="t-avatar"></div>
+        <p class="t-lbavatar"><i>Nhấn để thêm ảnh đại diện</i></p>
     </div>
+
     <div class="col-md-9 t-col-9">
       <div class="col-md-6">
-      <!--Tên địa điểm-->
+        <?php echo validation_errors("<p class='alert alert-dismissable alert-warning'><a href='#' class='close' data-dismiss='alert' aria-label='close'>×</a>"); ?>
+        <input type="file" id="anhDaiDienDD" name="anhDaiDienDD" style="display: none;">
+        
+        <!--Tên địa điểm-->
         <div class="form-group ">
-          <label for="usr">Tên địa điểm:</label>
-          <input type="text" class="form-control" id="usr" placeholder="Không quá 100 ký tự">
+          <label>Tên địa điểm</label>
+          <input type="text" class="form-control" id="tenDiaDiem" name="tenDiaDiem" placeholder="Không quá 100 ký tự" value=<?php echo set_value('tenDiaDiem'); ?>>
         </div>
-      <!--Địac chỉ-->
+        <!--Địa chỉ-->
         <div class="form-group">
-            <label for="usr">Địa chỉ:</label>
-            <input type="text" class="form-control" id="usr">
+            <label>Địa chỉ</label>
+            <input type="text" class="form-control" id="diaChi" name="diaChi" value=<?php echo set_value('diaChi'); ?>>
         </div>
-      <!--SDT-->
+        <!--SDT-->
         <div class="form-group">
-                <label for="usr">Số điện thoại:</label>
-                <input type="text" class="form-control" id="usr">
+            <label>Số điện thoại</label>
+            <input type="text" class="form-control" id="soDT" name="soDT" value=<?php echo set_value('soDT'); ?>>
         </div>
-      <!--Email-->  
+        <!--Email-->  
         <div class="form-group">
-                <label for="usr">Email:</label>
-                <input type="text" class="form-control" id="usr">
+            <label>Email</label>
+            <input type="text" class="form-control" id="emailDD" name="emailDD" value=<?php echo set_value('emailDD'); ?>>
         </div>
-      <!--Website--> 
+        <!--Website--> 
         <div class="form-group">
-                <label for="usr">Website:</label>
-                <input type="text" class="form-control" id="usr">
+            <label>Website</label>
+            <input type="text" class="form-control" id="website" name="website" value=<?php echo set_value('website'); ?>>
         </div>
-      <!--Giờ đóng mở cửa--> 
+        <!--Giờ đóng mở cửa--> 
         <div class="row">
           <div class="col-md-6 form-group t-gio">
-            <label for="usr">Giờ mở cửa:</label>
-            <input type="text" class="form-control" id="usr" placeholder="hh:mm">
+            <label for="usr">Giờ mở cửa</label>
+            <input type="text" class="form-control" id="gioMoCua" name="gioMoCua" placeholder="hh:mm" value=<?php echo set_value('gioMoCua'); ?>>
           </div>
           <div class="col-md-6 form-group t-gio">
-            <label for="usr">Giờ đóng cửa:</label>
-            <input type="text" class="form-control" id="usr" placeholder="hh:mm">
+            <label for="usr">Giờ đóng cửa</label>
+            <input type="text" class="form-control" id="gioDongCua" name="gioDongCua" placeholder="hh:mm" value=<?php echo set_value('gioDongCua'); ?>>
           </div>
         </div>
-      <!--Comment--> 
+        <!--Comment--> 
         <div class="form-group">
-          <label for="comment">Comment:</label>
-          <textarea class="form-control" rows="5" id="comment"></textarea>
+          <label for="comment">Mô tả địa điểm</label>
+          <textarea class="form-control" rows="5" id="moTaDD" name="moTaDD"><?php echo set_value('moTaDD'); ?></textarea>
         </div> 
       </div>
       <!--Danh mục hình ảnh-->
@@ -60,9 +65,12 @@
       </div>
     </div>
     <!--Button-->
-    <div class="t-div-btntaodiadiem ">
-      <button type="button" class="btn btn-default t-btn-default">Tạo địa điểm</button>
-      <button type="button" class="btn btn-default t-btn">Đặt lại</button>
+    <div class="panel-body">
+        <div class="pull-right">
+            <button type="submit" id="taoDiaDiem" class="btn btn-default t-btn-default">Tạo địa điểm</button>
+            <button type="reset" class="btn btn-default t-btn">Đặt lại</button>
+        </div>
     </div>
+    <?php echo form_close(); ?>
   </div>
 </div>

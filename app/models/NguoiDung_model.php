@@ -1,5 +1,5 @@
 <?php
-class Nguoidung_model extends CI_Model
+class NguoiDung_model extends CI_Model
 {
     public $tenDangNhap;
     public $tenNguoiDung;
@@ -27,16 +27,26 @@ class Nguoidung_model extends CI_Model
         return $inserted;
     }
 
-	public function login($tenDangNhap, $matKhau) {
-		$enc_matKhau = md5($matKhau);
+    public function select($tenDangNhap)
+    {
+        $this->db->where('tenDangNhap', $tenDangNhap);
+        $query = $this->db->get('NGUOIDUNG');
 
-		$this->db->where('tenDangNhap', $tenDangNhap);
-		$this->db->where('matKhau', $enc_matKhau);
+        return $query->row_array();
+    }
 
-		$query = $this->db->get('NGUOIDUNG');
-		if($query->num_rows() === 1)
-			return TRUE;
-		else
-			return FALSE;
-	}
+    public function login($tenDangNhap, $matKhau)
+    {
+        $enc_matKhau = md5($matKhau);
+
+        $this->db->where('tenDangNhap', $tenDangNhap);
+        $this->db->where('matKhau', $enc_matKhau);
+
+        $query = $this->db->get('NGUOIDUNG');
+        if ($query->num_rows() === 1) {
+            return TRUE;
+        } else {
+            return FALSE;
+        }
+    }
 }

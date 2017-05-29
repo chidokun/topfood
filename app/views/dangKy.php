@@ -1,6 +1,4 @@
-<script src=<?php echo base_url( "assets/js/dangKy_js.js"); ?>
-    >
-</script>
+<script src=<?php echo base_url( "assets/js/dangKy_js.js"); ?>></script>
 
 <div class="t-logo_middle">
     <center>
