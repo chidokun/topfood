@@ -49,7 +49,7 @@
                 </div>
             </form>
         </div>
-        <?php if($this->session->userdata('logged_in')) :?>
+        <?php if(!$this->session->userdata('logged_in')) :?>
         <div class="nav navbar-nav navbar-right">
             <a href=<?php echo base_url("DangNhap"); ?> class="btn t-btn-default navbar-btn">Đăng nhập</a>
             <a href=<?php echo base_url("DangKy"); ?> class="btn t-btn-default navbar-btn">Đăng ký</a>
