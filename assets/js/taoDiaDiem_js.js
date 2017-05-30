@@ -19,4 +19,36 @@ $(document).ready(function () {
             reader.readAsDataURL(file);
         }
     });
+
+    $("#themHinhAnh").click(function () {
+        $("#danhMucHinhAnh").trigger("click");
+    });
+
+    $("#danhMucHinhAnh").change(function () {
+        $("#hinhAnhBg").empty();
+        var files = $(this)[0].files;
+        var reader = new FileReader();
+        reader.onloadend = function () {
+            $("." + i).css("background-image", "url(" + reader.result + ")");
+        }
+
+        //không thể load hình đồng bộ
+        function loadImage(i) {
+            if (i >= files.length)
+                return;
+            $("#hinhAnhBg").append("<div class='" + i + "'></div>");
+            $("." + i).css("width", "150px");
+            $("." + i).css("height", "150px");
+            $("." + i).css("margin", "10px");
+            $("." + i).css("border", "1px solid #ddd");
+            $("." + i).css("display", "inline-block");
+
+            if (files[i]) {
+                reader.readAsDataURL(files[i]);
+            }
+            loadImage(i + 1);
+        }
+
+        loadImage(0);
+    });
 });

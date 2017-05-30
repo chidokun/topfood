@@ -79,9 +79,7 @@ footer {
 	padding: 10px 10px 7px 10px;
 	font-weight: bold;
 }
-.t-danhmuchinhanh{
-	padding-left: 20px;
-}
+
 
 .t-btn-default, .t-btn-default:visited {
 	background: url(../../assets/images/app/backgroundOrange.PNG) repeat scroll left ;
@@ -125,15 +123,6 @@ footer {
 	font-style: italic;
 	text-align: center;
 }
-
- .t-listimg{
- 	margin: 0px 20px 0px 23px;
-	border: 1px solid #e6e6e6;
-	background-color: #ffffff;
-	width: 292px;
-	height: 300px;
-	position: relative;
- }
 
  .t-diadiemcho{
  	border: 1px solid #f2f2f2;
