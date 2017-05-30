@@ -1,5 +1,5 @@
-<div class="t-wrapper">
-    <div class="t-panel-header">Thông tin ngươi dùng</div>
+<div class="panel panel-default">
+    <div class="panel-heading t-panel-header">Thông tin ngươi dùng</div>
     <div class="t-body">
       <div class=" t-top">
         <div class="t-bottom t-panel-infor">@Vương đẹp trai nhất thế gian@</div>
