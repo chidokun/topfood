@@ -544,6 +544,7 @@ h1, h2 {
 }
 .t-like-count {
 	color: #5890ff;
+	margin-right: 5px;
 }
 .t-like-panel{
 	overflow: auto;

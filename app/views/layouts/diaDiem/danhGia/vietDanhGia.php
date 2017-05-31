@@ -6,11 +6,11 @@
         <?php echo validation_errors("<p class='alert alert-dismissable alert-warning'><a href='#' class='close' data-dismiss='alert' aria-label='close'>×</a>"); ?>
         <div class="form-group">
             <label for="usr">Tiêu đề</label>
-            <input type="text" class="form-control" id="tieuDeDGDD" name="tieuDeDGDD" placeholder="Tiêu đề đánh giá...">
+            <input type="text" class="form-control" id="tieuDeDGDD" name="tieuDeDGDD" placeholder="Tiêu đề đánh giá..." value="<?php echo set_value('tieuDeDGDD'); ?>">
         </div>
         <div class="form-group">
             <label for="usr">Nhận xét</label>
-            <textarea class="form-control" rows="7" id="baiNhanXetDGDD" name="baiNhanXetDGDD" placeholder="Viết vài dòng nhận xét..."></textarea>
+            <textarea class="form-control" rows="7" id="baiNhanXetDGDD" name="baiNhanXetDGDD" placeholder="Viết vài dòng nhận xét..."><?php echo set_value('baiNhanXetDGDD'); ?></textarea>
         </div>
         <div class="form-group">
             <label>Đánh giá các tiêu chí</label>

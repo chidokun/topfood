@@ -1,5 +1,5 @@
 <div class="col-md-12 t-diadiem-wrapper">
-	<?php $this->load->view($diaDiem_info); ?>
+	<?php $this->load->view($layoutDiaDiemInfo); ?>
 	<div class="col-md-3 t-diadiem-menu">
 		<ul class="nav">
 			<?php if(strtolower($this->uri->rsegment(2)) == 'cacdanhgia'): ?> 
@@ -44,6 +44,6 @@
 		</ul>
 	</div>
 	<div class="col-md-9 t-diadiem-content">
-		<?php $this->load->view($main_diaDiem_content); ?>
+		<?php $this->load->view($layoutDiaDiemContent); ?>
 	</div>
 </div>

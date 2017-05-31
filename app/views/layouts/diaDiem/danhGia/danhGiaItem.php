@@ -1,22 +1,38 @@
+<?php if ($this->session->flashdata('review_update_successful')): ?> 
+    <p class='alert alert-dismissable alert-success'>
+    <a href='#' class='close' data-dismiss='alert' aria-label='close'>×</a>
+        <?php echo $this->session->flashdata('review_update_successful'); ?>
+    </p>
+<?php elseif ($this->session->flashdata('review_update_failed')): ?>
+    <p class='alert alert-dismissable alert-danger'>";
+    <a href='#' class='close' data-dismiss='alert' aria-label='close'>×</a>";
+        <?php echo $this->session->flashdata('review_update_failed'); ?>
+    </p>
+<?php endif; ?>
 <div class="panel panel-default">
-    <div class="panel-heading" style="overflow: auto;">
-        <div class="t-danhgia-item-avatar pull-left">
-            <img src="">
+    <div class="panel-heading media" style="overflow: auto;">
+        <div class="t-danhgia-item-avatar media-left">
+            <img src=<?php echo base_url('assets/images/db/'.($this->NguoiDung_model->select($danhGia['TenDangNhap']))['AnhDaiDien']); ?>>
         </div>      
-        <div class="t-danhgia-item-heading pull-left">
-            <div class="t-danhgia-username">AnH CkànG kH0@| tO</div>
-            <div class="t-danhgia-date">10:16 25/04/2017</div>      
+        <div class="t-danhgia-item-heading media-body">
+            <div class="t-danhgia-username">
+                <?php echo ($this->NguoiDung_model->select($danhGia['TenDangNhap']))['TenNguoiDung']; ?>
+            </div>
+            <div class="t-danhgia-date">
+                <?php echo date('H:i d/m/Y', strtotime($danhGia['NgayTaoDGDD'])); ?>
+            </div>      
         </div>
-        <div class="t-danhgia-diem pull-right">
-            <div>1.0</div>
+        <div class="media-right">
+            <div class="t-danhgia-diem">
+                <div><?php echo number_format($danhGia['DiemTrungBinhDGDD'], 1); ?></div>
+            </div>
         </div>
     </div>
     <div class="panel-body">
-        <div class="t-danhgia-item-content-heading">Mọe! Mắc như choó</div>
+        <div class="t-danhgia-item-content-heading"><?php echo $danhGia['TieuDeDGDD'];?></div>
         <div class="t-danhgia-item-content-body">
-            Đồ ăn dở như hạch, thịt thằn lằn thì bở, ăn có cảm giác nhơn nhợn trong họng, mới nuốt 1 miếng mà muốn phun hết ra ngoài.<br>
-            ĐM!
-        </div>    
+            <?php echo $danhGia['BaiNhanXetDGDD']; ?>
+        </div>   
         <div class="t-like-panel">
             <button class="btn btn-default btn-xs pull-left">Thích</button>
             <div class="t-like-count pull-right">
