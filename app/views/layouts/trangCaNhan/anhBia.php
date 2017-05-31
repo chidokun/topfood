@@ -1,4 +1,4 @@
-<div>
+
 	<!--Ảnh bìa và mô tả-->
   <div class="t-divanhbia">
     <div class="t-col-2 ">
@@ -20,4 +20,3 @@
       </div>
   </div>
 <!--Ảnh bìa và mô tả-->
-</div>

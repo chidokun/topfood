@@ -117,7 +117,6 @@ footer {
 	height: 200px;
 	background: url(../../assets/images/app/img.PNG) no-repeat center;
 	cursor: pointer;
-	
 }
 .t-lbavatar{
 	font-size: 13px;
@@ -358,7 +357,33 @@ td{
 	height: 40%;
 	background-color: #dddddd;
 }
-
+/*slider của diadiemdexuat*/
+.t-slider-diadiemdexuat{
+	margin-left:8px;
+	float:left; 
+	width:32%; 
+	border: 1px solid #dddddd; 
+	box-shadow:1px 1px 1px #dddddd
+}
+/*Cắt chuỗi thành ...*/
+.t-catchuoi{
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+/*Cắt chuỗi thành ... trong diadiemnhieulike nhat*/
+.t-catchuoidiadiemlike{
+	display: -webkit-box;
+	height: calc(1.2* 15px*3);
+	line-height: 1.3;
+	font-size: 15px;
+	line-clamp:2;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+a{
+	color:black;
+}
 /* phần của tuấn*/
 .t-logo_middle {
 	margin: 15px;
