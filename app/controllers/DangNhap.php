@@ -23,9 +23,11 @@ class DangNhap extends CI_Controller
             $user = $this->NguoiDung_model->login($tenDangNhap, $matKhau);
 
             if ($user) {
+                $info = $this->NguoiDung_model->select($tenDangNhap);
                 $userdata = array(
-                'tenDangNhap' => $tenDangNhap,
-                'logged_in' => TRUE
+                    'tenDangNhap' => $tenDangNhap,
+                    'logged_in'   => TRUE,
+                    'maQH'        => $info['MaQH']
                     );
                 $this->session->set_userdata($userdata);
                 redirect('Home');

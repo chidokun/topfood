@@ -23,7 +23,9 @@ class DangKy extends CI_Controller
             $this->load->view('layouts/main-register', $data);
         } else {
             //upload avatar
-            $this->upload();
+            if (!$_FILES['anhDaiDien']['size'] == 0 && $_FILES['anhDaiDien']['error'] == 0) {
+                $this->upload();
+            }
 
             //insert information
             $this->load->model('NguoiDung_model');
@@ -35,6 +37,11 @@ class DangKy extends CI_Controller
         }
     }
 
+    /**
+     * Upload ảnh đại diện khi đăng ký
+     *
+     * @return void
+     */
     public function upload()
     {
         $config['upload_path']          = "./assets/images/db";
@@ -47,10 +54,7 @@ class DangKy extends CI_Controller
         if (! $this->upload->do_upload('anhDaiDien')) {
             $this->session->set_flashdata('upload_error', $this->upload->display_errors());
         }
-
-        //lỗi up hình bị null
-        if (isset($_POST['anhDaiDien'])) {
-            $_POST['anhDaiDien'] = $this->upload->data('file_name');
-        }
+   
+        $_POST['anhDaiDien'] = $this->upload->data('file_name');
     }
 }
