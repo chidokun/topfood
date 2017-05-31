@@ -19,7 +19,7 @@
 
         <div class="form-group">
             <label for="usr">Tên đăng nhập</label>
-            <input type="text" class="form-control" id="tenDangNhap" name="tenDangNhap" value=<?php echo set_value('tenDangNhap'); ?>>
+            <input type="text" class="form-control" id="tenDangNhap" name="tenDangNhap" value="<?php echo set_value('tenDangNhap'); ?>">
         </div>
 
         <div class="form-group">
@@ -34,8 +34,7 @@
 
         <div class="form-group">
             <label for="tenNguoiDung">Tên người dùng</label>
-            <input type="text" class="form-control" id="tenNguoiDung" name="tenNguoiDung" value=<?php echo set_value( 'tenNguoiDung');
-                ?>>
+            <input type="text" class="form-control" id="tenNguoiDung" name="tenNguoiDung" value="<?php echo set_value( 'tenNguoiDung'); ?>">
         </div>
 
         <div class="form-group">
@@ -55,8 +54,8 @@
 
         <div class="form-group">
             <label for="email">Email</label>
-            <input type="text" class="form-control" id="email" name="email" placeholder="example@email.com" value=<?php echo set_value(
-                'email'); ?>>
+            <input type="text" class="form-control" id="email" name="email" placeholder="example@email.com" value="<?php echo set_value(
+                'email'); ?>">
         </div>
 
         <div class="form-group">

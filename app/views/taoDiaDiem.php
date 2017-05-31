@@ -70,8 +70,8 @@
     <!--Button-->
     <div class="panel-body">
         <div class="pull-right">
-            <button type="submit" id="taoDiaDiem" class="btn btn-default t-btn-default">Tạo địa điểm</button>
-            <button type="reset" class="btn btn-default t-btn">Đặt lại</button>
+            <button type="submit" id="taoDiaDiem" class="btn btn-default t-btn-default" style="width: 125px;">Tạo địa điểm</button>
+            <button type="reset" class="btn btn-default t-btn" style="width: 125px;">Đặt lại</button>
         </div>
     </div>
     <?php echo form_close(); ?>
