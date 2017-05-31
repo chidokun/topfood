@@ -1,4 +1,3 @@
-
   <div class="panel panel-default">
     <p class="panel-heading t-panel-header">Thay đổi mật khẩu</p>
     <div class="t-body">
@@ -23,4 +22,5 @@
       <button type="button" class="btn btn-default t-btn-default">Lưu</button>
       <button type="button" class="btn btn-default t-btn">Hủy bỏ</button>
     </div>
+  </div>
   </div>

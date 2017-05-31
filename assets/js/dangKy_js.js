@@ -24,7 +24,7 @@ $(document).ready(function () {
         var file = this.files[0];
         var reader = new FileReader();
         reader.onloadend = function () {
-            $(".t-avatar").css("background-image", "url(" + reader.result + ")");
+            $(".t-avatar").css({"background-image": "url(" + reader.result + ")","background-size":"contain"});
         }
         if (file) {
             reader.readAsDataURL(file);
