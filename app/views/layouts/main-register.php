@@ -56,8 +56,8 @@
         <ul class="nav navbar-nav navbar-right">
           <li class="dropdown">
             <?php $user = $this->NguoiDung_model->select($this->session->userdata('tenDangNhap'));?>
-            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Xin chào, <b><?php echo $user['TenNguoiDung']; ?></b> 
-            <img class="t-avatar-navbar" src=<?php echo base_url('assets/images/db/'.$user['AnhDaiDien']); ?>>
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Xin chào, <b id="tenNguoiDungNav"><?php echo $user['TenNguoiDung']; ?></b> 
+            <img class="t-avatar-navbar" id="imgNguoiDungNav" src=<?php echo base_url('assets/images/db/'.$user['AnhDaiDien']); ?>>
             <b class="caret"></b></a>
             <ul class="dropdown-menu">
               <li><a href="#">Trang cá nhân</a></li>

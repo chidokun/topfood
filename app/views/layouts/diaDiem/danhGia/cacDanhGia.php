@@ -1,4 +1,7 @@
 <div>
+	<?php if (count($cacDanhGia) == 0) : ?>
+			<p class='alert alert-dismissable alert-success'>Chưa có đánh giá nào.</p>
+	<?php else: ?>
 	<?php foreach ($cacDanhGia as $danhGia) : ?>
         <div class="panel panel-default">
 			<div class="panel-heading media" style="overflow: auto;">
@@ -27,13 +30,14 @@
 			</div>
 			<div class="panel-footer t-like-panel">
 				<div class="t-like-count pull-left">
-					<img src=<?php echo base_url('assets/images/app/like_num.png'); ?>> ? lượt thích
+					<img src=<?php echo base_url('assets/images/app/like_num.png'); ?>> <?php echo $danhGia['TongLuotThichDGDD'];?> lượt thích
 				</div>
 				<div class="t-like-count pull-left">
-					<img src=<?php echo base_url('assets/images/app/comment.png'); ?>> ? bình luận
+					<img src=<?php echo base_url('assets/images/app/comment.png'); ?>> <?php echo $this->DanhGiaDiaDiem_model->selectTongBinhLuanDanhGia($danhGia['MaDGDD']); ?> bình luận
 				</div>
 				<a href="<?php echo base_url(uri_string().'/'.$danhGia['MaDGDD']); ?>" class="btn btn-default btn-xs pull-right">Xem đánh giá</a>
 			</div>
 		</div>
     <?php endforeach; ?>
+	<?php endif; ?>
 </div>

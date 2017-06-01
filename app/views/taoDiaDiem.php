@@ -17,37 +17,37 @@
                 <!--Tên địa điểm-->
                 <div class="form-group ">
                     <label>Tên địa điểm</label>
-                    <input type="text" class="form-control" id="tenDiaDiem" name="tenDiaDiem" placeholder="Không quá 100 ký tự" value=<?php echo set_value('tenDiaDiem'); ?>>
+                    <input type="text" class="form-control" id="tenDiaDiem" name="tenDiaDiem" placeholder="Không quá 100 ký tự" value="<?php echo set_value('tenDiaDiem'); ?>">
                 </div>
                 <!--Địa chỉ-->
                 <div class="form-group">
                     <label>Địa chỉ</label>
-                    <input type="text" class="form-control" id="diaChi" name="diaChi" value=<?php echo set_value('diaChi'); ?>>
+                    <input type="text" class="form-control" id="diaChi" name="diaChi" value="<?php echo set_value('diaChi'); ?>">
                 </div>
                 <!--SDT-->
                 <div class="form-group">
                     <label>Số điện thoại</label>
-                    <input type="text" class="form-control" id="soDT" name="soDT" value=<?php echo set_value('soDT'); ?>>
+                    <input type="text" class="form-control" id="soDT" name="soDT" value="<?php echo set_value('soDT'); ?>">
                 </div>
                 <!--Email-->  
                 <div class="form-group">
                     <label>Email</label>
-                    <input type="text" class="form-control" id="emailDD" name="emailDD" value=<?php echo set_value('emailDD'); ?>>
+                    <input type="text" class="form-control" id="emailDD" name="emailDD" value="<?php echo set_value('emailDD'); ?>">
                 </div>
                 <!--Website--> 
                 <div class="form-group">
                     <label>Website</label>
-                    <input type="text" class="form-control" id="website" name="website" value=<?php echo set_value('website'); ?>>
+                    <input type="text" class="form-control" id="website" name="website" value="<?php echo set_value('website'); ?>">
                 </div>
                 <!--Giờ đóng mở cửa--> 
                 <div class="row">
                     <div class="col-md-6 form-group t-gio">
                         <label for="usr">Giờ mở cửa</label>
-                        <input type="text" class="form-control" id="gioMoCua" name="gioMoCua" placeholder="hh:mm" value=<?php echo set_value('gioMoCua'); ?>>
+                        <input type="text" class="form-control" id="gioMoCua" name="gioMoCua" placeholder="hh:mm" value="<?php echo set_value('gioMoCua'); ?>">
                     </div>
                     <div class="col-md-6 form-group t-gio">
                         <label for="usr">Giờ đóng cửa</label>
-                        <input type="text" class="form-control" id="gioDongCua" name="gioDongCua" placeholder="hh:mm" value=<?php echo set_value('gioDongCua'); ?>>
+                        <input type="text" class="form-control" id="gioDongCua" name="gioDongCua" placeholder="hh:mm" value="<?php echo set_value('gioDongCua'); ?>">
                     </div>
                 </div>
                 <!--Comment--> 

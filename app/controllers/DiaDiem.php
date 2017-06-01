@@ -1,6 +1,12 @@
 <?php
 class DiaDiem extends CI_Controller
 {
+    /**
+     * Hiển thị trang Đánh giá của một địa điểm.
+     * 
+     * @param int $maDiaDiem Mã địa điểm
+     * @return void
+     */
     public function cacDanhGia($maDiaDiem)
     {
         // lấy thông tin địa điểm
@@ -31,8 +37,8 @@ class DiaDiem extends CI_Controller
                 //đánh giá ko có hoặc k thuộc về địa điểm, điều hướng thông báo lỗi
             }
 
-            //load tiếp bình luận ..
-            //blablabla
+            //load các bình luận ..
+            $data['cacBinhLuan'] = $this->BinhLuanDD_model->selectAllBinhLuan($data['danhGia']['MaDGDD']);
 
             // nội dung bên trái là đánh giá
             $data['layoutDanhGia'] = 'layouts/diaDiem/danhGia/danhGiaItem';
@@ -54,6 +60,12 @@ class DiaDiem extends CI_Controller
         $this->load->view('layouts/main', $data);
     }
 
+    /**
+     * Hiển thị trang Hình ảnh của một địa điểm
+     *
+     * @param int $maDiaDiem Mã địa điểm
+     * @return void
+     */
     public function hinhAnh($maDiaDiem)
     {
         // lấy thông tin địa điểm
@@ -77,6 +89,12 @@ class DiaDiem extends CI_Controller
         $this->load->view('layouts/main', $data);
     }
 
+    /**
+     * Hiển thị trang Thực đơn của địa điểm
+     *
+     * @param int $maDiaDiem Mã địa điểm
+     * @return void
+     */
     public function thucDon($maDiaDiem)
     {
         // lấy thông tin địa điểm
@@ -95,6 +113,12 @@ class DiaDiem extends CI_Controller
         $this->load->view('layouts/main', $data);
     }
 
+    /**
+     * Hiển thị trang Thông tin chi tiết của địa điểm. Cũng bao gồm trang chỉnh sửa thông tin
+     *
+     * @param int $maDiaDiem Mã địa điểm
+     * @return void
+     */
     public function info($maDiaDiem)
     {
         // lấy thông tin địa điểm
@@ -117,6 +141,12 @@ class DiaDiem extends CI_Controller
         $this->load->view('layouts/main', $data);
     }
 
+    /**
+     * Xử lý kiểm tra và cập nhật thông tin địa điểm. Điều hướng tới trang Thông tin chi tiết sau khi thực hiện xong.
+     *
+     * @param int $maDiaDiem Mã địa điểm
+     * @return void
+     */
     public function updateInfo($maDiaDiem)
     {
         $this->form_validation->set_rules('tenDiaDiem', 'Tên địa điểm', 'trim|required|max_length[100]|min_length[5]');
@@ -145,6 +175,12 @@ class DiaDiem extends CI_Controller
         }
     }
 
+    /**
+     * Hiển thị trang Viết đánh giá
+     *
+     * @param int $maDiaDiem Mã địa điểm
+     * @return void
+     */
     public function vietDanhGia($maDiaDiem)
     {
         if (!$this->session->userdata('logged_in')) {
@@ -178,6 +214,12 @@ class DiaDiem extends CI_Controller
         $this->load->view('layouts/main', $data);
     }
 
+    /**
+     * Hiển thị trang Sử đánh giá
+     *
+     * @param int $maDiaDiem Mã địa điểm
+     * @return void
+     */
     public function suaDanhGia($maDanhGia)
     {
         if (!$this->session->userdata('logged_in')) {
@@ -210,6 +252,12 @@ class DiaDiem extends CI_Controller
         $this->load->view('layouts/main', $data);
     }
 
+    /**
+     * Xử lý kiểm tra và thêm đánh giá. Dữ liệu được lấy thông qua $_POST
+     *
+     * @param int $maDiaDiem Mã địa điểm
+     * @return void
+     */
     public function insertDanhGia($maDiaDiem) {
         if(!isset($_POST['submit'])){
             return;
@@ -231,6 +279,12 @@ class DiaDiem extends CI_Controller
         }
     }
 
+    /**
+     * Xử lý kiểm tra và cập nhật đánh giá. Dữ liệu được lấy thông qua $_POST
+     *
+     * @param int $maDanhGia Mã đánh giá
+     * @return void
+     */
     public function updateDanhGia($maDanhGia) {
         if(!isset($_POST['submit'])){
             return;

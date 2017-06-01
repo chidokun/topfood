@@ -89,6 +89,12 @@ class DiaDiem_model extends CI_Model
         return $query->result_array();
     }
 
+    /**
+     * Cập nhật thông tin một địa điểm
+     *
+     * @param string $maDiaDiem Mã địa điểm
+     * @return void
+     */
     public function update($maDiaDiem) {
         $data = array (
             'TenDiaDiem'      => $_POST['tenDiaDiem'],
@@ -102,8 +108,7 @@ class DiaDiem_model extends CI_Model
         );
         
         $this->db->where('MaDiaDiem', $maDiaDiem);
-        $updated = $this->db->update('DIADIEM', $data);
-        return $updated;
+        return  $this->db->update('DIADIEM', $data);   
     }
 }
 ?>

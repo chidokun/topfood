@@ -8,6 +8,6 @@ $(document).ready(function () {
 
 function changeValue(tieuChi) {
     $("input[name=" + tieuChi + "]").change( function() {
-        $("#"+ tieuChi).html($(this).val() / 10);
+        $("#"+ tieuChi).html(Number($(this).val()).toFixed(1));
     });
 }

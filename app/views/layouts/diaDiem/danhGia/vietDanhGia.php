@@ -18,31 +18,31 @@
             <div class="t-danhgia-tieuchi">
                 <div class="t-danhgia-tieuchi-header pull-left">Phục vụ</div>
                 <div id="phucVu" class="t-danhgia-tieuchi-header-score pull-right">8.0</div>
-                <input type="range" name="phucVu" min="0" max="100" value="80">                                               
+                <input type="range" name="phucVu" min="0" step="1" max="10" value="8">                                               
             </div>
 
             <div class="t-danhgia-tieuchi">
                 <div class="t-danhgia-tieuchi-header pull-left">Chất lượng</div>
                 <div id="chatLuong" class="t-danhgia-tieuchi-header-score pull-right">8.0</div>
-                <input type="range" name="chatLuong" min="0" max="100" value="80">                                               
+                <input type="range" name="chatLuong" min="0" step="1" max="10" value="8">                                               
             </div>
 
             <div class="t-danhgia-tieuchi">
                 <div class="t-danhgia-tieuchi-header pull-left">Vị trí</div>
                 <div id="viTri" class="t-danhgia-tieuchi-header-score pull-right">8.0</div>
-                <input type="range" name="viTri" min="0" max="100" value="80">                                               
+                <input type="range" name="viTri" min="0" step="1" max="10" value="8">                                               
             </div>
 
             <div class="t-danhgia-tieuchi">
                 <div class="t-danhgia-tieuchi-header pull-left">Không gian</div>
                 <div id="khongGian" class="t-danhgia-tieuchi-header-score pull-right">8.0</div>
-                <input type="range" name="khongGian" min="0" max="100" value="80">                                               
+                <input type="range" name="khongGian" min="0" step="1" max="10" value="8">                                               
             </div>
 
             <div class="t-danhgia-tieuchi">
                 <div class="t-danhgia-tieuchi-header pull-left">Giá cả</div>
                 <div id="giaCaDGDD" class="t-danhgia-tieuchi-header-score pull-right">8.0</div>
-                <input type="range" name="giaCaDGDD" min="0" max="100" value="80">                                               
+                <input type="range" name="giaCaDGDD" min="0" step="1" max="10" value="8">                                               
             </div>
         </div>
     </div>

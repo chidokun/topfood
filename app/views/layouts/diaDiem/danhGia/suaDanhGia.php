@@ -18,31 +18,31 @@
             <div class="t-danhgia-tieuchi">
                 <div class="t-danhgia-tieuchi-header pull-left">Phục vụ</div>
                 <div id="phucVu" class="t-danhgia-tieuchi-header-score pull-right"><?php echo number_format($danhGia['PhucVu'], 1); ?></div>
-                <input type="range" name="phucVu" min="0" max="100" value="<?php echo $danhGia['PhucVu'] * 10; ?>">                                               
+                <input type="range" name="phucVu" min="0" step="1" max="10" value="<?php echo $danhGia['PhucVu']; ?>">                                               
             </div>
 
             <div class="t-danhgia-tieuchi">
                 <div class="t-danhgia-tieuchi-header pull-left">Chất lượng</div>
                 <div id="chatLuong" class="t-danhgia-tieuchi-header-score pull-right"><?php echo number_format($danhGia['ChatLuong'], 1); ?></div>
-                <input type="range" name="chatLuong" min="0" max="100" value="<?php echo $danhGia['ChatLuong'] * 10; ?>">                                               
+                <input type="range" name="chatLuong" min="0" step="1" max="10" value="<?php echo $danhGia['ChatLuong']; ?>">                                               
             </div>
 
             <div class="t-danhgia-tieuchi">
                 <div class="t-danhgia-tieuchi-header pull-left">Vị trí</div>
                 <div id="viTri" class="t-danhgia-tieuchi-header-score pull-right"><?php echo number_format($danhGia['ViTri'], 1); ?></div>
-                <input type="range" name="viTri" min="0" max="100" value="<?php echo $danhGia['ViTri'] * 10; ?>">                                               
+                <input type="range" name="viTri" min="0" step="1" max="10" value="<?php echo $danhGia['ViTri']; ?>">                                               
             </div>
 
             <div class="t-danhgia-tieuchi">
                 <div class="t-danhgia-tieuchi-header pull-left">Không gian</div>
                 <div id="khongGian" class="t-danhgia-tieuchi-header-score pull-right"><?php echo number_format($danhGia['KhongGian'], 1); ?></div>
-                <input type="range" name="khongGian" min="0" max="100" value="<?php echo $danhGia['KhongGian'] * 10; ?>">                                               
+                <input type="range" name="khongGian" min="0" step="1" max="10" value="<?php echo $danhGia['KhongGian']; ?>">                                               
             </div>
 
             <div class="t-danhgia-tieuchi">
                 <div class="t-danhgia-tieuchi-header pull-left">Giá cả</div>
                 <div id="giaCaDGDD" class="t-danhgia-tieuchi-header-score pull-right"><?php echo number_format($danhGia['GiaCaDGDD'], 1); ?></div>
-                <input type="range" name="giaCaDGDD" min="0" max="100" value="<?php echo $danhGia['GiaCaDGDD'] * 10; ?>">                                               
+                <input type="range" name="giaCaDGDD" min="0" step="1" max="10" value="<?php echo $danhGia['GiaCaDGDD']; ?>">                                               
             </div>
         </div>
     </div>
