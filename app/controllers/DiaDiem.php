@@ -6,25 +6,49 @@ class DiaDiem extends CI_Controller
         // lấy thông tin địa điểm
         $data['diaDiem_data'] = $this->DiaDiem_model->select($maDiaDiem);
 
-        // lấy bảng đánh giá
-        $data['bangDanhGia_data'] = $this->DanhGiaDiaDiem_model->selectBangDanhGia($maDiaDiem);
-        $data['tongDanhGia'] = $this->DanhGiaDiaDiem_model->selectTongDanhGia($maDiaDiem);
-        $data['tongBinhLuan'] = $this->DanhGiaDiaDiem_model->selectTongBinhLuan($maDiaDiem);
+        
+        // trường hợp tất cả đánh giá
+        if (!$this->uri->rsegment(4)) {
+            // lấy bảng đánh giá
+            $data['bangDanhGia_data'] = $this->DanhGiaDiaDiem_model->selectBangDanhGia($maDiaDiem);
+            $data['tongDanhGia'] = $this->DanhGiaDiaDiem_model->selectTongDanhGia($maDiaDiem);
+            $data['tongBinhLuan'] = $this->DanhGiaDiaDiem_model->selectTongBinhLuan($maDiaDiem);
+            
+            // lấy danh sách đánh giá
+            $data['cacDanhGia'] = $this->DanhGiaDiaDiem_model->selectAllDanhGia($maDiaDiem);
+
+            // nội dung bên trái là các đánh giá
+            $data['layoutDanhGia'] = 'layouts/diaDiem/danhGia/cacDanhGia';
+
+            // nội dung bên phải là bảng đánh giá
+            $data['layoutBangDanhGia'] = 'layouts/diaDiem/danhGia/bangDanhGiaChung';
+        }
+        //trường hợp chỉ 1 đánh giá
+        else {
+            $data['danhGia'] = $this->DanhGiaDiaDiem_model->selectDanhGia($this->uri->rsegment(4));
+            
+            if (!isset($data['danhGia']) || $data['danhGia']['MaDiaDiem'] != $maDiaDiem) {
+                //đánh giá ko có hoặc k thuộc về địa điểm, điều hướng thông báo lỗi
+            }
+
+            //load tiếp bình luận ..
+            //blablabla
+
+            // nội dung bên trái là đánh giá
+            $data['layoutDanhGia'] = 'layouts/diaDiem/danhGia/danhGiaItem';
+
+            // nội dung bên phải là bảng đánh giá
+            $data['layoutBangDanhGia'] = 'layouts/diaDiem/danhGia/bangDanhGia';
+        }
 
         // chọn layout địa điểm
         $data['main_content'] = 'layouts/diaDiem';
 
         // load thông tin địa điểm
-        $data['diaDiem_info'] = 'layouts/diaDiem/info';
+        $data['layoutDiaDiemInfo'] = 'layouts/diaDiem/info';
 
         // nội dung chính menu là đánh giá
-        $data['main_diaDiem_content'] = 'layouts/diaDiem/danhGia-page';
-
-        // nội dung bên trái là các đánh giá
-        $data['diaDiem_cacDanhGia'] = 'layouts/diaDiem/danhGia-cacDanhGia';
-
-        // nội dung bên phải là bảng đánh giá
-        $data['diaDiem_bangDanhGia'] = 'layouts/diaDiem/danhGia-bangDanhGiaChung';
+        $data['layoutDiaDiemContent'] = 'layouts/diaDiem/danhGia-page';
         
         // hiển thị giao diện
         $this->load->view('layouts/main', $data);
@@ -42,10 +66,10 @@ class DiaDiem extends CI_Controller
         $data['main_content'] = 'layouts/diaDiem';
 
         // load thông tin địa điểm
-        $data['diaDiem_info'] = 'layouts/diaDiem/info';
+        $data['layoutDiaDiemInfo'] = 'layouts/diaDiem/info';
 
         // nội dung chính menu là hình ảnh
-        $data['main_diaDiem_content'] = 'layouts/diaDiem/hinhAnh-page';
+        $data['layoutDiaDiemContent'] = 'layouts/diaDiem/hinhAnh-page';
 
         
         
@@ -62,10 +86,10 @@ class DiaDiem extends CI_Controller
         $data['main_content'] = 'layouts/diaDiem';
 
         // load thông tin địa điểm
-        $data['diaDiem_info'] = 'layouts/diaDiem/info';
+        $data['layoutDiaDiemInfo'] = 'layouts/diaDiem/info';
 
         // nội dung chính menu là thực đơn
-        $data['main_diaDiem_content'] = 'layouts/diaDiem/thucDon-page';
+        $data['layoutDiaDiemContent'] = 'layouts/diaDiem/thucDon-page';
         
         // hiển thị giao diện
         $this->load->view('layouts/main', $data);
@@ -80,13 +104,13 @@ class DiaDiem extends CI_Controller
         $data['main_content'] = 'layouts/diaDiem';
 
         // load thông tin địa điểm
-        $data['diaDiem_info'] = 'layouts/diaDiem/info';
+        $data['layoutDiaDiemInfo'] = 'layouts/diaDiem/info';
 
         // nội dung chính menu là thông tin
         if ($this->uri->rsegment(4) == 'edit') {
-            $data['main_diaDiem_content'] = 'layouts/diaDiem/thongTin-edit';
+            $data['layoutDiaDiemContent'] = 'layouts/diaDiem/thongTin-edit';
         } else {
-            $data['main_diaDiem_content'] = 'layouts/diaDiem/thongTin-page';
+            $data['layoutDiaDiemContent'] = 'layouts/diaDiem/thongTin-page';
         }
         
         // hiển thị giao diện
@@ -105,8 +129,8 @@ class DiaDiem extends CI_Controller
         if ($this->form_validation->run() == false) {
             $data['diaDiem_data'] = $this->DiaDiem_model->select($maDiaDiem);
             $data['main_content'] = 'layouts/diaDiem';
-            $data['diaDiem_info'] = 'layouts/diaDiem/info';
-            $data['main_diaDiem_content'] = 'layouts/diaDiem/thongTin-edit';
+            $data['layoutDiaDiemInfo'] = 'layouts/diaDiem/info';
+            $data['layoutDiaDiemContent'] = 'layouts/diaDiem/thongTin-edit';
 
             $this->load->view('layouts/main', $data);
         } else {
@@ -139,16 +163,48 @@ class DiaDiem extends CI_Controller
         $data['main_content'] = 'layouts/diaDiem';
 
         // load thông tin địa điểm
-        $data['diaDiem_info'] = 'layouts/diaDiem/info';
+        $data['layoutDiaDiemInfo'] = 'layouts/diaDiem/info';
 
         // nội dung chính menu là đánh giá
-        $data['main_diaDiem_content'] = 'layouts/diaDiem/danhGia-page';
+        $data['layoutDiaDiemContent'] = 'layouts/diaDiem/danhGia-page';
 
         // nội dung bên trái là các đánh giá
-        $data['diaDiem_cacDanhGia'] = 'layouts/diaDiem/danhGia-vietDanhGia';
+        $data['layoutDanhGia'] = 'layouts/diaDiem/danhGia/vietDanhGia';
 
         // nội dung bên phải là bảng đánh giá
-        $data['diaDiem_bangDanhGia'] = 'layouts/diaDiem/danhGia-bangDanhGiaChung';
+        $data['layoutBangDanhGia'] = 'layouts/diaDiem/danhGia/bangDanhGiaChung';
+        
+        // hiển thị giao diện
+        $this->load->view('layouts/main', $data);
+    }
+
+    public function suaDanhGia($maDanhGia)
+    {
+        if (!$this->session->userdata('logged_in')) {
+            redirect('dangNhap');
+        }
+
+        // lấy đánh giá
+        $data['danhGia'] = $this->DanhGiaDiaDiem_model->selectDanhGia($maDanhGia);
+
+        // lấy thông tin địa điểm
+        $maDiaDiem = $data['danhGia']['MaDiaDiem'];
+        $data['diaDiem_data'] = $this->DiaDiem_model->select($maDiaDiem);
+
+        // chọn layout địa điểm
+        $data['main_content'] = 'layouts/diaDiem';
+
+        // load thông tin địa điểm
+        $data['layoutDiaDiemInfo'] = 'layouts/diaDiem/info';
+
+        // nội dung chính menu là đánh giá
+        $data['layoutDiaDiemContent'] = 'layouts/diaDiem/danhGia-page';
+
+        // nội dung bên trái là các đánh giá
+        $data['layoutDanhGia'] = 'layouts/diaDiem/danhGia/suaDanhGia';
+
+        // nội dung bên phải là bảng đánh giá
+        $data['layoutBangDanhGia'] = 'layouts/diaDiem/danhGia/bangDanhGia';
         
         // hiển thị giao diện
         $this->load->view('layouts/main', $data);
@@ -168,11 +224,35 @@ class DiaDiem extends CI_Controller
             $inserted = $this->DanhGiaDiaDiem_model->insert($maDiaDiem);
             
             if ($inserted) {
-                // chuyển tới trang chi tiết địa điểm đó
-                //redirect('diaDiem/info/'.$maDiaDiem);
+                redirect('diaDiem/cacDanhGia/'.$maDiaDiem.'/'.$inserted);
             } else {
                 $this->session->set_flashdata('review_insert_failed', 'Cập nhật không thành công.');
             }           
+        }
+    }
+
+    public function updateDanhGia($maDanhGia) {
+        if(!isset($_POST['submit'])){
+            return;
+        }
+
+        $maDiaDiem = $this->DanhGiaDiaDiem_model->selectDanhGia($maDanhGia)['MaDiaDiem'];
+
+        $this->form_validation->set_rules('tieuDeDGDD', 'Tiêu đề', 'trim|required|max_length[255]');
+        $this->form_validation->set_rules('baiNhanXetDGDD', 'Bài nhận xét', 'trim|required');
+
+        if (!$this->form_validation->run()) {
+            $this->suaDanhGia($maDanhGia);
+        } else {
+            $updated = $this->DanhGiaDiaDiem_model->update($maDanhGia);
+            
+            if ($updated) {
+                $this->session->set_flashdata('review_update_successful', 'Cập nhật đánh giá thành công.');
+            } else {
+                $this->session->set_flashdata('review_update_failed', 'Cập nhật đánh giá không thành công.');
+            }     
+
+            redirect('diaDiem/cacDanhGia/'.$maDiaDiem.'/'.$maDanhGia);    
         }
     }
 }

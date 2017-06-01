@@ -19,7 +19,7 @@
 			<div><span class="glyphicon glyphicon-tags"></span> Từ ?đ - ?đ</div>
 		</div>
 		<div class="t-diadiem-info-panel-right">
-			<div class="t-diadiem-avescore"><?php echo number_format($bangDanhGia_data['DiemTrungBinhDGDD'], 1); ?></div>
+			<div class="t-diadiem-avescore"><?php echo number_format($diaDiem_data['DiemTrungBinhDD'], 1); ?></div>
 			<div class="t-diadiem-avescore-description">Điểm trung bình</div>
 		</div>
 	</div>
