@@ -1,6 +1,12 @@
 <?php
 class DanhGiaDiaDiem_model extends CI_Model
 {
+    /**
+     * Lấy bảng đánh giá trung bình của một địa điểm
+     *
+     * @param string $maDiaDiem Mã địa điểm
+     * @return array
+     */
     public function selectBangDanhGia($maDiaDiem)
     {
         $this->db->where('MaDiaDiem', $maDiaDiem);
@@ -39,6 +45,12 @@ class DanhGiaDiaDiem_model extends CI_Model
         return $data;
     }
 
+    /**
+     * Lấy tổng bình luận của tất cả đánh giá trong địa điểm
+     *
+     * @param string $maDiaDiem Mã địa điểm
+     * @return int
+     */
     public function selectTongBinhLuan($maDiaDiem)
     {
         $this->db->select('*');
@@ -48,6 +60,24 @@ class DanhGiaDiaDiem_model extends CI_Model
         return $this->db->get()->num_rows();
     }
 
+    /**
+     * Lấy tổng bình luận của một đánh giá
+     *
+     * @param string $maDanhGia Mã đánh giá địa điểm
+     * @return int
+     */
+    public function selectTongBinhLuanDanhGia($maDanhGia) {
+        $this->db->where('MaDGDD', $maDanhGia);
+
+        return $this->db->get('BINHLUANDD')->num_rows();
+    }
+
+    /**
+     * Lấy tổng đánh giá của một địa điểm
+     *
+     * @param string $maDiaDiem Mã địa điểm
+     * @return int
+     */
     public function selectTongDanhGia($maDiaDiem)
     {
         $this->db->where('MaDiaDiem', $maDiaDiem);
@@ -55,14 +85,20 @@ class DanhGiaDiaDiem_model extends CI_Model
         return $this->db->get('DANHGIADIADIEM')->num_rows();
     }
 
+    /**
+     * Thêm đánh giá mới vào CSDL theo một địa điểm. Dữ liệu được lấy thông quan $_POST
+     *
+     * @param string $maDiaDiem Mã địa điểm
+     * @return mixed Nếu thành công trả về id của đánh giá. Nếu không thành công trả về false.
+     */
     public function insert($maDiaDiem) {
         $data = array (
             'TieuDeDGDD'          => $_POST['tieuDeDGDD'],
-            'PhucVu'              => $_POST['phucVu'] / 10.0,
-            'ChatLuong'           => $_POST['chatLuong'] / 10.0,
-            'ViTri'               => $_POST['viTri'] / 10.0,
-            'KhongGian'           => $_POST['khongGian'] / 10.0,
-            'GiaCaDGDD'           => $_POST['giaCaDGDD'] / 10.0,
+            'PhucVu'              => $_POST['phucVu'],
+            'ChatLuong'           => $_POST['chatLuong'],
+            'ViTri'               => $_POST['viTri'],
+            'KhongGian'           => $_POST['khongGian'],
+            'GiaCaDGDD'           => $_POST['giaCaDGDD'],
             'BaiNhanXetDGDD'      => $_POST['baiNhanXetDGDD'],
             'NgayTaoDGDD'         => date('Y-m-d H:i:s'),
             'TongLuotThichDGDD'   => 0,
@@ -76,6 +112,12 @@ class DanhGiaDiaDiem_model extends CI_Model
         return $inserted ? $this->db->insert_id() : $inserted;
     }
 
+    /**
+     * Lấy danh sách thông tin tất cả đánh giá của địa điểm
+     *
+     * @param string $maDiaDiem Mã địa điểm
+     * @return array
+     */
     public function selectAllDanhGia($maDiaDiem) {
         $this->db->where('MaDiaDiem', $maDiaDiem);
         $query = $this->db->get('DANHGIADIADIEM');
@@ -83,6 +125,12 @@ class DanhGiaDiaDiem_model extends CI_Model
         return $query->result_array();
     }
 
+    /**
+     * Lấy thông tin một đánh giá
+     *
+     * @param string $maDanhGia Mã đánh giá
+     * @return array
+     */
     public function selectDanhGia($maDanhGia) {
         $this->db->where('MaDGDD', $maDanhGia);
         $query = $this->db->get('DANHGIADIADIEM');
@@ -90,14 +138,20 @@ class DanhGiaDiaDiem_model extends CI_Model
         return $query->row_array();
     }
 
+    /**
+     * Cập nhật thông tin một đánh giá. Dữ liệu được lấy thông qua $_POST
+     *
+     * @param string $maDanhGia Mã đánh giá
+     * @return boolean
+     */
     public function update($maDanhGia) {
         $data = array (
             'TieuDeDGDD'          => $_POST['tieuDeDGDD'],
-            'PhucVu'              => $_POST['phucVu'] / 10.0,
-            'ChatLuong'           => $_POST['chatLuong'] / 10.0,
-            'ViTri'               => $_POST['viTri'] / 10.0,
-            'KhongGian'           => $_POST['khongGian'] / 10.0,
-            'GiaCaDGDD'           => $_POST['giaCaDGDD'] / 10.0,
+            'PhucVu'              => $_POST['phucVu'],
+            'ChatLuong'           => $_POST['chatLuong'],
+            'ViTri'               => $_POST['viTri'],
+            'KhongGian'           => $_POST['khongGian'],
+            'GiaCaDGDD'           => $_POST['giaCaDGDD'],
             'BaiNhanXetDGDD'      => $_POST['baiNhanXetDGDD'],
         );
 

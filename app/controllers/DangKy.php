@@ -9,6 +9,11 @@ class DangKy extends CI_Controller
         }
     }
     
+    /**
+     * Hiển thị trang Đăng ký và xử lý đăng ký
+     *
+     * @return void
+     */
     public function index()
     {
         $this->form_validation->set_rules('tenDangNhap', 'Tên đăng nhập', 'trim|required|max_length[100]|min_length[2]|is_unique[NGUOIDUNG.TenDangNhap]');

@@ -9,6 +9,8 @@
         <?php echo $this->session->flashdata('review_update_failed'); ?>
     </p>
 <?php endif; ?>
+
+<script src="<?php echo base_url('assets/js/danhGiaDiaDiem_js.js'); ?>"></script>
 <div class="panel panel-default">
     <div class="panel-heading media" style="overflow: auto;">
         <div class="t-danhgia-item-avatar media-left">
@@ -34,41 +36,56 @@
             <?php echo $danhGia['BaiNhanXetDGDD']; ?>
         </div>   
         <div class="t-like-panel">
-            <button class="btn btn-default btn-xs pull-left">Thích</button>
-            <div class="t-like-count pull-right">
-                <img src=""> 2
+            <button class="btn btn-default btn-xs pull-left like-review" value="<?php echo $danhGia['MaDGDD']; ?>">
+                <img src="<?php echo base_url('assets/images/app/like.png'); ?>"> Thích</a>
+            <div class="pull-right">
+                <div class="t-like-count" style="display: inline-block;">
+					<img src=<?php echo base_url('assets/images/app/like_num.png'); ?>> <?php echo $danhGia['TongLuotThichDGDD'];?> 
+				</div>
+				<div class="t-like-count" style="display: inline-block;">
+					<img src=<?php echo base_url('assets/images/app/comment.png'); ?>> <?php echo count($cacBinhLuan);?> 
+				</div>
             </div>
         </div>
     </div>
-    <div class="panel-footer">
-        <div class="t-comment">
-            <div class="t-comment-avatar pull-left">
-                <img src="">
-            </div>
-            <div>
-                <div class="t-comment-heading">
-                    <div class="t-danhgia-username pull-left">@nH CkOànG kHO@| pÉ xÝu</div>
-                    <div class="t-danhgia-date pull-right">10:17 25/04/2017</div>
+    <div id="commentPane">
+        <?php if (count($cacBinhLuan) == 0) : ?>
+        <div class="panel-footer">Chưa có bình luận</div>
+        <?php else: ?>
+        <?php foreach($cacBinhLuan as $binhLuan) : ?>
+        <div class="panel-footer">
+            <div class="media">
+                <div class="t-comment-avatar media-left">
+                    <?php $user = $this->NguoiDung_model->select($binhLuan['TenDangNhap']); 
+                          $img = $user['AnhDaiDien'];
+                          $ten = $user['TenNguoiDung'];
+                    ?>
+                    <img src="<?php echo base_url('assets/images/db/'.$img); ?>">
                 </div>
-                <div class="t-comment-body">
-                    Chuẩn, đồ ăn thấy gớm, mắc ói<br>
-                    Chuẩn, đồ ăn thấy gớm, mắc ói<br>
-                    Chuẩn, đồ ăn thấy gớm, mắc ói<br>
-                    Chuẩn, đồ ăn thấy gớm, mắc ói<br>
-                </div>
-            </div>
-            <div class="t-like-panel">
-                <button class="btn btn-default btn-xs pull-left">Thích</button>
-                <div class="t-like-count pull-right">
-                    <img src=""> 2
-                </div>
-            </div>
-        </div>         
+                <div class="media-body">
+                    <div class="t-comment-heading">
+                        <div class="t-danhgia-username pull-left"><?php echo $ten; ?></div>
+                        <div class="t-danhgia-date pull-right"><?php echo date('H:i d/m/Y', strtotime($binhLuan['NgayTaoBLDD'])); ?></div>
+                    </div>
+                    <div class="t-comment-body"><?php echo $binhLuan['NoiDungBLDD'] ?></div>
+                </div> 
+                <div class="t-like-panel media-footer">
+                    <button class="btn btn-default btn-xs pull-left like-comment" value="<?php echo $binhLuan['MaBLDD']; ?>">
+                        <img src="<?php echo base_url('assets/images/app/like.png'); ?>"> Thích</button>
+                    <div class="t-like-count pull-right">
+                        <img src="<?php echo base_url('assets/images/app/like_num.png'); ?>"> <?php echo $binhLuan['TongLuotThichBLDD'] ?> 
+                    </div>
+                </div>     
+            </div>         
+        </div>
+        <?php endforeach; ?>
+        <?php endif; ?>
     </div>
+
     <div class="panel-body input-group">
-            <input type="text" name="comment" class="form-control" placeholder="Viết bình luận...">
-            <div class="input-group-btn">
-                <button type="button" class="btn btn-default t-btn-default">Bình luận</button>
-            </div>
+        <input type="text" id="comment" class="form-control" placeholder="Viết bình luận...">
+        <div class="input-group-btn">
+            <button type="button" class="btn btn-default t-btn-default comment">Bình luận</button>
+        </div>
     </div>
 </div>

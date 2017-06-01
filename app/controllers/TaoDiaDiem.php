@@ -9,13 +9,17 @@ class TaoDiaDiem extends CI_Controller
         }
     }
 
+    /**
+     * Hiển thị trang Tạo địa điểm và xử lý thêm địa điểm
+     *
+     * @return void
+     */
     public function index()
     {
         $this->form_validation->set_rules('tenDiaDiem', 'Tên địa điểm', 'trim|required|max_length[100]|min_length[5]');
         $this->form_validation->set_rules('diaChi', 'Địa chỉ', 'trim|required|max_length[200]|min_length[6]');
         $this->form_validation->set_rules('soDT', 'Số điện thoại', 'trim|required|max_length[15]');
         $this->form_validation->set_rules('emailDD', 'Email', 'trim|required|valid_email');
-        $this->form_validation->set_rules('website', 'Website', 'trim|required');
         $this->form_validation->set_rules('moTaDD', 'Mô tả địa điểm', 'trim|required');
 
         if ($this->form_validation->run() == false) {
@@ -38,7 +42,7 @@ class TaoDiaDiem extends CI_Controller
                 $this->DiaDiem_model->insertImages($uploaded, $inserted);
 
                 //chuyển đến trang cá nhân địa điểm
-                //redirect(base_url());
+                redirect('diaDiem/cacDanhGia/'.$inserted);
             }
         }
     }

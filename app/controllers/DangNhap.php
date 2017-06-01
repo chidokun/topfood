@@ -7,6 +7,11 @@ class DangNhap extends CI_Controller
             redirect(base_url());
     }
 
+    /**
+     * Hiển thị trang Đăng nhập và xử lý đăng nhập
+     *
+     * @return void
+     */
     public function index()
     {
         $this->form_validation->set_rules('tenDangNhap', 'Tên đăng nhập', 'trim|required|max_length[100]|min_length[2]');
