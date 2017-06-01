@@ -363,9 +363,9 @@ td{
 /*Cắt chuỗi thành ... trong diadiemnhieulike nhat*/
 .t-catchuoidiadiemlike{
 	display: -webkit-box;
-	height: calc(1.2* 15px*3);
+	height: calc(1.2* 13px*3);
 	line-height: 1.3;
-	font-size: 15px;
+	font-size: 13px;
 	line-clamp:2;
 	overflow: hidden;
 	text-overflow: ellipsis;

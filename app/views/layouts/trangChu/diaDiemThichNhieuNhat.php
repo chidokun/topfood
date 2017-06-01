@@ -15,7 +15,7 @@
             <div style="padding:5px 3px; float:left; width:70%" >
                 <div class="t-diadiem-info-panel-left" style="width:99%;display: block">
                     <div style="font-weight: bold; font-size:18px;width:100%;display: block" class="t-catchuoi">Quán Thằn Lằn Chiênaaaaaaaaaa</div>
-                    <div style="opacity:0.7;font-size:13px;width:95%;display: block" class="t-catchuoidiadiemlike" ><em>Chuyên bán các món thằn lằn chiên, xào, đậm đà hương vị thằn lằn=]]]</em></div>
+                    <div style="opacity:0.7;" class="t-catchuoidiadiemlike" ><em>Chuyên bán các món thằn lằn chiên, xào, đậm đà hương vị thằn lằn=]]] anh yeu em nhieu lăm anh ah</em></div>
                 </div>
             </div>
         </div>
