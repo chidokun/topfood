@@ -365,10 +365,121 @@ td{
 	display: -webkit-box;
 	height: calc(1.2* 13px*3);
 	line-height: 1.3;
-	font-size: 13px;
+	font-size: 15px;
 	line-clamp:2;
 	overflow: hidden;
 	text-overflow: ellipsis;
+}
+/* Điều chỉnh size và khoảng cách panel của monngon va diadiem yeu thich*/
+.t-border-panel{
+	margin-bottom:0px;
+	font-size:20px;
+}
+/*padding panel và size của địa điểm đề xuất*/
+.t-padding-panel{
+	width:98%;
+	padding:5px;
+	margin: 0px auto;
+	font-size:18px; 
+}
+/*phần body của các địa điểm trong từng slider của địa điểm đề xuất*/
+.t-body-slider{
+	height:40%;
+	background-color:white
+}
+/*Div nội dung phần thông tin trong từng slider địa điểm đề xuất*/
+.t-info-body-slider{
+	padding:10px; 
+	display: table-cell;
+	height:100%; 
+	width:98%;
+}
+/*Tên địa điểm trong body của slider địa điểm đề xuất*/
+.t-panel-info-body-slider{
+	font-weight: bold;
+	font-size:18px;
+	padding-bottom:5px
+}
+/*Nội dung thông tin chi tiết của body của slider địa điểm đề xuất*/
+.t-content-info-body-slider{
+	opacity: 0.7;
+	font-size: 13px;
+}
+/* Định dạng div của từng nhóm bài review trong review mới nhất*/
+.t-group-review{
+	width:100%;
+	height:350px;
+	padding-bottom:15px
+}
+/*định dạng div tên địa điểm và điểm trong từng review*/
+.t-content-score-name-review{
+	height:50%; 
+	background-color:white;
+	padding-bottom:7px
+}
+/*Định dạng div tên địa điểm trong body của tên địa điểm và điểm từng review*/
+.t-content-name-review{
+	font-weight: bold; 
+	padding-left:10px;
+}
+/*Định dạng địa chỉ trong body của tên địa điểm và điểm từng review*/
+.t-content-address-review{
+	font-size:11px; 
+	opacity:0.7;
+}
+/*Div body nội dung của từng review */
+.t-content-info-body-reiew{
+	height:50%;
+	background-color:white;
+	border-top:1px solid #dddddd
+}
+/*Div nội dung chi tiết review*/
+.t-content-info-review{
+	opacity:0.7;
+	font-size:13px;
+	width:99%;
+	display: block
+}
+/*Body của từng div địa điểm yêu thích nhất*/
+.t-body-diadiem-thichnhat{
+	border:1px solid #dddddd;
+	height:20%;
+	padding-top:5px;
+}
+/*Số thứ tự top */
+.t-STT-top{
+	font-weight: bold;
+	font-size:30px; 
+	text-align:center;
+}
+/*Định dạng div img */
+.t-body-img{
+	padding-top: 1px; 
+	padding-right: 10px; 
+	padding-top:2px;
+	width:30%;
+	height:100%; 
+	float: left;
+}
+/*định dạng div thông tin của món ngon và địa điểm thích nhất*/
+.t-div-body-infor{
+	padding:5px 3px; 
+	float:left; 
+	width:70%;
+}
+/*định dạng tên trong thông tin của món ngon và địa điểm thích nhất*/
+.t-name-div-body-infor{
+	font-weight: bold; 
+	font-size:18px;
+	width:100%;
+	display: block;
+}
+/*định dạng nội dung thông tin trong thông tin của món ngon và địa điểm thích nhất*/
+.t-content-div-body-infor{
+	opacity:0.7;
+	font-size:13px;
+	width:99%;
+	display: block;
 }
 a{
 	color:black;

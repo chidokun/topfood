@@ -1,5 +1,6 @@
 <div  style="height:100%;margin-bottom:0px">
-  <p class="panel-heading t-panel-header" style="padding:5px;margin: 0px auto;  font-size:18px; border-bottom: 4px solid orange; width:98%">Địa điểm đề xuất</p>
+  <p class="panel-heading t-panel-header t-padding-panel" style="border-bottom: 4px solid orange; ">Địa điểm đề xuất</p>
+
   <div id="myCarousel1" class="carousel slide" data-ride="carousel" style="width:100%;padding-top: 30px; height:86%">
       <!-- Indicators -->
     <ol class="carousel-indicators" style="top:100%; ">
@@ -17,11 +18,11 @@
             <div style="height:60%">
               <img src="<?php echo base_url(); ?>/assets/images/db/banhxeo.jpg" alt="Địa điểm đề xuất" style="height:100%; width:100%" >
             </div>
-            <div style="height:40%; background-color:white" class="t-catchuoi">
-              <div class="t-diadiem-info-panel-left t-catchuoi" style="padding:10px; display: table-cell;height:100%; width:98%">
-                <div class="t-catchuoi" style="font-weight: bold; font-size:18px">Quán Thằn Lằn Chiên</div>
-                <div class="t-catchuoi"><em>Chuyên bán các món thằn lằn chiên, xào, đậm đà hương vị thằn lằn =]]]</em></div>
-                <div class="t-catchuoi"><span class="glyphicon glyphicon-home"></span> 103 Nguyễn Du, Quận 1, TP. HCM</div>
+            <div  class="t-catchuoi t-body-slider">
+              <div class="t-diadiem-info-panel-left t-catchuoi t-info-body-slider">
+                <div class="t-catchuoi t-panel-info-body-slider " >Quán Thằn Lằn Chiên</div>
+                <div class="t-catchuoi t-content-info-body-slider" ><em>Chuyên bán các món thằn lằn chiên, xào, đậm đà hương vị thằn lằn =]]]</em></div>
+                <div class="t-catchuoi t-content-info-body-slider" ><span class="glyphicon glyphicon-home"></span> 103 Nguyễn Du, Quận 1, TP. HCM</div>
 		          </div>
             </div>
           </a>
@@ -30,11 +31,11 @@
             <div style="height:60%">
               <img src="<?php echo base_url(); ?>/assets/images/db/dauhu.jpg" alt="Địa điểm đề xuất" style="height:100%; width:100%" >
             </div>
-            <div style="height:40%; background-color:white" class="t-catchuoi">
-              <div class="t-diadiem-info-panel-left t-catchuoi" style="padding:10px; display: table-cell;height:100%; width:98%">
-                <div class="t-catchuoi" style="font-weight: bold; font-size:18px">Quán Thằn Lằn Chiên</div>
-                <div class="t-catchuoi"><em>Chuyên bán các món thằn lằn chiên, xào, đậm đà hương vị thằn lằn =]]]</em></div>
-                <div class="t-catchuoi"><span class="glyphicon glyphicon-home"></span> 103 Nguyễn Du, Quận 1, TP. HCM</div>
+            <div  class="t-catchuoi t-body-slider">
+              <div class="t-diadiem-info-panel-left t-catchuoi t-info-body-slider">
+                <div class="t-catchuoi t-panel-info-body-slider " >Quán Thằn Lằn Chiên</div>
+                <div class="t-catchuoi t-content-info-body-slider" ><em>Chuyên bán các món thằn lằn chiên, xào, đậm đà hương vị thằn lằn =]]]</em></div>
+                <div class="t-catchuoi t-content-info-body-slider" ><span class="glyphicon glyphicon-home"></span> 103 Nguyễn Du, Quận 1, TP. HCM</div>
 		          </div>
             </div>
           </a>
@@ -43,11 +44,11 @@
             <div style="height:60%">
               <img src="<?php echo base_url(); ?>/assets/images/db/comtron.png" alt="Địa điểm đề xuất" style="height:100%; width:100%" >
             </div>
-            <div style="height:40%; background-color:white" class="t-catchuoi">
-              <div class="t-diadiem-info-panel-left t-catchuoi" style="padding:10px; display: table-cell;height:100%; width:98%">
-                <div class="t-catchuoi" style="font-weight: bold; font-size:18px">Quán Thằn Lằn Chiên</div>
-                <div class="t-catchuoi"><em>Chuyên bán các món thằn lằn chiên, xào, đậm đà hương vị thằn lằn =]]]</em></div>
-                <div class="t-catchuoi"><span class="glyphicon glyphicon-home"></span> 103 Nguyễn Du, Quận 1, TP. HCM</div>
+            <div  class="t-catchuoi t-body-slider">
+              <div class="t-diadiem-info-panel-left t-catchuoi t-info-body-slider">
+                <div class="t-catchuoi t-panel-info-body-slider " >Quán Thằn Lằn Chiên</div>
+                <div class="t-catchuoi t-content-info-body-slider" ><em>Chuyên bán các món thằn lằn chiên, xào, đậm đà hương vị thằn lằn =]]]</em></div>
+                <div class="t-catchuoi t-content-info-body-slider" ><span class="glyphicon glyphicon-home"></span> 103 Nguyễn Du, Quận 1, TP. HCM</div>
 		          </div>
             </div>
           </a>
@@ -62,11 +63,11 @@
             <div style="height:60%">
               <img src="<?php echo base_url(); ?>/assets/images/db/comrang.jpg" alt="Địa điểm đề xuất" style="height:100%; width:100%" >
             </div>
-            <div style="height:40%; background-color:white" class="t-catchuoi">
-              <div class="t-diadiem-info-panel-left t-catchuoi" style="padding:10px; display: table-cell;height:100%; width:98%">
-                <div class="t-catchuoi" style="font-weight: bold; font-size:18px">Quán Thằn Lằn Chiên</div>
-                <div class="t-catchuoi"><em>Chuyên bán các món thằn lằn chiên, xào, đậm đà hương vị thằn lằn =]]]</em></div>
-                <div class="t-catchuoi"><span class="glyphicon glyphicon-home"></span> 103 Nguyễn Du, Quận 1, TP. HCM</div>
+            <div  class="t-catchuoi t-body-slider">
+              <div class="t-diadiem-info-panel-left t-catchuoi t-info-body-slider">
+                <div class="t-catchuoi t-panel-info-body-slider " >Quán Thằn Lằn Chiên</div>
+                <div class="t-catchuoi t-content-info-body-slider" ><em>Chuyên bán các món thằn lằn chiên, xào, đậm đà hương vị thằn lằn =]]]</em></div>
+                <div class="t-catchuoi t-content-info-body-slider" ><span class="glyphicon glyphicon-home"></span> 103 Nguyễn Du, Quận 1, TP. HCM</div>
 		          </div>
             </div>
           </a>
@@ -75,11 +76,11 @@
             <div style="height:60%">
               <img src="<?php echo base_url(); ?>/assets/images/db/bunoc.jpg" alt="Địa điểm đề xuất" style="height:100%; width:100%" >
             </div>
-            <div style="height:40%; background-color:white" class="t-catchuoi">
-              <div class="t-diadiem-info-panel-left t-catchuoi" style="padding:10px; display: table-cell;height:100%; width:98%">
-                <div class="t-catchuoi" style="font-weight: bold; font-size:18px">Quán Thằn Lằn Chiên</div>
-                <div class="t-catchuoi"><em>Chuyên bán các món thằn lằn chiên, xào, đậm đà hương vị thằn lằn =]]]</em></div>
-                <div class="t-catchuoi"><span class="glyphicon glyphicon-home"></span> 103 Nguyễn Du, Quận 1, TP. HCM</div>
+            <div  class="t-catchuoi t-body-slider">
+              <div class="t-diadiem-info-panel-left t-catchuoi t-info-body-slider">
+                <div class="t-catchuoi t-panel-info-body-slider " >Quán Thằn Lằn Chiên</div>
+                <div class="t-catchuoi t-content-info-body-slider" ><em>Chuyên bán các món thằn lằn chiên, xào, đậm đà hương vị thằn lằn =]]]</em></div>
+                <div class="t-catchuoi t-content-info-body-slider" ><span class="glyphicon glyphicon-home"></span> 103 Nguyễn Du, Quận 1, TP. HCM</div>
 		          </div>
             </div>
           </a>
@@ -88,11 +89,11 @@
             <div style="height:60%">
               <img src="<?php echo base_url(); ?>/assets/images/db/bungio.jpg" alt="Địa điểm đề xuất" style="height:100%; width:100%" >
             </div>
-            <div style="height:40%; background-color:white" class="t-catchuoi">
-              <div class="t-diadiem-info-panel-left t-catchuoi" style="padding:10px; display: table-cell;height:100%; width:98%">
-                <div class="t-catchuoi" style="font-weight: bold; font-size:18px">Quán Thằn Lằn Chiên</div>
-                <div class="t-catchuoi"><em>Chuyên bán các món thằn lằn chiên, xào, đậm đà hương vị thằn lằn =]]]</em></div>
-                <div class="t-catchuoi"><span class="glyphicon glyphicon-home"></span> 103 Nguyễn Du, Quận 1, TP. HCM</div>
+            <div  class="t-catchuoi t-body-slider">
+              <div class="t-diadiem-info-panel-left t-catchuoi t-info-body-slider">
+                <div class="t-catchuoi t-panel-info-body-slider " >Quán Thằn Lằn Chiên</div>
+                <div class="t-catchuoi t-content-info-body-slider" ><em>Chuyên bán các món thằn lằn chiên, xào, đậm đà hương vị thằn lằn =]]]</em></div>
+                <div class="t-catchuoi t-content-info-body-slider" ><span class="glyphicon glyphicon-home"></span> 103 Nguyễn Du, Quận 1, TP. HCM</div>
 		          </div>
             </div>
           </a>
@@ -107,11 +108,11 @@
             <div style="height:60%">
               <img src="<?php echo base_url(); ?>/assets/images/db/shushi.jpg" alt="Địa điểm đề xuất" style="height:100%; width:100%" >
             </div>
-            <div style="height:40%; background-color:white" class="t-catchuoi">
-              <div class="t-diadiem-info-panel-left t-catchuoi" style="padding:10px; display: table-cell;height:100%; width:98%">
-                <div class="t-catchuoi" style="font-weight: bold; font-size:18px">Quán Thằn Lằn Chiên</div>
-                <div class="t-catchuoi"><em>Chuyên bán các món thằn lằn chiên, xào, đậm đà hương vị thằn lằn =]]]</em></div>
-                <div class="t-catchuoi"><span class="glyphicon glyphicon-home"></span> 103 Nguyễn Du, Quận 1, TP. HCM</div>
+            <div  class="t-catchuoi t-body-slider">
+              <div class="t-diadiem-info-panel-left t-catchuoi t-info-body-slider">
+                <div class="t-catchuoi t-panel-info-body-slider " >Quán Thằn Lằn Chiên</div>
+                <div class="t-catchuoi t-content-info-body-slider" ><em>Chuyên bán các món thằn lằn chiên, xào, đậm đà hương vị thằn lằn =]]]</em></div>
+                <div class="t-catchuoi t-content-info-body-slider" ><span class="glyphicon glyphicon-home"></span> 103 Nguyễn Du, Quận 1, TP. HCM</div>
 		          </div>
             </div>
           </a>
@@ -120,11 +121,11 @@
             <div style="height:60%">
               <img src="<?php echo base_url(); ?>/assets/images/db/ga.jpg" alt="Địa điểm đề xuất" style="height:100%; width:100%" >
             </div>
-            <div style="height:40%; background-color:white" class="t-catchuoi">
-              <div class="t-diadiem-info-panel-left t-catchuoi" style="padding:10px; display: table-cell;height:100%; width:98%">
-                <div class="t-catchuoi" style="font-weight: bold; font-size:18px">Quán Thằn Lằn Chiên</div>
-                <div class="t-catchuoi"><em>Chuyên bán các món thằn lằn chiên, xào, đậm đà hương vị thằn lằn =]]]</em></div>
-                <div class="t-catchuoi"><span class="glyphicon glyphicon-home"></span> 103 Nguyễn Du, Quận 1, TP. HCM</div>
+            <div  class="t-catchuoi t-body-slider">
+              <div class="t-diadiem-info-panel-left t-catchuoi t-info-body-slider">
+                <div class="t-catchuoi t-panel-info-body-slider " >Quán Thằn Lằn Chiên</div>
+                <div class="t-catchuoi t-content-info-body-slider" ><em>Chuyên bán các món thằn lằn chiên, xào, đậm đà hương vị thằn lằn =]]]</em></div>
+                <div class="t-catchuoi t-content-info-body-slider" ><span class="glyphicon glyphicon-home"></span> 103 Nguyễn Du, Quận 1, TP. HCM</div>
 		          </div>
             </div>
           </a>
@@ -133,11 +134,11 @@
             <div style="height:60%">
               <img src="<?php echo base_url(); ?>/assets/images/db/bonam.jpg" alt="Địa điểm đề xuất" style="height:100%; width:100%" >
             </div>
-            <div style="height:40%; background-color:white" class="t-catchuoi">
-              <div class="t-diadiem-info-panel-left t-catchuoi" style="padding:10px; display: table-cell;height:100%; width:98%">
-                <div class="t-catchuoi" style="font-weight: bold; font-size:18px">Quán Thằn Lằn Chiên</div>
-                <div class="t-catchuoi"><em>Chuyên bán các món thằn lằn chiên, xào, đậm đà hương vị thằn lằn =]]]</em></div>
-                <div class="t-catchuoi"><span class="glyphicon glyphicon-home"></span> 103 Nguyễn Du, Quận 1, TP. HCM</div>
+            <div  class="t-catchuoi t-body-slider">
+              <div class="t-diadiem-info-panel-left t-catchuoi t-info-body-slider">
+                <div class="t-catchuoi t-panel-info-body-slider " >Quán Thằn Lằn Chiên</div>
+                <div class="t-catchuoi t-content-info-body-slider" ><em>Chuyên bán các món thằn lằn chiên, xào, đậm đà hương vị thằn lằn =]]]</em></div>
+                <div class="t-catchuoi t-content-info-body-slider" ><span class="glyphicon glyphicon-home"></span> 103 Nguyễn Du, Quận 1, TP. HCM</div>
 		          </div>
             </div>
           </a>

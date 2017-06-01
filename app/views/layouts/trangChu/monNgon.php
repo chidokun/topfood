@@ -1,15 +1,15 @@
 <div class="panel panel-default">
-  <p class="panel-heading t-panel-header t-border-panel" style="border-bottom:4px solid orange">Top địa điểm ưa thích nhất</p>
-  <div class="t-body -body-diadiem-thichnhat">
+  <p class="panel-heading t-panel-header t-border-panel" style="border-bottom:4px solid orange">Món ngon</p>
+  <div class="t-body" style="border:1px solid #dddddd; height:18%;padding-top:5px">
       <!--Top1-->
       <!--STT-->
         <div class="col-md-2" style="padding:25px 14px;">
-            <span style="color:red;" class="t-STT-top">01</span>
+            <span style="color:darkgray;" class="t-STT-top">01</span>
         </div>
         <div class="col-md-10" style="padding:0px">
             <!--Hình ảnh-->
             <div  class="t-body-img">
-                <img src="<?php echo base_url(); ?>/assets/images/db/comtron.png" alt="top1" style="width:100%;height:90%; padding-top:5px">
+                <img src="<?php echo base_url(); ?>/assets/images/db/ga.jpg" alt="top1" style="width:100%;height:90%; padding-top:5px">
             </div>
             <!--Thông tin-->
             <div class="t-div-body-infor" >
@@ -22,16 +22,16 @@
     <!--/top1-->
     </div>
 
-    <div class="t-body" style="border:1px solid #dddddd; height:20%; ">
+    <div class="t-body" style="border:1px solid #dddddd; height:18%; ">
       <!--Top2-->
       <!--STT-->
         <div class="col-md-2" style="padding:25px 14px;">
-            <span style="color:Orange;" class="t-STT-top">02</span>
+            <span style="color:darkgray;" class="t-STT-top">02</span>
         </div>
         <div class="col-md-10" style="padding:0px">
             <!--Hình ảnh-->
             <div  class="t-body-img">
-                <img src="<?php echo base_url(); ?>/assets/images/db/bonam.jpg" alt="top2" style="width:100%;height:90%; padding-top:5px">
+                <img src="<?php echo base_url(); ?>/assets/images/db/dauhu.jpg" alt="top2" style="width:100%;height:90%; padding-top:5px">
             </div>
             <!--Thông tin-->
             <div class="t-div-body-infor" >
@@ -44,16 +44,16 @@
     <!--/top2-->
     </div>
 
-    <div class="t-body" style="border:1px solid #dddddd; height:20%; ">
+    <div class="t-body" style="border:1px solid #dddddd; height:18%; ">
       <!--Top3-->
       <!--STT-->
         <div class="col-md-2" style="padding:25px 14px;">
-            <span style="color:green;" class="t-STT-top">03</span>
+            <span style="color:darkgray;" class="t-STT-top">03</span>
         </div>
         <div class="col-md-10" style="padding:0px">
             <!--Hình ảnh-->
             <div  class="t-body-img">
-                <img src="<?php echo base_url(); ?>/assets/images/db/ga.jpg" alt="top3" style="width:100%;height:90%; padding-top:5px">
+                <img src="<?php echo base_url(); ?>/assets/images/db/comrang.jpg" alt="top3" style="width:100%;height:90%; padding-top:5px">
             </div>
             <!--Thông tin-->
             <div class="t-div-body-infor" >
@@ -66,16 +66,16 @@
     <!--/top3-->
     </div>
 
-    <div class="t-body" style="border:1px solid #dddddd; height:20%;">
+    <div class="t-body" style="border:1px solid #dddddd; height:18%;">
       <!--Top4-->
       <!--STT-->
         <div class="col-md-2" style="padding:25px 14px;">
-            <span style="color:black;" class="t-STT-top">04</span>
+            <span style="color:darkgray;" class="t-STT-top">04</span>
         </div>
         <div class="col-md-10" style="padding:0px">
             <!--Hình ảnh-->
             <div  class="t-body-img">
-                <img src="<?php echo base_url(); ?>/assets/images/db/shushi.jpg" alt="top4" style="width:100%;height:90%; padding-top:5px">
+                <img src="<?php echo base_url(); ?>/assets/images/db/bonam.jpg" alt="top4" style="width:100%;height:90%; padding-top:5px">
             </div>
             <!--Thông tin-->
             <div class="t-div-body-infor" >
@@ -88,16 +88,16 @@
     <!--/top4-->
     </div>
 
-    <div class="t-body" style="border:1px solid #dddddd; height:20%; ">
+    <div class="t-body" style="border:1px solid #dddddd; height:18%; ">
       <!--Top5-->
       <!--STT-->
         <div class="col-md-2" style="padding:25px 14px;">
-            <span style="color:blue;" class="t-STT-top">05</span>
+            <span style="color:darkgray;" class="t-STT-top">05</span>
         </div>
         <div class="col-md-10" style="padding:0px">
             <!--Hình ảnh-->
             <div  class="t-body-img">
-                <img src="<?php echo base_url(); ?>/assets/images/db/miquang.jpg" alt="top5" style="width:100%;height:90%; padding-top:5px">
+                <img src="<?php echo base_url(); ?>/assets/images/db/banhxeo.jpg" alt="top5" style="width:100%;height:90%; padding-top:5px">
             </div>
             <!--Thông tin-->
             <div class="t-div-body-infor" >
@@ -109,4 +109,12 @@
         </div>
     <!--/top5-->
     </div>
+    <!--Phân Trang-->
+    <ul class="pagination t-body" style="height:70%; margin :auto; padding-left:25%; border: none; color:orange ">
+        <li><a href="#" style="border: none; color:orange">1</a></li>
+        <li class="active"><a href="#" style="border: none; background-color:orange">2</a></li>
+        <li><a href="#" style="border: none; color:orange">3</a></li>
+        <li><a href="#" style="border: none; color:orange">4</a></li>
+        <li><a href="#" style="border: none; color:orange">5</a></li>
+    </ul>
 </div>
