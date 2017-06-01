@@ -19,6 +19,7 @@ class DangNhap extends CI_Controller
 
         if ($this->form_validation->run() == FALSE) {
             $data['main_content'] = 'dangNhap';
+            $data['title'] = 'Đăng nhập';
             $this->load->view('layouts/main-register', $data);
         } else {
             $tenDangNhap = $this->input->post('tenDangNhap');
@@ -41,5 +42,15 @@ class DangNhap extends CI_Controller
                 redirect('DangNhap');
             }
         }
+    }
+
+    public function logout() {
+        $this->session->unset_userdata('tenDangNhap');
+        $this->session->unset_userdata('logged_in');
+        $this->session->unset_userdata('maQH');
+
+        $this->session->sess_destroy();
+        $this->session->set_flashdata('logged_out', 'Bạn đã đăng xuất');
+        redirect('DangNhap');
     }
 }
