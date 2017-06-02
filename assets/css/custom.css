@@ -104,9 +104,12 @@ footer {
 	padding: 6px 20px;
 }
 
-.t-btnxoa {
-	background: url(../../assets/images/app/backgroundDatlai.PNG) repeat scroll left ;
+.t-btn-delete {
+	border: none;
+	background-color: transparent;
+	display: inline-block;
 }
+
 .t-avatar{
 	margin: 0 auto;
 	border: 1px solid #e6e6e6;
@@ -536,15 +539,10 @@ h1, h2 {
 .t-diadiem-info-panel {
 	background-color: white;
 	height: 180px;
-	padding: 15px 25px;
 	border: 1px solid #ddd;
+	padding: 20px 30px 5px;
 }
-.t-diadiem-info-panel-left {
-	float: left;
-}
-.t-diadiem-info-panel-right {
-	float: right;
-}
+
 .t-diadiem-avescore {
 	border: 10px solid #f59f08;
 	border-radius: 50%;
@@ -631,6 +629,7 @@ h1, h2 {
 .t-danhgia-date {
 	font-size: 90%;
 	color: #919191;
+	display: inline-block;
 }
 .t-danhgia-diem {
 	background-color: #f59f08;

@@ -1,21 +1,39 @@
 var base_url = 'http://localhost/topfood/';
-$(document).ready(function() {
-    $(".like-review").click(function() {
+$(document).ready(onload);
+
+/**
+ * Gán các event cho object cụ thể, trước khi gán phải gỡ bỏ cái cũ để tránh bị nhân lên
+ */
+function onload() {
+    //Sự kiện khi thích 1 đánh giá
+    $(".like-review").unbind('click').click(function() {
         likeReview();
     });
-       
-    $(".like-comment").click(function() {
+    
+    //Sự kiện khi thích 1 comment
+    $(".like-comment").unbind('click').click(function() {
         likeComment($(this));
     });
 
-    $(".comment").click(function() {
+    //Sự kiện nhấn nút Bình luận
+    $(".comment").unbind('click').click(function() {
         if (!$("#comment").val())
             alert("Bạn cần nhập bình luận");
-        else
+        else {
             comment();
+        }
     });
 
-    $('#comment').keypress(function (e) {
+    //Sự kiện khi xóa một comment
+    $(".t-btn-delete").unbind('click').click(function() {
+        if (!confirm('Bạn có chắc muốn xóa bình luận này?'))
+            e.preventDefault();
+        else
+            deleteComment($(this));
+    });
+
+    //Sự kiện khi đang gõ comment và nhấn Enter
+    $('#comment').unbind('keypress').keypress(function (e) {
         var key = e.which;
         if(key == 13) 
         {
@@ -23,7 +41,7 @@ $(document).ready(function() {
             $("#comment").val("");
         }
     });   
-});
+}
 
 function likeReview() {
     $.post(
@@ -70,6 +88,21 @@ function comment()
         function(result){ // Success
             $('.no-comment').remove();
             $('#commentPane').append(result);
+            $('#reviewComment').text($('#commentPane > div').length);
+            onload();
+        }, 
+        'text' // dataTyppe
+    );
+}
+
+function deleteComment(btnXoa) {
+    $.post(
+        base_url + 'danhGiaDiaDiem/deleteComment', // URL 
+        {
+            MaBLDD : btnXoa.val(),
+        },  // Data
+        function(result){ // Success
+            $('.cmt' + btnXoa.val()).remove();
             $('#reviewComment').text($('#commentPane > div').length);
         }, 
         'text' // dataTyppe

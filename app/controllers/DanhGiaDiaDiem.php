@@ -11,23 +11,36 @@ class DanhGiaDiaDiem extends CI_Controller
         $binhLuan = $this->BinhLuanDD_model->selectBinhLuan($this->BinhLuanDD_model->insertBinhLuan());
         $user = $this->NguoiDung_model->select($binhLuan['TenDangNhap']); 
         
-        echo '<div class="panel-footer">
+        echo '<div class="panel-footer cmt'.$binhLuan['MaBLDD'].'">
                 <div class="media">
+                    <!-- Ảnh đại diện -->
                     <div class="t-comment-avatar media-left">
                         <img src="'.base_url('assets/images/db/'.$user['AnhDaiDien']).'">
                     </div>
+
+                    <!-- Nội dung bình luận -->
                     <div class="media-body">
                         <div class="t-comment-heading">
+                            <!-- Tên người dùng -->
                             <div class="t-danhgia-username pull-left">'.$user['TenNguoiDung'].'</div>
-                            <div class="t-danhgia-date pull-right">'.date('H:i d/m/Y', strtotime($binhLuan['NgayTaoBLDD'])).'</div>
+                            <div class="pull-right">
+                                <!-- Ngày tháng -->
+                                <div class="t-danhgia-date">'.date('H:i d/m/Y', strtotime($binhLuan['NgayTaoBLDD'])).'</div>
+                                <!-- Nút xóa -->'.
+                                ($this->session->userdata('logged_in') && ($this->session->userdata('tenDangNhap') == $binhLuan['TenDangNhap'] || $this->session->userdata('maQH') == 0)?
+                                '<button title="Xóa" class="t-btn-delete" value="'.$binhLuan['MaBLDD'].'">
+                                    <img src="'.base_url('assets/images/app/delete.png').'"></button>': '').
+                            '</div>
                         </div>
                         <div class="t-comment-body">'.$binhLuan['NoiDungBLDD'].'</div>
                     </div> 
-                    <div class="t-like-panel media-footer">
-                        <button class="btn btn-default btn-xs pull-left like-comment" value="'.$binhLuan['MaBLDD'].'">
+
+                    <!-- Like, count like -->
+                    <div class="t-like-panel media-footer">'.($this->session->userdata('logged_in')?
+                        '<button class="btn btn-default btn-xs like-comment" value="'.$binhLuan['MaBLDD'].'">
                             <img src="'.base_url('assets/images/app/like.png').'"> <span class="likeCmt'.$binhLuan['MaBLDD'].'">'.($this->BinhLuanDD_model->isLiked($binhLuan['MaBLDD']) ? 'Bỏ thích' : 'Thích').'</span>
-                        </button>
-                        <div class="t-like-count pull-right">
+                        </button>':'').
+                        '<div class="t-like-count pull-right">
                             <img src="'.base_url('assets/images/app/like_num.png').'"> <span class="numLikeCmt'.$binhLuan['MaBLDD'].'">'.$binhLuan['TongLuotThichBLDD'].'</span>
                         </div>
                     </div>     
@@ -67,5 +80,15 @@ class DanhGiaDiaDiem extends CI_Controller
         }
 
         echo $this->BinhLuanDD_model->countLike($_POST['MaBLDD']);
+    }
+
+    /**
+     * Xóa một bình luận. Hàm này dùng cho AJAX. Phương thức POST
+     *
+     * @return text
+     */
+    public function deleteComment()
+    {
+        $this->BinhLuanDD_model->delete($_POST['MaBLDD']);
     }
 }
