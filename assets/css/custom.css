@@ -98,6 +98,18 @@ footer {
 	color: #ffffff !important;
 }
 
+.t-btn-default-transparent{
+	background: rgba(245,159,8,0.3) repeat scroll left ;
+}
+
+.t-btn-default-transparent:hover{
+	background: rgba(245,159,8,0.7) repeat scroll left ;
+}
+
+.t-btn-default-transparent:active{
+	background: rgba(245,159,8,0.9) repeat scroll left ;
+}
+
 .t-btn {
 	background: url(../../assets/images/app/backgroundDatlai.PNG) repeat scroll left ;
 	margin-left: 5px;
@@ -128,24 +140,26 @@ footer {
 
  .t-diadiemcho{
  	border: 1px solid #f2f2f2;
- 	box-shadow: 2px#eeeeee;
+ 	box-shadow: 2px #eeeeee;
  	width: 95%;
  	margin: 14px auto 5px auto;
  }
 
 .t-imgdiadiemcho{
-	margin-top: 15px;
-	height: 120px;
-	width: 100%;
+	
+	height: 130px;
+	width: 130px;
 	clear: both;
 	position: absolute;
+	border:1px solid #dddddd;
 }
 
 .t-user{
 	border-radius: 18px;
 	width: 40px;
 	height: 40px;
-	margin: 7px 7px 10px 15px;
+	margin: 7px 5px 5px 5px;
+	float: left;
 }
 
 .t-col-3{
@@ -155,6 +169,7 @@ footer {
 
 .t-username{
 	color: #0569c7;
+	padding-left: 5px;
 }
 
 .t-telephone{
@@ -163,7 +178,6 @@ footer {
 
 .t-infodiadiemcho{
 	margin-left: 10px;
-	margin-top: 15px;
 }
 
 .t-btndiadiemcho{
@@ -188,15 +202,16 @@ footer {
 	height: 80%;
 	margin: 20px 20px 20px 15px;
 }
-.t-header-infor{
+.t-header-info{
 	padding-top: 5%;
 	padding-bottom: 20px;
 	color: #ffffff;
 	font-size: 30px;
 	text-shadow:  2px 3px 3px black;
+	font-weight: bold;
 }
 
-.t-panel-infor{
+.t-panel-info{
 	width: 90%;
 	font-size: 23px;
 }
@@ -244,7 +259,7 @@ footer {
 	padding: 10px 15px 0px 15px;
 }
 
-.t-header-infordetail{
+.t-header-infodetail{
 	padding-top: 10px;
 	padding-left: 10%;
 	padding-bottom: 20px;
@@ -297,12 +312,6 @@ td{
     display: flex;
 }
 
-.t-editinfor{
-	width: 58.33333333%;
-	height: 100%;
-	padding-left: 10%;
-	margin-top: 15px;
-}
 
 .t-editpassword{
 	width: 58.33333333%;

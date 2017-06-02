@@ -110,5 +110,20 @@ class DiaDiem_model extends CI_Model
         $this->db->where('MaDiaDiem', $maDiaDiem);
         return  $this->db->update('DIADIEM', $data);   
     }
+
+    /**
+     * Chọn các địa điểm đang chờ duyệt có trạng thái là 0
+     *
+     * @param [type] $maDiaDiem
+     * @return void
+     */
+    public function selectDiaDiemCho()
+    {
+        # code...
+        $this->db->where('TrangThai', 0);
+        $query = $this->db->get('DIADIEM');
+
+        return $query->result_array();
+    }
 }
 ?>

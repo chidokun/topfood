@@ -22,6 +22,38 @@ class NguoiDung_model extends CI_Model
         $inserted = $this->db->insert('NGUOIDUNG', $data);
         return $inserted;
     }
+    
+    /**
+     * Update thông tin người dùng
+     *
+     * @return boolean
+     */
+    public function updateThongTin($tenDangNhap)
+    {
+        $data = array (
+            'TenNguoiDung' => $_POST['tenNguoiDung'],
+            'NgaySinh' => $_POST['ngaySinh'],
+            'GioiTinh' => $_POST['gioiTinh'],
+            'Email' => $_POST['email'],
+            'GioiThieuBanThan' => $_POST['gioiThieuBanThan'],
+        );
+        $this->db->where('TenDangNhap', $tenDangNhap);
+        return  $this->db->update('NGUOIDUNG', $data); 
+    }
+
+    /**
+     * Update mật khẩu người dùng
+     *
+     * @return boolean
+     */
+    public function updateMatKhau($tenDangNhap)
+    {
+        $data = array (
+            'MatKhau' => md5($_POST['matKhauMoi'])
+        );
+        $this->db->where('TenDangNhap', $tenDangNhap);
+        return  $this->db->update('NGUOIDUNG', $data); 
+    }
 
     /**
      * Lấy thông tin một người dùng.
