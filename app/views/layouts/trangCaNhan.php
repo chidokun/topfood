@@ -1,8 +1,8 @@
 <div>
-  <?php $this->load->view($trangCaNhan_anhBia); ?>
+  <?php $this->load->view($layoutAnhBia); ?>
 </div>
 <div>
-  <?php $this->load->view($trangCaNhan_content); ?>
+  <?php $this->load->view($layoutContent); ?>
 </div>
 
 

@@ -37,7 +37,7 @@ class DangNhap extends CI_Controller
                 $this->session->set_userdata($userdata);
                 redirect('Home');
             } else {
-                $this->session->set_flashdata('login_failed', 'Thông tin đăng nhập không thành công');
+                $this->session->set_flashdata('login_failed', 'Tên đăng nhập hoặc mật khẩu không chính xác.');
                 redirect('DangNhap');
             }
         }

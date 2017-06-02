@@ -6,7 +6,7 @@
         <div class="col-md-2" style="padding:25px 14px;">
             <span style="color:darkgray;" class="t-STT-top">01</span>
         </div>
-        <div class="col-md-10" style="padding:0px">
+        <a href="<?php echo base_url('dangKy'); ?>" class="col-md-10" style="padding:0px">
             <!--Hình ảnh-->
             <div  class="t-body-img">
                 <img src="<?php echo base_url(); ?>/assets/images/db/ga.jpg" alt="top1" style="width:100%;height:90%; padding-top:5px">
@@ -18,7 +18,7 @@
                     <div  class="t-catchuoidiadiemlike t-content-div-body-infor"><em style="width:100%">Chuyên bán các món thằn lằn chiên, xào, đậm đà hương vị thằn lằn=]]]anh eu em nhieu lam lam luon ah</em></div>
                 </div>
             </div>
-        </div>
+        </a>
     <!--/top1-->
     </div>
 
@@ -28,7 +28,7 @@
         <div class="col-md-2" style="padding:25px 14px;">
             <span style="color:darkgray;" class="t-STT-top">02</span>
         </div>
-        <div class="col-md-10" style="padding:0px">
+        <a href="<?php echo base_url('dangKy'); ?>" class="col-md-10" style="padding:0px">
             <!--Hình ảnh-->
             <div  class="t-body-img">
                 <img src="<?php echo base_url(); ?>/assets/images/db/dauhu.jpg" alt="top2" style="width:100%;height:90%; padding-top:5px">
@@ -40,7 +40,7 @@
                     <div  class="t-catchuoidiadiemlike t-content-div-body-infor"><em>Chuyên bán các món thằn lằn chiên, xào, đậm đà hương vị thằn lằn=]]]aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</em></div>
                 </div>
             </div>
-        </div>
+        </a>
     <!--/top2-->
     </div>
 
@@ -50,7 +50,7 @@
         <div class="col-md-2" style="padding:25px 14px;">
             <span style="color:darkgray;" class="t-STT-top">03</span>
         </div>
-        <div class="col-md-10" style="padding:0px">
+        <a href="<?php echo base_url('dangKy'); ?>" class="col-md-10" style="padding:0px">
             <!--Hình ảnh-->
             <div  class="t-body-img">
                 <img src="<?php echo base_url(); ?>/assets/images/db/comrang.jpg" alt="top3" style="width:100%;height:90%; padding-top:5px">
@@ -62,7 +62,7 @@
                     <div  class="t-catchuoidiadiemlike t-content-div-body-infor"><em>Chuyên bán các món thằn lằn chiên, xào, đậm đà hương vị thằn lằn=]]]aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</em></div>
                 </div>
             </div>
-        </div>
+        </a>
     <!--/top3-->
     </div>
 
@@ -72,7 +72,7 @@
         <div class="col-md-2" style="padding:25px 14px;">
             <span style="color:darkgray;" class="t-STT-top">04</span>
         </div>
-        <div class="col-md-10" style="padding:0px">
+        <a href="<?php echo base_url('dangKy'); ?>" class="col-md-10" style="padding:0px">
             <!--Hình ảnh-->
             <div  class="t-body-img">
                 <img src="<?php echo base_url(); ?>/assets/images/db/bonam.jpg" alt="top4" style="width:100%;height:90%; padding-top:5px">
@@ -84,7 +84,7 @@
                     <div  class="t-catchuoidiadiemlike t-content-div-body-infor"><em>Chuyên bán các món thằn lằn chiên, xào, đậm đà hương vị thằn lằn=]]]aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</em></div>
                 </div>
             </div>
-        </div>
+        </a>
     <!--/top4-->
     </div>
 
@@ -94,7 +94,7 @@
         <div class="col-md-2" style="padding:25px 14px;">
             <span style="color:darkgray;" class="t-STT-top">05</span>
         </div>
-        <div class="col-md-10" style="padding:0px">
+        <a href="<?php echo base_url('dangKy'); ?>" class="col-md-10" style="padding:0px">
             <!--Hình ảnh-->
             <div  class="t-body-img">
                 <img src="<?php echo base_url(); ?>/assets/images/db/banhxeo.jpg" alt="top5" style="width:100%;height:90%; padding-top:5px">
@@ -106,7 +106,7 @@
                     <div  class="t-catchuoidiadiemlike t-content-div-body-infor"><em>Chuyên bán các món thằn lằn chiên, xào, đậm đà hương vị thằn lằn=]]]aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</em></div>
                 </div>
             </div>
-        </div>
+        </a>
     <!--/top5-->
     </div>
     <!--Phân Trang-->

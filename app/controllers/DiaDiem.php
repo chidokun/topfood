@@ -309,4 +309,5 @@ class DiaDiem extends CI_Controller
             redirect('diaDiem/cacDanhGia/'.$maDiaDiem.'/'.$maDanhGia);    
         }
     }
+    
 }
