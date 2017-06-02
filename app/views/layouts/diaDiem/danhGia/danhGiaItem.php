@@ -10,8 +10,16 @@
     </p>
 <?php endif; ?>
 
+<?php if ($this->session->flashdata('review_deleted_failed')): ?> 
+    <p class='alert alert-dismissable alert-danger'>
+    <a href='#' class='close' data-dismiss='alert' aria-label='close'>×</a>
+        <?php echo $this->session->flashdata('review_deleted_failed'); ?>
+    </p>
+<?php endif; ?>
+
 <script src="<?php echo base_url('assets/js/danhGiaDiaDiem_js.js'); ?>"></script>
-<div class="panel panel-default">
+<input type="text" id="maDGDD" value="<?php echo $danhGia['MaDGDD']; ?>" style="display:none">
+<div class="panel panel-default">  
     <div class="panel-heading media" style="overflow: auto;">
         <div class="t-danhgia-item-avatar media-left">
             <img src=<?php echo base_url('assets/images/db/'.($this->NguoiDung_model->select($danhGia['TenDangNhap']))['AnhDaiDien']); ?>>
@@ -37,20 +45,20 @@
         </div>   
         <div class="t-like-panel">
             <button class="btn btn-default btn-xs pull-left like-review" value="<?php echo $danhGia['MaDGDD']; ?>">
-                <img src="<?php echo base_url('assets/images/app/like.png'); ?>"> Thích</a>
+                <img src="<?php echo base_url('assets/images/app/like.png'); ?>"> <span id="reviewLikeBtn"><?php echo $this->DanhGiaDiaDiem_model->isLiked($danhGia['MaDGDD']) ? 'Bỏ thích' : 'Thích'; ?></span></button>
             <div class="pull-right">
                 <div class="t-like-count" style="display: inline-block;">
-					<img src=<?php echo base_url('assets/images/app/like_num.png'); ?>> <?php echo $danhGia['TongLuotThichDGDD'];?> 
+					<img src=<?php echo base_url('assets/images/app/like_num.png'); ?>> <span id="reviewLike"><?php echo $danhGia['TongLuotThichDGDD'];?></span>
 				</div>
 				<div class="t-like-count" style="display: inline-block;">
-					<img src=<?php echo base_url('assets/images/app/comment.png'); ?>> <?php echo count($cacBinhLuan);?> 
+					<img src=<?php echo base_url('assets/images/app/comment.png'); ?>> <span id="reviewComment"><?php echo count($cacBinhLuan);?></span>
 				</div>
             </div>
         </div>
     </div>
     <div id="commentPane">
         <?php if (count($cacBinhLuan) == 0) : ?>
-        <div class="panel-footer">Chưa có bình luận</div>
+        <div class="panel-footer no-comment">Chưa có bình luận</div>
         <?php else: ?>
         <?php foreach($cacBinhLuan as $binhLuan) : ?>
         <div class="panel-footer">
@@ -71,9 +79,9 @@
                 </div> 
                 <div class="t-like-panel media-footer">
                     <button class="btn btn-default btn-xs pull-left like-comment" value="<?php echo $binhLuan['MaBLDD']; ?>">
-                        <img src="<?php echo base_url('assets/images/app/like.png'); ?>"> Thích</button>
+                        <img src="<?php echo base_url('assets/images/app/like.png'); ?>"> <span class="<?php echo 'likeCmt'.$binhLuan['MaBLDD']; ?>"><?php echo $this->BinhLuanDD_model->isLiked($binhLuan['MaBLDD']) ? 'Bỏ thích' : 'Thích'; ?></span></button>
                     <div class="t-like-count pull-right">
-                        <img src="<?php echo base_url('assets/images/app/like_num.png'); ?>"> <?php echo $binhLuan['TongLuotThichBLDD'] ?> 
+                        <img src="<?php echo base_url('assets/images/app/like_num.png'); ?>"> <span class="<?php echo 'numLikeCmt'.$binhLuan['MaBLDD']; ?>"><?php echo $binhLuan['TongLuotThichBLDD'] ?> 
                     </div>
                 </div>     
             </div>         
@@ -81,11 +89,11 @@
         <?php endforeach; ?>
         <?php endif; ?>
     </div>
-
-    <div class="panel-body input-group">
+    <div class="panel-body input-group">       
         <input type="text" id="comment" class="form-control" placeholder="Viết bình luận...">
         <div class="input-group-btn">
             <button type="button" class="btn btn-default t-btn-default comment">Bình luận</button>
-        </div>
+        </div>   
     </div>
+
 </div>

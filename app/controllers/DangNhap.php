@@ -51,6 +51,6 @@ class DangNhap extends CI_Controller
 
         $this->session->sess_destroy();
         $this->session->set_flashdata('logged_out', 'Bạn đã đăng xuất');
-        redirect('DangNhap');
+        redirect('DangNhap','refresh');
     }
 }

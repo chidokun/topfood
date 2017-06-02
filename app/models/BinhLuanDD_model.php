@@ -44,5 +44,86 @@ class BinhLuanDD_model extends CI_Model
 
         return $query->row_array();
     }
+
+    /**
+     * Thích một bình luận
+     *
+     * @param string $maDanhGia Mã bình luận
+     * @return boolean
+     */
+    public function like($maBinhLuan) {
+        $data = array (
+            'MaBLDD'      => $maBinhLuan,
+            'TenDangNhap' => $this->session->userdata('tenDangNhap')
+        );
+
+        return $this->db->insert('THICHBLDD', $data);
+    }
+
+    /**
+     * Bỏ thích một bình luận
+     *
+     * @param string $maDanhGia Mã bình luận
+     * @return boolean
+     */
+    public function unlike($maBinhLuan) {
+        $this->db->where('MaBLDD', $maBinhLuan);
+        $this->db->where('TenDangNhap', $this->session->userdata('tenDangNhap'));
+
+        return $this->db->delete('THICHBLDD');
+    }
+
+    /**
+     * Đếm tổng lượt thích của bình luận
+     *
+     * @param string $maDanhGia Mã bình luận
+     * @return int
+     */
+    public function countLike($maBinhLuan) {
+        $this->db->where('MaBLDD', $maBinhLuan);
+
+        return $this->db->get('THICHBLDD')->num_rows();
+    }
+
+    /**
+     * Kiểm tra người dùng đang đăng nhập có like bình luận chưa
+     *
+     * @param string $maDanhGia Mã bình luận
+     * @return boolean
+     */
+    public function isLiked($maBinhLuan) {
+        $this->db->where('MaBLDD', $maBinhLuan);
+        $this->db->where('TenDangNhap', $this->session->userdata('tenDangNhap'));
+
+        return $this->db->get('THICHBLDD')->num_rows() == 1;
+    }
+
+    /**
+     * Xóa tất cả lượt thích của bình luận
+     *
+     * @param string $maBinhLuan Mã bình luận
+     * @return boolean
+     */
+    public function deleteAllLike($maBinhLuan) {
+        $this->db->where('MaBLDD', $maBinhLuan);
+
+        return $this->db->delete('THICHBLDD');
+    }
+
+    /**
+     * Xóa tất cả bình luận của đánh giá.
+     *
+     * @param string $maDanhGia
+     * @return boolean
+     */
+    public function deleteAllBinhLuan($maDanhGia) {
+        $cacBinhLuan = $this->selectAllBinhLuan($maDanhGia);
+        foreach ($cacBinhLuan as $binhLuan) {
+            $this->deleteAllLike($binhLuan['MaBLDD']);
+        }
+
+        $this->db->where('MaDGDD', $maDanhGia);
+        return $this->db->delete('BINHLUANDD');
+    }
 }
 ?>

@@ -325,4 +325,24 @@ class DiaDiem extends CI_Controller
             redirect('diaDiem/cacDanhGia/'.$maDiaDiem.'/'.$maDanhGia);    
         }
     }
+
+    /**
+     * Xử lý xóa một đánh giá
+     *
+     * @param string $maDanhGia Mã đánh giá
+     * @return void
+     */
+    public function deleteDanhGia($maDanhGia) {
+        $maDiaDiem = $this->DanhGiaDiaDiem_model->selectDanhGia($maDanhGia)['MaDiaDiem'];
+        $deleted = $this->DanhGiaDiaDiem_model->delete($maDanhGia);
+        
+        if($deleted) {
+            $this->session->set_flashdata('review_deleted_successful', 'Xóa đánh giá thành công.');
+            redirect('diaDiem/cacDanhGia/'.$maDiaDiem);
+        }
+        else {
+            $this->session->set_flashdata('review_deleted_failed', 'Không thể xóa đánh giá.');
+            redirect('diaDiem/cacDanhGia/'.$maDiaDiem.'/'.$maDanhGia);
+        }
+    }
 }
