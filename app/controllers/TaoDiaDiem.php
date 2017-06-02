@@ -24,6 +24,8 @@ class TaoDiaDiem extends CI_Controller
 
         if ($this->form_validation->run() == false) {
             $data["main_content"] = "taoDiaDiem";
+             // đặt tiêu đề
+            $data['title'] = 'Tạo địa điểm mới';
             $this->load->view("layouts/main", $data);
         } else {
             $inserted = $this->DiaDiem_model->insert();

@@ -160,4 +160,86 @@ class DanhGiaDiaDiem_model extends CI_Model
         $this->db->where('MaDGDD', $maDanhGia);
         return $this->db->update('DANHGIADIADIEM', $data);
     }
+
+    /**
+     * Thích một bài đánh giá
+     *
+     * @param string $maDanhGia Mã đánh giá
+     * @return boolean
+     */
+    public function like($maDanhGia) {
+        $data = array (
+            'MaDGDD'      => $maDanhGia,
+            'TenDangNhap' => $this->session->userdata('tenDangNhap')
+        );
+
+        return $this->db->insert('THICHDGDD', $data);
+    }
+
+    /**
+     * Bỏ thích một bài đánh giá
+     *
+     * @param string $maDanhGia Mã đánh giá
+     * @return boolean
+     */
+    public function unlike($maDanhGia) {
+        $this->db->where('MaDGDD', $maDanhGia);
+        $this->db->where('TenDangNhap', $this->session->userdata('tenDangNhap'));
+
+        return $this->db->delete('THICHDGDD');
+    }
+
+    /**
+     * Đếm tổng lượt thích của bài đánh giá
+     *
+     * @param string $maDanhGia Mã đánh giá
+     * @return int
+     */
+    public function countLike($maDanhGia) {
+        $this->db->where('MaDGDD', $maDanhGia);
+
+        return $this->db->get('THICHDGDD')->num_rows();
+    }
+
+    /**
+     * Kiểm tra người dùng đang đăng nhập có like đánh giá chưa
+     *
+     * @param string $maDanhGia Mã đánh giá
+     * @return boolean
+     */
+    public function isLiked($maDanhGia) {
+        $this->db->where('MaDGDD', $maDanhGia);
+        $this->db->where('TenDangNhap', $this->session->userdata('tenDangNhap'));
+
+        return $this->db->get('THICHDGDD')->num_rows() == 1;
+    }
+
+    /**
+     * Xóa một đánh giá
+     *
+     * @param string $maDanhGia Mã đánh giá
+     * @return boolean
+     */
+    public function delete($maDanhGia) {
+        $this->BinhLuanDD_model->deleteAllBinhLuan($maDanhGia);
+
+        $this->db->where('MaDGDD', $maDanhGia);
+        return $this->db->delete('DANHGIADIADIEM');
+    }
+
+    /**
+     * Xóa tất cả đánh giá của địa điểm
+     *
+     * @param string $maDiaDiem Mã địa điểm
+     * @return boolean
+     */
+    public function deleteAllDanhGia($maDiaDiem) {
+        $cacDanhGia = $this->selectAllDanhGia($maDiaDiem);
+        foreach($cacDanhGia as $danhGia) {
+            $this->BinhLuanDD_model->deleteAllBinhLuan($maDanhGia);
+        }
+        
+        $this->db->where('MaDiaDiem', $maDiaDiem);
+        return $this->db->delete('DANHGIADIADIEM');
+    }
 }

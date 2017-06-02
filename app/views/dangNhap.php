@@ -7,18 +7,22 @@
         <h2>Website đánh giá địa điểm ăn uống<br>hàng đầu Việt Nam</h1>
     </div>
     <div class="col-md-4 t-register-panel t-login-panel">
-        <?php if ($this->session->flashdata('registered')) {
-                    echo "<p class='alert alert-dismissable alert-success'>";
-                    echo "<a href='#' class='close' data-dismiss='alert' aria-label='close'>×</a>";
-                    echo $this->session->flashdata('registered');
-                    echo "</p>";
-				} elseif ($this->session->flashdata('login_failed')) {
-					echo "<p class='alert alert-dismissable alert-danger'>";
-                    echo "<a href='#' class='close' data-dismiss='alert' aria-label='close'>×</a>";
-					echo $this->session->flashdata('login_failed');
-					echo "</p>";
-				}
-            ?>
+        <?php if ($this->session->flashdata('registered')) :?>
+            <p class='alert alert-dismissable alert-success'>
+            <a href='#' class='close' data-dismiss='alert' aria-label='close'>×</a>
+            <?php echo $this->session->flashdata('registered'); ?>
+            </p>
+		<?php elseif ($this->session->flashdata('login_failed')) : ?>
+			<p class='alert alert-dismissable alert-danger'>
+            <a href='#' class='close' data-dismiss='alert' aria-label='close'>×</a>
+			<?php echo $this->session->flashdata('login_failed'); ?>
+			</p>
+        <?php elseif ($this->session->flashdata('logged_out')) : ?>
+            <p class='alert alert-dismissable alert-success'>
+            <a href='#' class='close' data-dismiss='alert' aria-label='close'>×</a>
+			<?php echo $this->session->flashdata('logged_out'); ?>
+			</p>
+        <?php endif; ?>
 		<?php echo validation_errors("<p class='alert alert-dismissable alert-warning'><a href='#' class='close' data-dismiss='alert' aria-label='close'>×</a>"); ?>
         <?php echo form_open('DangNhap'); ?>
 

@@ -1,16 +1,62 @@
 var base_url = 'http://localhost/topfood/';
 $(document).ready(function() {
-    $(".like-review").click(likeReview());
-    $(".like-comment").click(likeComment());
-    $(".comment").click(comment());
+    $(".like-review").click(function() {
+        likeReview();
+    });
+       
+    $(".like-comment").click(function() {
+        likeComment($(this));
+    });
+
+    $(".comment").click(function() {
+        if (!$("#comment").val())
+            alert("Bạn cần nhập bình luận");
+        else
+            comment();
+    });
+
+    $('#comment').keypress(function (e) {
+        var key = e.which;
+        if(key == 13) 
+        {
+            $(".comment").click();
+            $("#comment").val("");
+        }
+    });   
 });
 
 function likeReview() {
-
+    $.post(
+        base_url + 'danhGiaDiaDiem/likeReview', // URL 
+        {
+            MaDGDD : $('#maDGDD').val()
+        },  // Data
+        function (result) { // Success
+            $("#reviewLike").text(result);
+            if ($("#reviewLikeBtn").text() == "Thích")
+                $("#reviewLikeBtn").text("Bỏ thích");
+            else
+                $("#reviewLikeBtn").text("Thích");
+        }, 
+        'text' // dataTyppe
+    );
 }
 
-function likeComment() {
-
+function likeComment(btnThich) {
+    $.post(
+        base_url + 'danhGiaDiaDiem/likeComment', // URL 
+        {
+            MaBLDD : btnThich.val()
+        },  // Data
+        function (result) { // Success
+            $(".numLikeCmt" + btnThich.val()).text(result);
+            if ($(".likeCmt" + btnThich.val()).text() == "Thích")
+                $(".likeCmt" + btnThich.val()).text("Bỏ thích");
+            else
+                $(".likeCmt" + btnThich.val()).text("Thích");
+        }, 
+        'text' // dataTyppe
+    );
 }
 
 function comment()
@@ -19,34 +65,13 @@ function comment()
         base_url + 'danhGiaDiaDiem/insertBinhLuan', // URL 
         {
             NoiDungBLDD : $('#comment').val(),
-            MaDGDD : arr[7]
-
+            MaDGDD : $('#maDGDD').val()
         },  // Data
         function(result){ // Success
-            $('#commentPane').append(
-                '<div class="panel-footer">\
-                    <div class="media">\
-                        <div class="t-comment-avatar media-left">\
-                            <img src="' + $("#imgNguoiDungNav").attr("src") +
-                        '</div>\
-                        <div class="media-body">\
-                            <div class="t-comment-heading media-body">\
-                                <div class="t-danhgia-username pull-left">' + $("#tenNguoiDungNav").html() + '</div>\
-                                <div class="t-danhgia-date pull-right">' + result[2] + '</div>\
-                            </div>\
-                            <div class="t-comment-body">' + result[1] + '</div>\
-                        </div>\
-                        <div class="t-like-panel media-footer">\
-                            <a href="" class="btn btn-default btn-xs pull-left">\
-                                <img src=""> Thích</a>\
-                            <div class="t-like-count pull-right">\
-                                <img src=""> ' + result[3] +
-                            '</div>\
-                        </div>\
-                    </div>\
-                </div>'
-            );
+            $('.no-comment').remove();
+            $('#commentPane').append(result);
+            $('#reviewComment').text($('#commentPane > div').length);
         }, 
-        'json' // dataTyppe
+        'text' // dataTyppe
     );
 }

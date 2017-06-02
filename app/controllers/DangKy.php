@@ -25,6 +25,7 @@ class DangKy extends CI_Controller
 
         if ($this->form_validation->run() == false) {
             $data['main_content'] = 'dangKy';
+            $data['title'] = 'Đăng ký tài khoản';
             $this->load->view('layouts/main-register', $data);
         } else {
             //upload avatar

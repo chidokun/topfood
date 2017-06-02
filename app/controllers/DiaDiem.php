@@ -12,6 +12,8 @@ class DiaDiem extends CI_Controller
         // lấy thông tin địa điểm
         $data['diaDiem_data'] = $this->DiaDiem_model->select($maDiaDiem);
 
+        // đặt tiêu đề
+        $data['title'] = $data['diaDiem_data']['TenDiaDiem'].' - Đánh giá';
         
         // trường hợp tất cả đánh giá
         if (!$this->uri->rsegment(4)) {
@@ -71,6 +73,9 @@ class DiaDiem extends CI_Controller
         // lấy thông tin địa điểm
         $data['diaDiem_data'] = $this->DiaDiem_model->select($maDiaDiem);
 
+         // đặt tiêu đề
+        $data['title'] = $data['diaDiem_data']['TenDiaDiem'].' - Hình ảnh';
+
         // lấy danh mục hình ảnh
         $data['listImg'] = $this->DiaDiem_model->selectImages($maDiaDiem);
 
@@ -83,8 +88,6 @@ class DiaDiem extends CI_Controller
         // nội dung chính menu là hình ảnh
         $data['layoutDiaDiemContent'] = 'layouts/diaDiem/hinhAnh-page';
 
-        
-        
         // hiển thị giao diện
         $this->load->view('layouts/main', $data);
     }
@@ -99,6 +102,9 @@ class DiaDiem extends CI_Controller
     {
         // lấy thông tin địa điểm
         $data['diaDiem_data'] = $this->DiaDiem_model->select($maDiaDiem);
+
+         // đặt tiêu đề
+        $data['title'] = $data['diaDiem_data']['TenDiaDiem'].' - Thực đơn';
 
         // chọn layout địa điểm
         $data['main_content'] = 'layouts/diaDiem';
@@ -123,6 +129,9 @@ class DiaDiem extends CI_Controller
     {
         // lấy thông tin địa điểm
         $data['diaDiem_data'] = $this->DiaDiem_model->select($maDiaDiem);
+
+         // đặt tiêu đề
+        $data['title'] = $data['diaDiem_data']['TenDiaDiem'].' - Thông tin chi tiết';
 
         // chọn layout địa điểm
         $data['main_content'] = 'layouts/diaDiem';
@@ -158,6 +167,7 @@ class DiaDiem extends CI_Controller
 
         if ($this->form_validation->run() == false) {
             $data['diaDiem_data'] = $this->DiaDiem_model->select($maDiaDiem);
+            $data['title'] = $data['diaDiem_data']['TenDiaDiem'].' - Đánh giá';
             $data['main_content'] = 'layouts/diaDiem';
             $data['layoutDiaDiemInfo'] = 'layouts/diaDiem/info';
             $data['layoutDiaDiemContent'] = 'layouts/diaDiem/thongTin-edit';
@@ -189,6 +199,9 @@ class DiaDiem extends CI_Controller
 
         // lấy thông tin địa điểm
         $data['diaDiem_data'] = $this->DiaDiem_model->select($maDiaDiem);
+
+         // đặt tiêu đề
+        $data['title'] = 'Viết đánh giá cho '.$data['diaDiem_data']['TenDiaDiem'];
 
         // lấy bảng đánh giá
         $data['bangDanhGia_data'] = $this->DanhGiaDiaDiem_model->selectBangDanhGia($maDiaDiem);
@@ -232,6 +245,9 @@ class DiaDiem extends CI_Controller
         // lấy thông tin địa điểm
         $maDiaDiem = $data['danhGia']['MaDiaDiem'];
         $data['diaDiem_data'] = $this->DiaDiem_model->select($maDiaDiem);
+
+         // đặt tiêu đề
+        $data['title'] = 'Sửa đánh giá của '.$data['diaDiem_data']['TenDiaDiem'];
 
         // chọn layout địa điểm
         $data['main_content'] = 'layouts/diaDiem';
@@ -309,5 +325,24 @@ class DiaDiem extends CI_Controller
             redirect('diaDiem/cacDanhGia/'.$maDiaDiem.'/'.$maDanhGia);    
         }
     }
-    
+
+    /**
+     * Xử lý xóa một đánh giá
+     *
+     * @param string $maDanhGia Mã đánh giá
+     * @return void
+     */
+    public function deleteDanhGia($maDanhGia) {
+        $maDiaDiem = $this->DanhGiaDiaDiem_model->selectDanhGia($maDanhGia)['MaDiaDiem'];
+        $deleted = $this->DanhGiaDiaDiem_model->delete($maDanhGia);
+        
+        if($deleted) {
+            $this->session->set_flashdata('review_deleted_successful', 'Xóa đánh giá thành công.');
+            redirect('diaDiem/cacDanhGia/'.$maDiaDiem);
+        }
+        else {
+            $this->session->set_flashdata('review_deleted_failed', 'Không thể xóa đánh giá.');
+            redirect('diaDiem/cacDanhGia/'.$maDiaDiem.'/'.$maDanhGia);
+        }
+    }
 }

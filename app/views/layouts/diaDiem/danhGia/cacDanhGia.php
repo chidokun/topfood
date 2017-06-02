@@ -2,6 +2,12 @@
 	<?php if (count($cacDanhGia) == 0) : ?>
 			<p class='alert alert-dismissable alert-success'>Chưa có đánh giá nào.</p>
 	<?php else: ?>
+	<?php if ($this->session->flashdata('review_deleted_successful')): ?> 
+            <p class='alert alert-dismissable alert-success'>
+            <a href='#' class='close' data-dismiss='alert' aria-label='close'>×</a>
+                <?php echo $this->session->flashdata('review_deleted_successful'); ?>
+            </p>
+	<?php endif; ?>
 	<?php foreach ($cacDanhGia as $danhGia) : ?>
         <div class="panel panel-default">
 			<div class="panel-heading media" style="overflow: auto;">
