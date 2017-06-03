@@ -1,11 +1,25 @@
-<script src=<?php echo base_url('assets/js/duyetDiaDiem_js.js'); ?> ></script>
 
 <div class="panel panel-default">
-     <p class="panel-heading t-panel-header">Duyệt các địa điểm chờ</p>
-	<?php foreach ($cacDiaDiemCho as $diaDiemCho) : ?>
+     <div class="panel-heading t-panel-header">Duyệt các địa điểm chờ</div>
+
+<?php if ($this->session->flashdata('duyet_update_successful')): ?> 
+    <p class='alert alert-dismissable alert-success'>
+    <a href='#' class='close' data-dismiss='alert' aria-label='close'>×</a>
+        <?php echo $this->session->flashdata('duyet_update_successful'); ?>
+    </p>
+<?php elseif ($this->session->flashdata('duyet_update_failed')): ?>
+    <p class='alert alert-dismissable alert-danger'>
+    <a href='#' class='close' data-dismiss='alert' aria-label='close'>×</a>
+        <?php echo $this->session->flashdata('duyet_update_failed'); ?>
+    </p>
+<?php endif; ?>
+
+	<?php foreach ($cacDiaDiemCho as  $diaDiemCho) : ?>
     <!--Tạo địa điểm chờ 1-->
-	<input type="text" id="maDiaDiemCho" value="<?php echo $diaDiemCho['MaDiaDiem']; ?>" style="display:none">
-    <div class="t-body row" >
+<!--	<input type="text"  id="<?php echo $diaDiemCho['MaDiaDiem']; ?>" style="display:none">-->
+	<?php echo validation_errors("<p class='alert alert-dismissable alert-warning'><a href='#' class='close' data-dismiss='alert' aria-label='close'>×</a>"); ?>
+        <?php echo form_open('duyetDiaDiemCho/duyetDiaDiem/'.$diaDiemCho['MaDiaDiem']); ?>
+    <div class="t-body row" id="<?php echo $diaDiemCho['MaDiaDiem']; ?>" >
     	<div class="t-diadiemcho" style="box-shadow: 2px 2px #dddddd; margin-bottom:7px; padding:10px">
     		<div class="col-md-8">
     			<div class="row" style="height:140px">
@@ -34,12 +48,13 @@
             <!--Button-->
     		<div class="col-md-4">
     			<div class="t-btndiadiemcho">
-    				<button type="submit" class="btn btn-default t-btn-default" id="submit" name="submit">Duyệt ngay</button>
+    				<button type="submit" class="btn btn-default t-btn-default submit"  name="submit" value="<?php echo $diaDiemCho['MaDiaDiem']; ?>">Duyệt ngay</button>
     				<a href="#" class="btn btn-default t-btnxoa">Xóa địa điểm</a>
     			</div>
     		</div>
     	</div>
     </div>
+	<?php echo form_close(); ?>
     <!--Tạo địa điểm chờ 1-->
 	<?php endforeach; ?>
 </div>
