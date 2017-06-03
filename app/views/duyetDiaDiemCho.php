@@ -1,8 +1,11 @@
+<script src=<?php echo base_url('assets/js/duyetDiaDiem_js.js'); ?> ></script>
+
 <div class="panel panel-default">
      <p class="panel-heading t-panel-header">Duyệt các địa điểm chờ</p>
 	<?php foreach ($cacDiaDiemCho as $diaDiemCho) : ?>
     <!--Tạo địa điểm chờ 1-->
-    <div class="t-body row">
+	<input type="text" id="maDiaDiemCho" value="<?php echo $diaDiemCho['MaDiaDiem']; ?>" style="display:none">
+    <div class="t-body row" >
     	<div class="t-diadiemcho" style="box-shadow: 2px 2px #dddddd; margin-bottom:7px; padding:10px">
     		<div class="col-md-8">
     			<div class="row" style="height:140px">

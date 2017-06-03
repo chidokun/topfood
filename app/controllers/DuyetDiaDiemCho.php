@@ -18,6 +18,17 @@ class DuyetDiaDiemCho extends CI_Controller {
 		$this->load->view("layouts/main", $data);
 	}
 
-
+    /**
+     * Upadate trạng thái của địa điểm chờ từ 0 sang 1
+     *
+     * @param string $value
+     * @return void
+     */
+    public function updateTrangThai()
+    {
+        # code...
+        $this->DiaDiemCho_model->updateTrangThai($_POST['maDiaDiem']);
+        return true;
+    }
 }
 ?>
