@@ -1,11 +1,11 @@
 <div class="panel panel-default">
   <div class="panel-heading t-panel-header">Bảng đánh giá chung</div>
   <div class="panel-body">
+    <?php if ($this->session->userdata('logged_in')): ?>
     <div class="btn-group btn-group-justified">
-        <div class="btn-group">
-            <a href="<?php echo base_url('diaDiem/vietDanhGia/'.$diaDiem_data['MaDiaDiem']); ?>" class="btn btn-default t-btn-default">Viết đánh giá ngay...</a>
-        </div>
+        <a href="<?php echo base_url('diaDiem/vietDanhGia/'.$diaDiem_data['MaDiaDiem']); ?>" class="btn btn-default t-btn-default">Viết đánh giá ngay...</a>
     </div>
+    <?php endif; ?>
     <div class="t-danhgia-count">
         <div><b><?php echo $tongDanhGia; ?></b> đánh giá.</div>
         <div><b><?php echo $tongBinhLuan; ?></b> bình luận.</div>

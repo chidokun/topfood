@@ -111,6 +111,19 @@ class BinhLuanDD_model extends CI_Model
     }
 
     /**
+     * Xóa một bình luận
+     *
+     * @param string $maBinhLuan Mã bình luận
+     * @return void
+     */
+    public function delete($maBinhLuan) {
+        $this->deleteAllLike($maBinhLuan);
+        $this->db->where('MaBLDD', $maBinhLuan);
+
+        return $this->db->delete('BINHLUANDD');
+    }
+
+    /**
      * Xóa tất cả bình luận của đánh giá.
      *
      * @param string $maDanhGia

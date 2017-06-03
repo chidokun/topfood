@@ -2,7 +2,7 @@
 <div class="panel panel-default">
   <div class="panel-heading t-panel-header">Bảng đánh giá tiêu chí</div>
   <div class="panel-body">
-    <?php if ($this->session->userdata('logged_in') && ($this->session->userdata('tenDangNhap') == $danhGia['TenDangNhap'] || $this->session->userdata('maQH') == 0)): ?>
+    <?php if (($this->session->userdata('logged_in')) && ($this->session->userdata('tenDangNhap') == $danhGia['TenDangNhap'] || $this->session->userdata('maQH') == 0)): ?>
     <div class="btn-group btn-group-justified">
             <a href="<?php echo base_url('diaDiem/suaDanhGia/'.$danhGia['MaDGDD']); ?>" class="btn btn-default t-btn-default">Sửa đánh giá</a>
             <a href="<?php echo base_url('diaDiem/deleteDanhGia/'.$danhGia['MaDGDD']); ?>" id="deleteReview" class="btn btn-default t-btn-default">Xóa đánh giá</a>

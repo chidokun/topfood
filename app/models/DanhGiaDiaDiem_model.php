@@ -215,6 +215,18 @@ class DanhGiaDiaDiem_model extends CI_Model
     }
 
     /**
+     * Xóa tất cả lượt thích của đánh giá
+     *
+     * @param string $maDanhGia Mã bình luận
+     * @return boolean
+     */
+    public function deleteAllLike($maDanhGia) {
+        $this->db->where('MaDGDD', $maDanhGia);
+
+        return $this->db->delete('THICHDGDD');
+    }
+
+    /**
      * Xóa một đánh giá
      *
      * @param string $maDanhGia Mã đánh giá
@@ -222,6 +234,7 @@ class DanhGiaDiaDiem_model extends CI_Model
      */
     public function delete($maDanhGia) {
         $this->BinhLuanDD_model->deleteAllBinhLuan($maDanhGia);
+        $this->deleteAllLike($maDanhGia);
 
         $this->db->where('MaDGDD', $maDanhGia);
         return $this->db->delete('DANHGIADIADIEM');
@@ -236,7 +249,8 @@ class DanhGiaDiaDiem_model extends CI_Model
     public function deleteAllDanhGia($maDiaDiem) {
         $cacDanhGia = $this->selectAllDanhGia($maDiaDiem);
         foreach($cacDanhGia as $danhGia) {
-            $this->BinhLuanDD_model->deleteAllBinhLuan($maDanhGia);
+            $this->BinhLuanDD_model->deleteAllBinhLuan($danhGia['MaDGDD']);
+            $this->deleteAllLike($danhGia['MaDGDD']);
         }
         
         $this->db->where('MaDiaDiem', $maDiaDiem);

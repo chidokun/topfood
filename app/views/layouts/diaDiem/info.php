@@ -3,7 +3,7 @@
 		<img class="t-diadiem-img-avatar" src=<?php echo base_url('/assets/images/db/'.$diaDiem_data['AnhDaiDienDD']); ?>>
 	</div>
 	<div class="col-md-9 t-diadiem-info-panel">
-		<div class="t-diadiem-info-panel-left">
+		<div class="pull-left">
 			<div class="t-diadiem-name"><?php echo $diaDiem_data['TenDiaDiem']; ?></div>
 			<div><em><?php echo $diaDiem_data['MoTaDD']; ?></em></div>
 			<div><span class="glyphicon glyphicon-home"></span> <?php echo $diaDiem_data['DiaChi']; ?></div>
@@ -18,7 +18,7 @@
 			</div>
 			<div><span class="glyphicon glyphicon-tags"></span> Từ ?đ - ?đ</div>
 		</div>
-		<div class="t-diadiem-info-panel-right">
+		<div class="pull-right">
 			<div class="t-diadiem-avescore"><?php echo number_format($diaDiem_data['DiemTrungBinhDD'], 1); ?></div>
 			<div class="t-diadiem-avescore-description">Điểm trung bình</div>
 		</div>
