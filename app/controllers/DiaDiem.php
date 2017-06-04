@@ -103,6 +103,9 @@ class DiaDiem extends CI_Controller
         // lấy thông tin địa điểm
         $data['diaDiem_data'] = $this->DiaDiem_model->select($maDiaDiem);
 
+        // lấy danh sách các món ăn 
+        $data['cacMonAn'] = $this->MonAn_model->selectAll($maDiaDiem);
+
          // đặt tiêu đề
         $data['title'] = $data['diaDiem_data']['TenDiaDiem'].' - Thực đơn';
 
@@ -228,7 +231,7 @@ class DiaDiem extends CI_Controller
     }
 
     /**
-     * Hiển thị trang Sử đánh giá
+     * Hiển thị trang Sửa đánh giá
      *
      * @param int $maDiaDiem Mã địa điểm
      * @return void
