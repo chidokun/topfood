@@ -129,6 +129,7 @@ footer {
 	width: 200px;
 	height: 200px;
 	background: url(../../assets/images/app/img.PNG) no-repeat center;
+	background-size: cover;
 	cursor: pointer;
 }
 .t-lbavatar{
@@ -201,6 +202,7 @@ footer {
 	margin-bottom: 20px;
 	vertical-align: middle;
 	position: relative;
+	background-size: cover;
 }
 .t-col-2{
 	width: 16.66666667%;
@@ -518,16 +520,20 @@ a{
 	border-radius: 10px;
 }
 .t-footer-register {
-	position: relative;
+	position: absolute;
     left: 0;
     right: 0;
-    bottom: 0;
+    bottom: 10px;
 	background-image: none !important;
 	color: white;
 }
 
 .t-bg-register {
 	background: url(../../assets/images/app/bg_register_login.jpg) no-repeat fixed center;
+	min-height: 100vh;
+    position: relative;
+	background-size: cover;
+	padding-bottom: 100px;
 }
 
 .t-login-panel {
