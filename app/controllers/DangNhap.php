@@ -45,9 +45,11 @@ class DangNhap extends CI_Controller
     }
 
     public function logout() {
-        $this->session->unset_userdata('tenDangNhap');
-        $this->session->unset_userdata('logged_in');
-        $this->session->unset_userdata('maQH');
+        $this->session->set_userdata(array(
+                    'tenDangNhap' => '',
+                    'logged_in'   => FALSE,
+                    'maQH'        => ''
+                    ));
 
         $this->session->sess_destroy();
         $this->session->set_flashdata('logged_out', 'Bạn đã đăng xuất');

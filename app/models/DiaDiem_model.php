@@ -129,25 +129,57 @@ class DiaDiem_model extends CI_Model
     /**
      * Duyệt địa điểm chờ
      *
-     * @param [type] $maDiaDiem
+     * @param int $maDiaDiem
      * @return boolean
      */
     public function duyetDiaDiem($maDiaDiem){
-        # code...
         $data = array(
             'TrangThai' => 1
         );
+
         $this->db->where('MaDiaDiem', $maDiaDiem);
         return $this->db->update('DIADIEM', $data);
     }
 
+    /**
+     * Tìm kiếm theo tên
+     *
+     * @param string $key
+     * @return array
+     */
     public function timKiem($key)
     {
-        # code...
-        $this->load->helper("text");
         $this->db->like('TenDiaDiem', $key);
+
         $query = $this->db->get('DIADIEM');
-       return $query->result_array(); 
+        return $query->result_array(); 
+    }
+
+    /**
+     * Xóa tất cả hình ảnh của địa điểm
+     *
+     * @param int $maDiaDiem Mã địa điểm
+     * @return boolean
+     */
+    public function deleteAllImages($maDiaDiem) {
+        $this->db->where('MaDiaDiem', $maDiaDiem);
+
+        return $this->db->delete('IMGDIADIEM');
+    }
+
+    /**
+     * Xóa một địa điểm
+     *
+     * @param int $maDiaDiem
+     * @return boolean
+     */
+    public function delete($maDiaDiem) {
+        $this->DanhGiaDiaDiem_model->deleteAllDanhGia($maDiaDiem);
+        $this->MonAn_model->deleteAllMonAn($maDiaDiem);
+        $this->deleteAllImages($maDiaDiem);
+
+        $this->db->where('MaDiaDiem', $maDiaDiem);
+        return $this->db->delete('DIADIEM');
     }
 }
 ?>
