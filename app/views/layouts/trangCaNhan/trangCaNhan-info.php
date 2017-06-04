@@ -25,7 +25,7 @@
   <div class="panel panel-default">
     <div class="panel-heading t-panel-header">Thông tin ngươi dùng</div>
 
-    <div class="t-body">
+    <div class="panel-body">
 
       <div class=" t-top">
         <div class="t-bottom t-panel-info"><?php echo $nguoiDung_data['TenNguoiDung']; ?></div>
@@ -57,10 +57,13 @@
 
     </div>
 
+     <?php if (($this->session->userdata('logged_in')) && ($this->session->userdata('tenDangNhap') == $nguoiDung_data['TenDangNhap'] || $this->session->userdata('maQH') == 0)): ?>
     <div class="t-divbtntrangcanhan">
       <a href=" <?php echo base_url('trangCaNhan/edit/'.$nguoiDung_data['TenDangNhap'] ); ?>" class="btn t-btn-default btn-default t-btn-editinfor">Chỉnh sửa thông tin</a>
       <a href=" <?php echo base_url('trangCaNhan/doiMatKhau/'.$nguoiDung_data['TenDangNhap'] ); ?>" class="btn t-btn-resetpassword">Đổi mật khẩu</a>
     </div>
+    <?php endif;?>
   </div>
   </div>
+
   <!--dong trag ca nhan-->

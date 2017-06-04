@@ -197,8 +197,9 @@ footer {
 .t-divanhbia{
 	background: url(../../assets/images/app/bg_register_login.jpg) no-repeat scroll center;
 	max-width: 100%;
-	height: 180px;
+	height: 250px;
 	margin-bottom: 20px;
+	margin-top: -20px;
 	vertical-align: middle;
 	position: relative;
 }
@@ -208,10 +209,10 @@ footer {
 	float: left;
 }
 .t-infoavatar{
-	border-radius: 70%;
-	width: 80%;
-	height: 80%;
-	margin: 20px 20px 20px 15px;
+	border-radius: 50%;
+	width: 160px;
+	height: 160px;
+	margin: 30px;
 }
 .t-header-info{
 	padding-top: 5%;

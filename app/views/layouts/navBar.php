@@ -20,14 +20,14 @@
             <?php echo validation_errors("<p class='alert alert-dismissable alert-warning'><a href='#' class='close' data-dismiss='alert' aria-label='close'>×</a>"); ?>
             <?php echo form_open('timKiem'); ?>  
                 <div class="form-group">
-                    <select class="form-control" id="timkiem" name='timkiem'>
-                         <option value="place"  >Địa điểm</option>
-                         <option value="food"  >Món ăn</option>
-                         <option value="user" >Người dùng</option>
+                    <select class="form-control" id="timkiem" name='timkiem' >
+                         <option value="place">Địa điểm</option>
+                         <option value="food">Món ăn</option>
+                         <option value="user">Người dùng</option>
                      </select>
                 </div>  		
                 <div class="input-group t-search-box">
-                    <input type="text" class="form-control" id="search" name="search" placeholder="Địa điểm, món ăn, người dùng,..." name="q">
+                    <input type="text" class="form-control" id="search" name="search" placeholder="Địa điểm, món ăn, người dùng,..." name="q" >
                     <div class="input-group-btn">
                         <button class="btn btn-default" id="searchbtn" name="searchbtn" type="submit"value="1"><i class="glyphicon glyphicon-search"></i></button>
                     </div>
