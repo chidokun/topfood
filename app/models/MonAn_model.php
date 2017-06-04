@@ -149,7 +149,7 @@ class MonAn_model extends CI_Model
         $query = $this->db->get('MONAN');
        return $query->result_array(); 
 
-
+    }
     /**
      * Xóa tất cả món ăn của một địa điểm
      *
