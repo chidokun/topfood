@@ -90,4 +90,19 @@ class NguoiDung_model extends CI_Model
             return FALSE;
         }
     }
+
+    /**
+     * Tìm kiếm người dùng
+     *
+     * @param [type] $key
+     * @return result
+     */
+    public function timKiem($key)
+    {
+        # code...
+        $this->load->helper("text");
+        $this->db->like('TenNguoiDung', $key);
+        $query = $this->db->get('NGUOIDUNG');
+       return $query->result_array(); 
+    }
 }

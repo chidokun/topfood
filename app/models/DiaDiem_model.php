@@ -140,5 +140,14 @@ class DiaDiem_model extends CI_Model
         $this->db->where('MaDiaDiem', $maDiaDiem);
         return $this->db->update('DIADIEM', $data);
     }
+
+    public function timKiem($key)
+    {
+        # code...
+        $this->load->helper("text");
+        $this->db->like('TenDiaDiem', $key);
+        $query = $this->db->get('DIADIEM');
+       return $query->result_array(); 
+    }
 }
 ?>

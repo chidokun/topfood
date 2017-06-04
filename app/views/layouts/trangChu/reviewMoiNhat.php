@@ -37,8 +37,8 @@
                 </div>
 
                 <div class="col-md-10" style="padding:17px 18px ; ">
-                  <div  class="t-content-info-review t-catchuoidiadiemlike">
-                      <em style="width:100%">Đồ ăn dở như hạch, thịt thằn lằn thì bở, ăn có cảm giác nhơn nhợn trong họng, mới nuốt 1 miếng mà muốn phun hết ra ngoài.</em>
+                  <div  class="t-content-info-review ">
+                      <em style="width:100%" class="t-catchuoidiadiemlike">Đồ ăn dở như hạch, thịt thằn lằn thì bở, ăn có cảm giác nhơn nhợn trong họng, mới nuốt 1 miếng mà muốn phun hết ra ngoài.</em>
                   </div> 
                 </div>
 

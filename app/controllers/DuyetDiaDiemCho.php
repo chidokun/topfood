@@ -1,6 +1,5 @@
 <?php
 class DuyetDiaDiemCho extends CI_Controller {
-
 	/**
      * Lấy thông tin địa điểm đang chờ duyệt
      *
@@ -10,16 +9,12 @@ class DuyetDiaDiemCho extends CI_Controller {
         # code...
         // lấy thông tin địa điểm đang chờ
         $data['cacDiaDiemCho'] = $this->DiaDiem_model->selectDiaDiemCho();
-
         $data['title'] = 'Duyệt địa điểm';
-
         //Hiển thị nội dung của địa điểm chờ duyệt
-
 		$data['main_content'] = 'duyetDiaDiemCho';
         
 		$this->load->view("layouts/main", $data);
 	}
-
     /**
      * thực hiện duyệt các địa điểm đang chờ
      *
@@ -37,14 +32,12 @@ class DuyetDiaDiemCho extends CI_Controller {
         if(!isset($_POST['submit'])){
             return;
         }
-
 		    $updated = $this->DiaDiem_model->duyetDiaDiem($maDiaDiem);
 			if ($updated) {
                 $this->session->set_flashdata('duyet_update_successful', 'Duyệt địa điểm thành công.');
             } else {
                 $this->session->set_flashdata('duyet_update_failed', 'Duyệt địa điểm không thành công.');
             }     
-
             redirect('duyetDiaDiemCho'); 
     }
 }

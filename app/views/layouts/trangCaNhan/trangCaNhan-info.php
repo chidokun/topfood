@@ -43,7 +43,7 @@
             </tr>
             <tr>
               <td>Ngày sinh</td>
-              <td><?php echo date_format(date_create($nguoiDung_data['NgaySinh']),'d/m/Y'); ?></td>
+              <td><?php echo date_format(date_create($nguoiDung_data['NgaySinh']),'d-m-Y'); ?></td>
             </tr>
             <tr>
               <td>Email</td>

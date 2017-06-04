@@ -1,3 +1,5 @@
+
+
 <nav class="navbar navbar-inverse" role="navigation">
     <div class="container t-content">
       <!-- Brand and toggle get grouped for better mobile display -->
@@ -14,21 +16,24 @@
       <!-- Collect the nav links, forms, and other content for toggling -->
       <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">    
         <div class="t-inline">
-            <form class="navbar-form form-inline" role="search">
+            <div class="navbar-form form-inline">
+            <?php echo validation_errors("<p class='alert alert-dismissable alert-warning'><a href='#' class='close' data-dismiss='alert' aria-label='close'>×</a>"); ?>
+            <?php echo form_open('timKiem'); ?>  
                 <div class="form-group">
-                    <select class="form-control">
-                         <option value="place">Địa điểm</option>
-                         <option value="food">Món ăn</option>
-                         <option value="user">Người dùng</option>
+                    <select class="form-control" id="timkiem" name='timkiem'>
+                         <option value="place"  >Địa điểm</option>
+                         <option value="food"  >Món ăn</option>
+                         <option value="user" >Người dùng</option>
                      </select>
-                </div>       		
+                </div>  		
                 <div class="input-group t-search-box">
-                    <input type="text" class="form-control" placeholder="Địa điểm, món ăn, người dùng,..." name="q">
+                    <input type="text" class="form-control" id="search" name="search" placeholder="Địa điểm, món ăn, người dùng,..." name="q">
                     <div class="input-group-btn">
-                        <button class="btn btn-default" type="submit"><i class="glyphicon glyphicon-search"></i></button>
+                        <button class="btn btn-default" id="searchbtn" name="searchbtn" type="submit"value="1"><i class="glyphicon glyphicon-search"></i></button>
                     </div>
                 </div>
-            </form>
+            <?php echo form_close(); ?>
+            </div>
         </div>
         <?php if(!$this->session->userdata('logged_in')) :?>
         <div class="nav navbar-nav navbar-right">

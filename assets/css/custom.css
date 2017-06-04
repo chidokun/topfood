@@ -140,13 +140,22 @@ footer {
 
  .t-diadiemcho{
  	border: 1px solid #f2f2f2;
- 	box-shadow: 2px #eeeeee;
- 	width: 95%;
- 	margin: 14px auto 5px auto;
+ 	box-shadow: 2px 2px #dddddd;
+	height:100%;
+ 	margin: 10px 30px ;
+	position: relative;
+	overflow: auto;
+ }
+
+ 
+ .t-diadiemcho:last-of-type{
+	 margin-bottom: 20px;
  }
 
 .t-imgdiadiemcho{
 	
+	margin-top: 5px;
+	margin-left: 5px;
 	height: 130px;
 	width: 130px;
 	clear: both;
@@ -375,12 +384,12 @@ td{
 /*Cắt chuỗi thành ... trong diadiemnhieulike nhat*/
 .t-catchuoidiadiemlike{
 	display: -webkit-box;
-	height: calc(1.2* 13px*3);
-	line-height: 1.3;
-	font-size: 15px;
-	line-clamp:2;
-	overflow: hidden;
-	text-overflow: ellipsis;
+    height: calc(1.2 * 13px * 3);
+    line-height: 1.2;
+    font-size: 13px;
+    line-clamp: 2;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 /* Điều chỉnh size và khoảng cách panel của monngon va diadiem yeu thich*/
 .t-border-panel{

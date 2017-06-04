@@ -18,7 +18,7 @@
 </head>
 <body>
     <?php $this->load->view('layouts/navBar'); ?>  
-    <div class="container">    
+    <div class="container" style="min-height: calc(100vh - 290px);">    
     <!-- nội dung -->
     <?php $this->load->view($main_content); ?>    
     </div> <!-- /container -->
