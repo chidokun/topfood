@@ -125,5 +125,20 @@ class DiaDiem_model extends CI_Model
 
         return $query->result_array();
     }
+
+    /**
+     * Duyệt địa điểm chờ
+     *
+     * @param [type] $maDiaDiem
+     * @return boolean
+     */
+    public function duyetDiaDiem($maDiaDiem){
+        # code...
+        $data = array(
+            'TrangThai' => 1
+        );
+        $this->db->where('MaDiaDiem', $maDiaDiem);
+        return $this->db->update('DIADIEM', $data);
+    }
 }
 ?>
