@@ -197,8 +197,10 @@ footer {
 .t-divanhbia{
 	background: url(../../assets/images/app/bg_register_login.jpg) no-repeat scroll center;
 	max-width: 100%;
-	height: 200px;
+	height: 180px;
 	margin-bottom: 20px;
+	vertical-align: middle;
+	position: relative;
 }
 .t-col-2{
 	width: 16.66666667%;
@@ -329,24 +331,24 @@ td{
 	margin-top: 15px;
 }
 /*CSS Mon an*/
-/*div avartar cua info monan*/
-.t-divavartarmonan{
-	width: 18%;
-	height: 100%;
-	float: left;
+/*div avatar cua info monan*/
+.t-divavatarmonan{
+	width: 150px;
+	height: 150px;
+	margin: 15px;
 }
 /*imageavartar cua info monan*/
 .t-imgavatarmonan{
-	border-radius: 65%;
-	width: 100%;
-	height: 100%;
-	margin-top: 5px;
+	border-radius: 50%;
+	width: 150px;
+	height: 150px;
 }
 /*detail infor cua info monan*/
 .t-detailmonan{
-	margin-top: 20px;
-	margin-left: 20px;
+	margin: 20px 0 0 10px;
 	color: white;
+	max-width: 500px;
+	text-shadow: 2px 2px 4px #000000;
 }
 /*dtb của info monan*/
 .t-monan-avescore{
@@ -359,7 +361,7 @@ td{
 	height: 60px;
 	width: 60px;
 	text-align: center;
-	line-height: 45px;
+	margin: 20px 10px 0 0;
 }
 /*avartar của suamonan*/
 .t-imgsuamonan{
@@ -712,6 +714,7 @@ h1, h2 {
 }
 .t-thucdon-item-content {
 	margin: 10px;
+	max-width: 550px;
 }
 .t-thucdon-item-content div {
 	margin: 5px 0;

@@ -114,7 +114,7 @@ class DiaDiem_model extends CI_Model
     /**
      * Chọn các địa điểm đang chờ duyệt có trạng thái là 0
      *
-     * @param [type] $maDiaDiem
+     * @param string $maDiaDiem
      * @return void
      */
     public function selectDiaDiemCho()
