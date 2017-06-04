@@ -137,6 +137,20 @@ class MonAn_model extends CI_Model
     }
 
     /**
+     * tìm kiếm món ăn
+     *
+     * @param [type] $key
+     * @return result
+     */
+    public function timKiem($key)
+    {
+        # code...
+        $this->db->like('TenMonAn', $key);
+        $query = $this->db->get('MONAN');
+       return $query->result_array(); 
+
+    }
+    /**
      * Xóa tất cả món ăn của một địa điểm
      *
      * @param int $maDiaDiem Mã địa điểm
@@ -151,6 +165,7 @@ class MonAn_model extends CI_Model
 
         $this->db->where('MaDiaDiem', $maDiaDiem);
         return $this->db->delete('MONAN');
+
     }
 }
 ?>

@@ -100,7 +100,7 @@ class NguoiDung_model extends CI_Model
     public function timKiem($key)
     {
         # code...
-        $this->load->helper("text");
+       // $this->load->helper("text");
         $this->db->like('TenNguoiDung', $key);
         $query = $this->db->get('NGUOIDUNG');
        return $query->result_array(); 
