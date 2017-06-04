@@ -42,7 +42,7 @@
         </div>
     </div>
     <div class="panel-footer" style="overflow: auto;">
-        <button type="submit" name="submit" class="btn btn-default t-btn-default pull-right" style="width: 120px;">Đánh giá</button>
+        <button type="submit" name="submit" class="btn btn-default t-btn-default pull-right" style="width: 120px;">Lưu đánh giá</button>
     </div>
     <?php echo form_close(); ?>
 </div>
