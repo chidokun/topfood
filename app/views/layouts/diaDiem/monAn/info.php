@@ -3,7 +3,7 @@
 	<div class="col-md-3">
 		<img class="t-diadiem-img-avatar" src="<?php echo base_url('/assets/images/db/'.$diaDiem_data['AnhDaiDienDD']); ?>">
 	</div>
-	<div class="col-md-9 t-divanhbia">
+	<div class="col-md-9 t-divanhbia-monan">
 		<div class="t-divavatarmonan pull-left">
       		<img src="<?php echo base_url('assets/images/db/'.$monAn['AnhDaiDienMA']); ?>" class="t-imgavatarmonan">
     	</div>

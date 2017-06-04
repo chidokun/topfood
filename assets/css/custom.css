@@ -205,6 +205,17 @@ footer {
 	position: relative;
 	background-size: cover;
 }
+
+.t-divanhbia-monan{
+	background: url(../../assets/images/app/bg_register_login.jpg) no-repeat scroll center;
+	max-width: 100%;
+	height: 180px;
+	margin-bottom: 20px;
+	vertical-align: middle;
+	position: relative;
+	background-size: cover;
+}
+
 .t-col-2{
 	width: 16.66666667%;
 	height: 100%;
