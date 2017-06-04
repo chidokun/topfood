@@ -1,7 +1,7 @@
 <script src=<?php echo base_url('assets/js/vietDanhGiaDiaDiem_js.js'); ?>></script>
 <div class="panel panel-default">
     <div class="panel-heading t-panel-header">Viết đánh giá</div>
-    <?php echo form_open('monAn/insertDanhGia/'.$monAn['MaMonAn']); ?>
+    <?php echo form_open('diaDiem/insertDanhGia/'.$diaDiem_data['MaDiaDiem']); ?>
     <div class="panel-body">
         <?php echo validation_errors("<p class='alert alert-dismissable alert-warning'><a href='#' class='close' data-dismiss='alert' aria-label='close'>×</a>"); ?>
         <div class="form-group">
