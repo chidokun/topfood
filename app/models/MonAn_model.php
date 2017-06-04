@@ -135,6 +135,7 @@ class MonAn_model extends CI_Model
 
         return $this->db->delete('MONAN');
     }
+
     /**
      * tìm kiếm món ăn
      *
@@ -147,6 +148,24 @@ class MonAn_model extends CI_Model
         $this->db->like('TenMonAn', $key);
         $query = $this->db->get('MONAN');
        return $query->result_array(); 
+
+
+    /**
+     * Xóa tất cả món ăn của một địa điểm
+     *
+     * @param int $maDiaDiem Mã địa điểm
+     * @return boolean
+     */
+    public function deleteAllMonAn($maDiaDiem) {
+        $cacMonAn = $this->selectAll($maDiaDiem);
+        foreach ($cacMonAn as $monAn) {
+            $this->DanhGiaMonAn_model->deleteAllDanhGia($monAn['MaMonAn']);
+            $this->deleteAllImages($monAn['MaMonAn']);
+        }
+
+        $this->db->where('MaDiaDiem', $maDiaDiem);
+        return $this->db->delete('MONAN');
+
     }
 }
 ?>

@@ -348,4 +348,23 @@ class DiaDiem extends CI_Controller
             redirect('diaDiem/cacDanhGia/'.$maDiaDiem.'/'.$maDanhGia);
         }
     }
+
+    /**
+     * Xóa một địa điểm
+     *
+     * @param int $maDiaDiem Mã địa điểm
+     * @return boolean
+     */
+    public function delete($maDiaDiem) {
+         $deleted = $this->DiaDiem_model->delete($maDiaDiem);
+        
+        if($deleted) {
+            $this->session->set_flashdata('place_deleted_successful', 'Xóa địa điểm thành công.');
+            redirect(base_url());
+        }
+        else {
+            $this->session->set_flashdata('place_deleted_failed', 'Không thể xóa địa điểm.');
+            redirect('diaDiem/cacDanhGia/'.$maDiaDiem);
+        }
+    }
 }

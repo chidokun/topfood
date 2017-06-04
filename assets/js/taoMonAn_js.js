@@ -33,13 +33,14 @@ $(document).ready(function() {
 
     $("#danhMucHinhAnh").change(function () {
         $("#hinhAnhBg").empty();
+        var i = 0;
         var files = $(this)[0].files;
         var reader = new FileReader();
-        reader.onloadend = function () {
-            $("." + i).css("background-image", "url(" + reader.result + ")");
+        reader.onloadend = function (e) {
+            $("." + i).css("background-image", "url(" + e.target.result + ")");
+            loadImage(++i);
         }
 
-        //không thể load hình đồng bộ
         function loadImage(i) {
             if (i >= files.length)
                 return;
@@ -49,13 +50,14 @@ $(document).ready(function() {
             $("." + i).css("margin", "10px");
             $("." + i).css("border", "1px solid #ddd");
             $("." + i).css("display", "inline-block");
-
+            $("." + i).css("background-size", "cover");
+            $("." + i).css("background-position", "center");
+       
             if (files[i]) {
                 reader.readAsDataURL(files[i]);
-            }
-            loadImage(i + 1);
-        }
-
-        loadImage(0);
+            }  
+        } 
+        
+        loadImage(i); 
     });
 });

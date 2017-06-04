@@ -1,3 +1,5 @@
+<script src="<?php echo base_url('assets/js/thongTinDiaDiem_js.js'); ?>"></script>
+
 <div class="panel panel-default">
     <div class="panel-heading t-panel-header">
 	    Thông tin chi tiết
@@ -17,8 +19,8 @@
         
         <?php if ($this->session->userdata('logged_in') && ($this->session->userdata('tenDangNhap') == $diaDiem_data['TenDangNhap'] || $this->session->userdata('maQH') == 0)): ?>
         <div class="btn-group pull-right">
-            <a href=<?php echo base_url(uri_string().'/edit'); ?> class="btn btn-default t-btn-default">Chỉnh sửa thông tin</a>
-            <a class="btn btn-default t-btn-default">Xóa địa điểm</a>
+            <a href="<?php echo base_url(uri_string().'/edit'); ?>" class="btn btn-default t-btn-default">Chỉnh sửa thông tin</a>
+            <a id="deletePlace" href="<?php echo base_url('diaDiem/delete/'.$diaDiem_data['MaDiaDiem']); ?>" class="btn btn-default t-btn-default">Xóa địa điểm</a>
         </div>
         <?php endif; ?>
 
