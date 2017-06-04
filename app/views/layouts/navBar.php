@@ -48,11 +48,13 @@
             <img class="t-avatar-navbar" id="imgNguoiDungNav" src="<?php echo base_url('assets/images/db/'.$user['AnhDaiDien']); ?>">
             <b class="caret"></b></a>
             <ul class="dropdown-menu">
-                <li><a href="#">Trang cá nhân</a></li>
-                <li><a href=<?php echo base_url('taoDiaDiem'); ?>>Tạo địa điểm</a></li>
+                <li><a href="<?php echo base_url('trangCaNhan/info/'.$this->session->userdata('tenDangNhap')); ?>">Trang cá nhân</a></li>
+                <li><a href="<?php echo base_url('taoDiaDiem'); ?>">Tạo địa điểm</a></li>
                 <li class="divider"></li>
-                <li><a href="#">Duyệt các địa điểm chờ</a></li>
+                <?php if ($this->session->userdata('maQH') == 0): ?>
+                <li><a href="<?php echo base_url('duyetDiaDiemCho'); ?>">Duyệt các địa điểm chờ</a></li>
                 <li class="divider"></li>
+                <?php endif;?>
                 <li><a href="<?php echo base_url('dangNhap/logout');?>">Đăng xuất</a></li>
             </ul>
           </li>

@@ -19,7 +19,7 @@
 <!--	<input type="text"  id="<?php echo $diaDiemCho['MaDiaDiem']; ?>" style="display:none">-->
 	<?php echo validation_errors("<p class='alert alert-dismissable alert-warning'><a href='#' class='close' data-dismiss='alert' aria-label='close'>×</a>"); ?>
         <?php echo form_open('duyetDiaDiemCho/duyetDiaDiem/'.$diaDiemCho['MaDiaDiem']); ?>
-    <div class="t-body row" id="<?php echo $diaDiemCho['MaDiaDiem']; ?>" >
+    <div class="panel-body" id="<?php echo $diaDiemCho['MaDiaDiem']; ?>" >
     	<div class="t-diadiemcho" style="box-shadow: 2px 2px #dddddd; margin-bottom:7px; padding:10px">
     		<div class="col-md-8">
     			<div class="row" style="height:140px">
