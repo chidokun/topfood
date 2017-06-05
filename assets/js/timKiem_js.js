@@ -1,7 +1,5 @@
-
-var base_url = 'http://localhost/topfood/';
+var base_url = $("#baseurl").attr('href');
 $(document).ready(function(){
-    //alert('jjjjjj');
     $("#timkiem").change(function(){
         var loai = $("#timkiem").val();
        alert(loai);

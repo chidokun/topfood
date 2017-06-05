@@ -367,4 +367,56 @@ class DiaDiem extends CI_Controller
             redirect('diaDiem/cacDanhGia/'.$maDiaDiem);
         }
     }
+
+    /**
+     * Xóa một hình ảnh của địa điểm. Hàm này chỉ dùng cho AJAX, phương thức POST
+     *
+     * @return text
+     */
+    public function deleteImage() {
+        $this->DiaDiem_model->deleteImage($_POST['maDiaDiem'], $_POST['pathDD']);
+
+        echo json_encode(array('fileDeleted' => str_replace('.','\\.',$_POST['pathDD'])));
+    }
+
+    /**
+     * Upload ảnh cho địa điểm
+     *
+     * @param string $id Khóa chính của địa điểm
+     * @return void
+     */
+    public function uploadImage($id)
+    {
+        $config['upload_path']          = './assets/images/db';
+        $config['allowed_types']        = 'gif|jpg|png';
+        $config['max_size']             = 3000;
+        $config['overwrite']            = true;
+        $config['file_name']            = 'dd_pic_'.$id.'_'.($this->DiaDiem_model->selectMaxIndexImage($id) + 1);
+
+        $this->load->library('upload', $config);
+
+        if (!$this->upload->do_upload('hinhAnh')) {
+            $this->session->set_flashdata('upload_error', $this->upload->display_errors());
+            return;
+        }
+             
+        $_POST['pathDD'] = $this->upload->data('file_name');
+    }
+
+    /**
+     * Xử lý thêm hình ảnh. Phương thức POST
+     *
+     * @return void
+     */
+    public function themHinhAnh() {
+        if(!isset($_POST['submit'])) {
+            return;
+        }
+
+        if(!$_FILES['hinhAnh']['size'] == 0 && $_FILES['hinhAnh']['error'] == 0)
+            $this->uploadImage($_POST['maDiaDiem']);
+        $this->DiaDiem_model->insertImage($_POST['maDiaDiem'], $_POST['pathDD']);
+
+        redirect('diaDiem/hinhAnh/'.$_POST['maDiaDiem']);
+    }
 }

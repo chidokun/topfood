@@ -1,4 +1,4 @@
-var base_url = 'http://localhost/topfood/';
+var base_url = $("#baseurl").attr('href');
 $(document).ready(onload);
 
 /**

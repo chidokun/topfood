@@ -25,7 +25,7 @@
                     <div class="t-thucdon-item-monan"><?php echo $monAn['TenMonAn']; ?></div>
                     <div><i><?php echo $monAn['MaLoaiMonAn']=='0'?'Món ăn':'Thức uống';?></i></div>
                     <div><?php echo $monAn['MoTaMA']; ?></div>
-                    <div style="color: #890606;"><span class="glyphicon glyphicon-tags"></span><b><?php echo $monAn['GiaCaMA']; ?>đ</b></div>
+                    <div style="color: #890606;"><span class="glyphicon glyphicon-tags"></span> <b><?php echo number_format($monAn['GiaCaMA'],0,',','.').'đ';?></b></div>
                 </div>
                 <div class="t-danhgia-diem pull-right" style="margin: 10px;">
                     <div><?php echo number_format($monAn['DiemTrungBinhMA'],1); ?></div>

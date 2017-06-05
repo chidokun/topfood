@@ -11,7 +11,7 @@
 			<div class="t-diadiem-name"><?php echo $monAn['TenMonAn'];?></div>
 			<div>Tại <b><?php echo $diaDiem_data['TenDiaDiem'];?></b></div>
 			<div><em><?php echo $monAn['MoTaMA'];?></em></div>
-			<div><span class="glyphicon glyphicon-tags"></span> <?php echo $monAn['GiaCaMA'];?></div>
+			<div><span class="glyphicon glyphicon-tags"></span> <b><?php echo number_format($monAn['GiaCaMA'],0,',','.').'đ';?></b></div>
 		</div>
 		<div class="t-monan-avescore pull-right"><?php echo number_format($monAn['DiemTrungBinhMA'], 1); ?></div>
 		<div class="btn-group" style="position: absolute; bottom: 10px; right: 10px;">

@@ -1,5 +1,3 @@
-
-
 <nav class="navbar navbar-inverse" role="navigation">
     <div class="container t-content">
       <!-- Brand and toggle get grouped for better mobile display -->
@@ -10,7 +8,7 @@
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
         </button>
-        <a href="<?php echo base_url(); ?>"><img class="t-logo_nav" src="<?php echo base_url(); ?>/assets/images/app/logo_nav.png"></a>
+        <a id="baseurl" href="<?php echo base_url(); ?>"><img class="t-logo_nav" src="<?php echo base_url(); ?>/assets/images/app/logo_nav.png"></a>
       </div>
 
       <!-- Collect the nav links, forms, and other content for toggling -->

@@ -103,7 +103,7 @@ class TaoDiaDiem extends CI_Controller
                 'file_name'     => 'dd_pic_'.$id.'_'.$i,
                 'allowed_types' => 'jpg|jpeg|png|gif',
                 'max_size'      => 3000,
-                'overwrite'     => false,
+                'overwrite'     => true,
                 'upload_path' => './assets/images/db'
               );
             $this->upload->initialize($config);

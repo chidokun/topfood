@@ -36,14 +36,14 @@
                 <input type="password" class="form-control" id="matKhau" name="matKhau">
             </div>
 
-            <div class="form-group">
+            <div class="form-group" style="overflow: auto;">
                 <button type="submit" name="submit" class="btn btn-default t-btn-default pull-right" value="submit">Đăng nhập</button>
             </div>
         <?php echo form_close(); ?>
 
         <div class="form-group" style="clear: right;">
-            <span style="font-size: 26px; display: block;">Chưa có tài khoản?</span>
-            Hãy <a href=<?php echo base_url('dangKy'); ?>>Đăng ký</a> ngay!
+            <span style="font-size: 23px; display: block;">Chưa có tài khoản?</span>
+            Hãy <a href="<?php echo base_url('dangKy'); ?>">Đăng ký</a> ngay!
         </div>  
     </div>
     

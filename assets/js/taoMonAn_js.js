@@ -45,8 +45,8 @@ $(document).ready(function() {
             if (i >= files.length)
                 return;
             $("#hinhAnhBg").append("<div class='" + i + "'></div>");
-            $("." + i).css("width", "150px");
-            $("." + i).css("height", "150px");
+            $("." + i).css("width", "130px");
+            $("." + i).css("height", "130px");
             $("." + i).css("margin", "10px");
             $("." + i).css("border", "1px solid #ddd");
             $("." + i).css("display", "inline-block");

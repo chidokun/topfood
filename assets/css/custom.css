@@ -189,6 +189,7 @@ footer {
 
 .t-infodiadiemcho{
 	margin-left: 10px;
+	max-width: 800px;
 }
 
 .t-btndiadiemcho{
@@ -563,6 +564,7 @@ h1, h2 {
 	display: table;
 	margin-top: -20px;
 	border: 1px solid #eeeeee;
+	padding-bottom: 30px;
 }
 
 .t-diadiem-img-avatar {

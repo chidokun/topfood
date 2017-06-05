@@ -50,9 +50,9 @@
             <input type="file" id="danhMucHinhAnh" name="danhMucHinhAnh[]" multiple="multiple" style="display: none">
             <div id="hinhAnhBg"></div>      
         </div>
-        <div class="col-md-12">
+    </div>
+    <div class="panel-footer" style="overflow: auto;">
             <button type="submit" id="submit" value="submit" name="submit" class="btn btn-default t-btn-default pull-right">Tạo món ăn</button>
-        </div>
     </div>
     <?php echo form_close(); ?>
 </div>

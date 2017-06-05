@@ -77,6 +77,22 @@ class DiaDiem_model extends CI_Model
     }
 
     /**
+     * Chèn một hình ảnh cho địa điểm
+     *
+     * @param int $maDiaDiem Mã địa điểm
+     * @param string $pathDD Tên file
+     * @return boolean
+     */
+    public function insertImage($maDiaDiem, $pathDD) {
+        $data = array (
+            'MaDiaDiem' => $maDiaDiem,
+            'PathDD'    => $pathDD
+        );
+
+        return $this->db->insert('IMGDIADIEM', $data);
+    }
+
+    /**
      * Lấy danh mục hình ảnh
      *
      * @param string $maDiaDiem Mã địa điểm
@@ -180,6 +196,33 @@ class DiaDiem_model extends CI_Model
 
         $this->db->where('MaDiaDiem', $maDiaDiem);
         return $this->db->delete('DIADIEM');
+    }
+
+    /**
+     * Xóa một hình ảnh của địa điểm
+     *
+     * @param int $maDiaDiem Mã địa điểm
+     * @param string $pathDD Tên file hình
+     * @return boolean
+     */
+    public function deleteImage($maDiaDiem, $pathDD) {
+        $this->db->where('MaDiaDiem', $maDiaDiem);
+        $this->db->where('PathDD', $pathDD);
+
+        return $this->db->delete('IMGDIADIEM');
+    }
+
+    /**
+     * Lấy chỉ số lớn nhất của hình trong danh mục hình của địa điểm. Dùng để đặt tên hình tiếp theo cho địa điểm.
+     *
+     * @param int $maDiaDiem Mã địa điểm
+     * @return int
+     */
+    public function selectMaxIndexImage($maDiaDiem) {
+        $this->db->select_max("SUBSTRING_INDEX(SUBSTRING_INDEX(PathDD,'.',1), '_', -1)", "MAX");
+        $this->db->where('MaDiaDiem', $maDiaDiem);
+
+        return $this->db->get('IMGDIADIEM')->row_array()['MAX'];
     }
 }
 ?>
