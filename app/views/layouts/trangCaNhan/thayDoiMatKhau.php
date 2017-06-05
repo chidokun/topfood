@@ -5,6 +5,12 @@
       <div class="col-md-4"></div>
 
       <div class="col-md-4">
+        <?php if ($this->session->flashdata('pass_update_failed')): ?>
+          <p class='alert alert-dismissable alert-danger'>
+          <a href='#' class='close' data-dismiss='alert' aria-label='close'>×</a>
+              <?php echo $this->session->flashdata('pass_update_failed'); ?>
+          </p>
+        <?php endif; ?>
         <?php echo validation_errors("<p class='alert alert-dismissable alert-warning'><a href='#' class='close' data-dismiss='alert' aria-label='close'>×</a>"); ?>
         <?php echo form_open('trangCaNhan/updateMatKhau/'.$nguoiDung_data['TenDangNhap']); ?>
 
