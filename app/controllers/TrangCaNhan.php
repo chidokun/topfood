@@ -29,6 +29,31 @@ class TrangCaNhan extends CI_Controller {
 	}
 
 	/**
+	 * Hiển thị giao diện các địa điểm của tôi
+	 *
+	 * @param string $tenDangNhap Tên đăng nhập
+	 * @return void
+	 */
+	public function diaDiem($tenDangNhap)
+	{
+		//Lấy thông tin người dùng
+		$data['nguoiDung_data'] = $this ->NguoiDung_model->select($tenDangNhap);
+
+		//Thêm tiêu đề
+		$data['title'] = $data['nguoiDung_data']['TenNguoiDung'].' - Đánh giá';
+
+		$data['cacDiaDiem'] = $this->DiaDiem_model->selectAll($tenDangNhap);
+
+		$data['layoutAnhBia'] = "layouts/trangCaNhan/anhBia";
+
+		$data["layoutContent"] = "layouts/trangCaNhan/diaDiemCuaToi";
+
+		$data["main_content"] = "layouts/trangCaNhan";
+
+		$this->load->view("layouts/main", $data);
+	}
+
+	/**
 	 * Hiển thị giao diện thông tin người dùng
 	 *
 	 * @param string $tenDangNhap Tên đăng nhập

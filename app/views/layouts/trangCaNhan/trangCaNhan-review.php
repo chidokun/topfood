@@ -12,7 +12,7 @@
             <div id="dgdd" class="tab-pane fade in active">
                 <div class="col-md-12" style="padding: 20px 10px 20px;">    
                     <?php if (count($danhGiaDiaDiem) == 0) : ?>
-                            <p class='alert alert-dismissable alert-success'>Chưa có đánh giá nào.</p>
+                        <p class='alert alert-dismissable alert-success'>Chưa có đánh giá nào.</p>
                     <?php else: ?>
                     <?php foreach ($danhGiaDiaDiem as $danhGia) : ?>
                         <div class="panel panel-default">
