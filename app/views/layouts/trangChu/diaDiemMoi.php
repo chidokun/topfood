@@ -4,24 +4,27 @@
       <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
       <li data-target="#myCarousel" data-slide-to="1"></li>
       <li data-target="#myCarousel" data-slide-to="2"></li>
+      <li data-target="#myCarousel" data-slide-to="3"></li>
+      <li data-target="#myCarousel" data-slide-to="4"></li>
     </ol>
 
     <!-- Wrapper for slides -->
     <div class="carousel-inner" style="width:100%; height:100%">
-
-      <div class="item active">
-        <img src="<?php echo base_url(); ?>/assets/images/db/nhahang1.jpg" alt="New York" style="width:100%">
-      </div>
-
-      <div class="item">
-        <img src="<?php echo base_url(); ?>/assets/images/db/nhahang2.jpg" alt="New York" style="width:100%">
-      </div>
     
-      <div class="item">
-        <img src="<?php echo base_url(); ?>/assets/images/db/nhahang3.jpg" alt="New York" style="width:100%">
+    <?php foreach ($diadiemmoi_data as  $diaDiem) : ?>
+      <div class="item" style="height:100%">
+        <img src="<?php echo base_url('assets/images/db/'.$diaDiem['AnhDaiDienDD']); ?>" alt="New York" style="width:100%;height:100%;object-fit:cotain ; ">
+        <div class="carousel-caption" >
+          <h3><?php echo $diaDiem['TenDiaDiem']; ?></h3>
+          <p><?php echo $diaDiem['MoTaDD']; ?></p>
+        </div>
       </div>
-  
+    <?php endforeach; ?>
+    <script>
+      $(".item:first-of-type").addClass("active");
+    </script>
     </div>
+
 
     <!-- Left and right controls -->
     <a class="left carousel-control" href="#myCarousel" data-slide="prev">

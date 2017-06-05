@@ -419,4 +419,10 @@ class DiaDiem extends CI_Controller
 
         redirect('diaDiem/hinhAnh/'.$_POST['maDiaDiem']);
     }
+
+    public function selectTop5()
+    {
+        # code...
+        return $this->DanhGiaDiaDiem_model->selectTop5();
+    }
 }

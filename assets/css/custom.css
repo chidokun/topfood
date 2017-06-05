@@ -67,7 +67,7 @@ footer {
     max-width: 100%;
     margin: 0px auto 0px auto;
     background-color: #ffffff;
-    display: flex;
+    
 }
 .t-col-9{
     background-color: #f9f9f9;
@@ -505,7 +505,7 @@ td{
 }
 /*định dạng div thông tin của món ngon và địa điểm thích nhất*/
 .t-div-body-infor{
-	padding:15px 3px; 
+	padding:5px 3px; 
 	float:left; 
 	width:70%;
 }
@@ -519,6 +519,7 @@ td{
 .t-content-div-body-infor{
 	opacity:0.7;
 	font-size:13px;
+	padding-top:5px;
 	width:99%;
 	display: block;
 }

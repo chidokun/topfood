@@ -256,4 +256,15 @@ class DanhGiaDiaDiem_model extends CI_Model
         $this->db->where('MaDiaDiem', $maDiaDiem);
         return $this->db->delete('DANHGIADIADIEM');
     }
+
+    public function selectTop5()
+    {
+        # code...
+        $this->db->select();
+        $this->db->order_by('TongLuotThichDGDD', 'desc');
+        $this->db->limit(5);
+        $query = $this->db->get('DanhGiaDiaDiem');
+        return  $query->result_array();
+
+    }
 }
