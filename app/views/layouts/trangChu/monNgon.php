@@ -14,7 +14,7 @@
             <!--Thông tin-->
             <div class="t-div-body-infor" >
                 <div class="t-diadiem-info-panel-left" style="width:99%;display: block">
-                    <div class="t-name-div-body-infor t-catchuoi">Quán Thằn Lằn Chiênaaaaaaaaaa</div>
+                    <div class="t-name-div-body-infor ">Quán Thằn Lằn Chiênaaaaaaaaaa</div>
                     <div  class=" t-content-div-body-infor"><em style="width:100%" class="t-catchuoidiadiemlike">Chuyên bán các món thằn lằn chiên, xào, đậm đà hương vị thằn lằn=]]]anh eu em nhieu lam lam luon ah</em></div>
                 </div>
             </div>
@@ -36,7 +36,7 @@
             <!--Thông tin-->
             <div class="t-div-body-infor" >
                 <div class="t-diadiem-info-panel-left" style="width:99%;display: block">
-                    <div class="t-name-div-body-infor t-catchuoi">Quán Thằn Lằn Chiênaaaaaaaaaa</div>
+                    <div class="t-name-div-body-infor ">Quán Thằn Lằn Chiênaaaaaaaaaa</div>
                     <div  class=" t-content-div-body-infor"><em class="t-catchuoidiadiemlike">Chuyên bán các món thằn lằn chiên, xào, đậm đà hương vị thằn lằn=]]]aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</em></div>
                 </div>
             </div>
@@ -58,7 +58,7 @@
             <!--Thông tin-->
             <div class="t-div-body-infor" >
                 <div class="t-diadiem-info-panel-left" style="width:99%;display: block">
-                    <div class="t-name-div-body-infor t-catchuoi">Quán Thằn Lằn Chiênaaaaaaaaaa</div>
+                    <div class="t-name-div-body-infor ">Quán Thằn Lằn Chiênaaaaaaaaaa</div>
                     <div  class=" t-content-div-body-infor"><em class="t-catchuoidiadiemlike">Chuyên bán các món thằn lằn chiên, xào, đậm đà hương vị thằn lằn=]]]aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</em></div>
                 </div>
             </div>
@@ -80,7 +80,7 @@
             <!--Thông tin-->
             <div class="t-div-body-infor" >
                 <div class="t-diadiem-info-panel-left" style="width:99%;display: block">
-                    <div class="t-name-div-body-infor t-catchuoi">Quán Thằn Lằn Chiênaaaaaaaaaa</div>
+                    <div class="t-name-div-body-infor ">Quán Thằn Lằn Chiênaaaaaaaaaa</div>
                     <div  class= "t-content-div-body-infor"><em class="t-catchuoidiadiemlike">Chuyên bán các món thằn lằn chiên, xào, đậm đà hương vị thằn lằn=]]]aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</em></div>
                 </div>
             </div>
@@ -102,7 +102,7 @@
             <!--Thông tin-->
             <div class="t-div-body-infor" >
                 <div class="t-diadiem-info-panel-left" style="width:99%;display: block">
-                    <div class="t-name-div-body-infor t-catchuoi">Quán Thằn Lằn Chiênaaaaaaaaaa</div>
+                    <div class="t-name-div-body-infor ">Quán Thằn Lằn Chiênaaaaaaaaaa</div>
                     <div  class=" t-content-div-body-infor"><em class="t-catchuoidiadiemlike">Chuyên bán các món thằn lằn chiên, xào, đậm đà hương vị thằn lằn=]]]aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</em></div>
                 </div>
             </div>

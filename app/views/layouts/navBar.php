@@ -17,7 +17,6 @@
       <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">    
         <div class="t-inline">
             <div class="navbar-form form-inline">
-            <?php echo validation_errors("<p class='alert alert-dismissable alert-warning'><a href='#' class='close' data-dismiss='alert' aria-label='close'>×</a>"); ?>
             <?php echo form_open('timKiem'); ?>  
                 <div class="form-group">
                     <select class="form-control" id="timkiem" name='timkiem' >

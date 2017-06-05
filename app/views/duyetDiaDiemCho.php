@@ -42,7 +42,7 @@
     			<div class="row" >
 					<?php $thongTinNguoiDung = $this->NguoiDung_model->select($diaDiemCho['TenDangNhap']);?>
     				<img src="<?php echo base_url('assets/images/db/'.$thongTinNguoiDung['AnhDaiDien'] ); ?>" class="t-user">
-    				<div style="float:left; padding-top:17px"><b class="t-username"><?php echo $thongTinNguoiDung['TenNguoiDung'] ; ?> </b> đã tạo địa điểm này.</div>
+    				<div href="<?php echo base_url('trangCaNhan/info/'.$thongTinNguoiDung['TenDangNhap'] ); ?>" style="float:left; padding-top:17px; text-decorate: none"><a href="<?php echo base_url('trangCaNhan/info/'.$thongTinNguoiDung['TenDangNhap'] ); ?>"><b class="t-username"><?php echo $thongTinNguoiDung['TenNguoiDung'] ; ?> </b></a> đã tạo địa điểm này.</div>
     			</div>
     		</div>
             <!--Button-->
