@@ -36,7 +36,7 @@
                       <img src="<?php echo base_url(); ?>/assets/images/db/User1.png" alt="avartar" style="width:40px; height:40px;border-radius: 50%;margin:15px 7px 10px 7px">
                 </div>
 
-                <div class="col-md-10" style="padding:17px 18px ; ">
+                <div class="col-md-10" style="padding:20px 18px 10px 18px; ">
                   <div  class="t-content-info-review ">
                       <em style="width:100%" class="t-catchuoidiadiemlike">Đồ ăn dở như hạch, thịt thằn lằn thì bở, ăn có cảm giác nhơn nhợn trong họng, mới nuốt 1 miếng mà muốn phun hết ra ngoài.</em>
                   </div> 
@@ -79,7 +79,7 @@
                       <img src="<?php echo base_url(); ?>/assets/images/db/User1.png" alt="avartar" style="width:40px; height:40px;border-radius: 50%;margin:15px 7px 10px 7px">
                 </div>
 
-                <div class="col-md-10" style="padding:17px 18px ; ">
+                <div class="col-md-10" style="padding:20px 18px 10px 18px; ">
                   <div  class="t-content-info-review t-catchuoidiadiemlike">
                       <em style="width:100%">Đồ ăn dở như hạch, thịt thằn lằn thì bở, ăn có cảm giác nhơn nhợn trong họng, mới nuốt 1 miếng mà muốn phun hết ra ngoài.</em>
                   </div> 
@@ -122,7 +122,7 @@
                       <img src="<?php echo base_url(); ?>/assets/images/db/User1.png" alt="avartar" style="width:40px; height:40px;border-radius: 50%;margin:15px 7px 10px 7px">
                 </div>
 
-                <div class="col-md-10" style="padding:17px 18px ; ">
+                <div class="col-md-10" style="padding:20px 18px 10px 18px; ">
                   <div  class="t-content-info-review t-catchuoidiadiemlike">
                       <em style="width:100%">Đồ ăn dở như hạch, thịt thằn lằn thì bở, ăn có cảm giác nhơn nhợn trong họng, mới nuốt 1 miếng mà muốn phun hết ra ngoài.</em>
                   </div> 
@@ -170,7 +170,7 @@
                       <img src="<?php echo base_url(); ?>/assets/images/db/User1.png" alt="avartar" style="width:40px; height:40px;border-radius: 50%;margin:15px 7px 10px 7px">
                 </div>
 
-                <div class="col-md-10" style="padding:17px 18px ; ">
+                <div class="col-md-10" style="padding:20px 18px 10px 18px; ">
                   <div  class="t-content-info-review t-catchuoidiadiemlike">
                       <em style="width:100%">Đồ ăn dở như hạch, thịt thằn lằn thì bở, ăn có cảm giác nhơn nhợn trong họng, mới nuốt 1 miếng mà muốn phun hết ra ngoài.</em>
                   </div> 
@@ -213,7 +213,7 @@
                       <img src="<?php echo base_url(); ?>/assets/images/db/User1.png" alt="avartar" style="width:40px; height:40px;border-radius: 50%;margin:15px 7px 10px 7px">
                 </div>
 
-                <div class="col-md-10" style="padding:17px 18px ; ">
+                <div class="col-md-10" style="padding:20px 18px 10px 18px; ">
                   <div  class="t-content-info-review t-catchuoidiadiemlike">
                       <em style="width:100%">Đồ ăn dở như hạch, thịt thằn lằn thì bở, ăn có cảm giác nhơn nhợn trong họng, mới nuốt 1 miếng mà muốn phun hết ra ngoài.</em>
                   </div> 
@@ -256,7 +256,7 @@
                       <img src="<?php echo base_url(); ?>/assets/images/db/User1.png" alt="avartar" style="width:40px; height:40px;border-radius: 50%;margin:15px 7px 10px 7px">
                 </div>
 
-                <div class="col-md-10" style="padding:17px 18px ; ">
+                <div class="col-md-10" style="padding:20px 18px 10px 18px; ">
                   <div  class="t-content-info-review t-catchuoidiadiemlike">
                       <em style="width:100%">Đồ ăn dở như hạch, thịt thằn lằn thì bở, ăn có cảm giác nhơn nhợn trong họng, mới nuốt 1 miếng mà muốn phun hết ra ngoài.</em>
                   </div> 
