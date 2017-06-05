@@ -15,6 +15,10 @@ class TrangCaNhan extends CI_Controller {
 		//Thêm tiêu đề
 		$data['title'] = $data['nguoiDung_data']['TenNguoiDung'].' - Đánh giá';
 
+		$data['danhGiaDiaDiem'] = $this->DanhGiaDiaDiem_model->selectAllDanhGiaNguoiDung($tenDangNhap);
+
+		$data['danhGiaMonAn'] = $this->DanhGiaMonAn_model->selectAllDanhGiaNguoiDung($tenDangNhap);
+
 		$data['layoutAnhBia'] = "layouts/trangCaNhan/anhBia";
 
 		$data["layoutContent"] = "layouts/trangCaNhan/trangCaNhan-review";
