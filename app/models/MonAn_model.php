@@ -139,7 +139,7 @@ class MonAn_model extends CI_Model
     /**
      * tìm kiếm món ăn
      *
-     * @param [type] $key
+     * @param string $key
      * @return result
      */
     public function timKiem($key)

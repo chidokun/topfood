@@ -430,7 +430,7 @@ class MonAn extends CI_Controller {
                 $this->session->set_flashdata('review_update_failed', 'Cập nhật đánh giá không thành công.');
             }     
 
-            redirect('diaDiem/cacDanhGia/'.$maDiaDiem.'/'.$maDanhGia);    
+            redirect('monAn/cacDanhGia/'.$maMonAn.'/'.$maDanhGia);    
         }
     }
 
