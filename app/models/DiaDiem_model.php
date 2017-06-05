@@ -131,15 +131,25 @@ class DiaDiem_model extends CI_Model
      * Chọn các địa điểm đang chờ duyệt có trạng thái là 0
      *
      * @param string $maDiaDiem
-     * @return void
+     * @return array
      */
     public function selectDiaDiemCho()
     {
-        # code...
         $this->db->where('TrangThai', 0);
         $query = $this->db->get('DIADIEM');
 
         return $query->result_array();
+    }
+
+    /**
+     * Lấy tất cả các địa điểm theo người dùng
+     *
+     * @return array
+     */
+    public function selectAll($tenDangNhap) {
+        $this->db->where('TenDangNhap', $tenDangNhap);
+
+        return $this->db->get('DIADIEM')->result_array();
     }
 
     /**

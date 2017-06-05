@@ -58,6 +58,22 @@ class MonAn_model extends CI_Model
     }
 
     /**
+     * Chèn một hình ảnh cho món ăn
+     *
+     * @param int $maMonAn Mã món ăn
+     * @param string $pathMA Tên file
+     * @return boolean
+     */
+    public function insertImage($maMonAn, $pathMA) {
+        $data = array (
+            'MaMonAn' => $maMonAn,
+            'PathMA'    => $pathMA
+        );
+
+        return $this->db->insert('IMGMONAN', $data);
+    }
+
+    /**
      * Lấy danh mục hình ảnh
      *
      * @param string $maMonAn Mã món ăn
@@ -166,6 +182,33 @@ class MonAn_model extends CI_Model
         $this->db->where('MaDiaDiem', $maDiaDiem);
         return $this->db->delete('MONAN');
 
+    }
+
+    /**
+     * Lấy chỉ số lớn nhất của hình trong danh mục hình của món ăn. Dùng để đặt tên hình tiếp theo cho món ăn.
+     *
+     * @param int $maMonAn Mã món ăn
+     * @return int
+     */
+    public function selectMaxIndexImage($maMonAn) {
+        $this->db->select_max("SUBSTRING_INDEX(SUBSTRING_INDEX(PathMA,'.',1), '_', -1)", "MAX");
+        $this->db->where('MaMonAn', $maMonAn);
+
+        return $this->db->get('IMGMONAN')->row_array()['MAX'];
+    }
+
+    /**
+     * Xóa một hình ảnh của địa điểm
+     *
+     * @param int $maMonAn Mã món ăn
+     * @param string $pathMA Tên file hình
+     * @return boolean
+     */
+    public function deleteImage($maMonAn, $pathMA) {
+        $this->db->where('MaMonAn', $maMonAn);
+        $this->db->where('PathMA', $pathMA);
+
+        return $this->db->delete('IMGMONAN');
     }
 }
 ?>

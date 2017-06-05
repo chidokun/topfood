@@ -476,6 +476,57 @@ class MonAn extends CI_Controller {
         }
     }
 
+    /**
+     * Xử lý thêm hình ảnh. Phương thức POST
+     *
+     * @return void
+     */
+    public function themHinhAnh() {
+        if(!isset($_POST['submit'])) {
+            return;
+        }
+
+        if(!$_FILES['hinhAnh']['size'] == 0 && $_FILES['hinhAnh']['error'] == 0)
+            $this->uploadImage($_POST['maMonAn']);
+        $this->MonAn_model->insertImage($_POST['maMonAn'], $_POST['pathMA']);
+
+        redirect('monAn/hinhAnh/'.$_POST['maMonAn']);
+    }
+
+    /**
+     * Upload ảnh cho món ăn
+     *
+     * @param string $id Khóa chính của món ăn
+     * @return void
+     */
+    public function uploadImage($id)
+    {
+        $config['upload_path']          = './assets/images/db';
+        $config['allowed_types']        = 'gif|jpg|png';
+        $config['max_size']             = 3000;
+        $config['overwrite']            = true;
+        $config['file_name']            = 'ma_pic_'.$id.'_'.($this->MonAn_model->selectMaxIndexImage($id) + 1);
+
+        $this->load->library('upload', $config);
+
+        if (!$this->upload->do_upload('hinhAnh')) {
+            $this->session->set_flashdata('upload_error', $this->upload->display_errors());
+            return;
+        }
+             
+        $_POST['pathMA'] = $this->upload->data('file_name');
+    }
+
+    /**
+     * Xóa một hình ảnh của địa điểm. Hàm này chỉ dùng cho AJAX, phương thức POST
+     *
+     * @return text
+     */
+    public function deleteImage() {
+        $this->MonAn_model->deleteImage($_POST['maMonAn'], $_POST['pathMA']);
+
+        echo json_encode(array('fileDeleted' => str_replace('.','\\.',$_POST['pathMA'])));
+    }
    
 }
 ?>

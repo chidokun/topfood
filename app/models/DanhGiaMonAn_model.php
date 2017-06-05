@@ -96,6 +96,18 @@ class DanhGiaMonAn_model extends CI_Model
     }
 
     /**
+     * Lấy danh sách thông tin tất cả các đánh giá theo người dùng
+     *
+     * @param string $tenDangNhap Tên đăng nhập
+     * @return void
+     */
+    public function selectAllDanhGiaNguoiDung($tenDangNhap) {
+        $this->db->where('TenDangNhap', $tenDangNhap);
+
+        return $this->db->get('DANHGIAMONAN')->result_array();
+    }
+
+    /**
      * Lấy thông tin một đánh giá
      *
      * @param string $maDanhGia Mã đánh giá

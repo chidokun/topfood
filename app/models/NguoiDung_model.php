@@ -42,15 +42,22 @@ class NguoiDung_model extends CI_Model
     }
 
     /**
-     * Update mật khẩu người dùng
+     * Update mật khẩu người dùng. Thông qua $_POST
      *
      * @return boolean
      */
     public function updateMatKhau($tenDangNhap)
     {
+        $nguoiDung = $this->select($tenDangNhap);
+        $enc_oldpass = md5($_POST['matKhauCu']);
+
+        if ($enc_oldpass != $nguoiDung['MatKhau'])
+            return false;
+
         $data = array (
             'MatKhau' => md5($_POST['matKhauMoi'])
         );
+        
         $this->db->where('TenDangNhap', $tenDangNhap);
         return  $this->db->update('NGUOIDUNG', $data); 
     }
