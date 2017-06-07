@@ -142,6 +142,20 @@ class DiaDiem_model extends CI_Model
     }
 
     /**
+     * Lấy giá min, max của địa điểm
+     *
+     * @param int $maDiaDiem
+     * @return array Min Max
+     */
+    public function selectGia($maDiaDiem) {
+        $this->db->where('MaDiaDiem', $maDiaDiem);
+        $this->db->select('min(GiaCaMA) as Min, max(GiaCaMA) as Max');
+        $this->db->from('MONAN');
+
+        return $this->db->get()->row_array();
+    }
+
+    /**
      * Lấy tất cả các địa điểm theo người dùng
      *
      * @return array
@@ -176,6 +190,7 @@ class DiaDiem_model extends CI_Model
     public function timKiem($key)
     {
         $this->db->like('TenDiaDiem', $key);
+        $this->db->where('TrangThai', 1);
 
         $query = $this->db->get('DIADIEM');
         return $query->result_array(); 

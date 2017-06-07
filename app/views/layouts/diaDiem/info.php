@@ -16,7 +16,8 @@
 				<?php endif; ?>
 				<?php echo date('H:i',strtotime($diaDiem_data['GioMoCua'])).' - '.date('H:i',strtotime($diaDiem_data['GioDongCua'])); ?>
 			</div>
-			<div><span class="glyphicon glyphicon-tags"></span> Từ ?đ - ?đ</div>
+			<?php $gia = $this->DiaDiem_model->selectGia($diaDiem_data['MaDiaDiem']); ?>
+			<div><span class="glyphicon glyphicon-tags"></span> Từ <?php echo number_format($gia['Min'],0,',','.').'đ';?> - <?php echo number_format($gia['Max'],0,',','.').'đ';?></div>
 		</div>
 		<div class="pull-right">
 			<div class="t-diadiem-avescore"><?php echo number_format($diaDiem_data['DiemTrungBinhDD'], 1); ?></div>
