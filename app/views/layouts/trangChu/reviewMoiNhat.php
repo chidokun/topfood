@@ -7,7 +7,7 @@
           <!--Review 1-->
           <a  href="#">
             <div style="padding:1px;width:32%;height:100%; float:left;border:1px solid #dddddd; margin-top:25px; margin-right:10px">
-            <div style="height:40%px;width:100% ">
+            <div style="height:263px;width:100% ">
               <img src="<?php echo base_url('assets/images/db/'.($this->DiaDiem_model->select($danhGia['MaDiaDiem']))['AnhDaiDienDD']); ?>" alt="Địa điểm đề xuất" style="height:100%; width:100%" >
             </div >
 
