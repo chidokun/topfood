@@ -5,8 +5,8 @@
         <!--STT-->
         <div style="height:103px; border-bottom:1px solid #dddddd">
             <a href="<?php echo base_url('dangKy'); ?>" >
-                <div class="col-md-2" style="padding:25px 14px;">
-                    <div style="color:<?php echo $color["$stt"] ; ?>" class="t-STT-top"><?php $stt++; echo $stt; ?></div>
+                <div class="col-md-2" style="padding: 30px 10px 10px 5px;">
+                    <div style="color:<?php echo $color["$stt"] ; ?>" class="t-STT-top">0<?php $stt++; echo $stt; ?></div>
                 </div>
                 <div  class="col-md-10" style="padding:10px 0px">
                     <!--Hình ảnh-->
