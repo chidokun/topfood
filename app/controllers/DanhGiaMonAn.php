@@ -10,18 +10,22 @@ class DanhGiaMonAn extends CI_Controller
     {
         $binhLuan = $this->BinhLuanMA_model->selectBinhLuan($this->BinhLuanMA_model->insertBinhLuan());
         $user = $this->NguoiDung_model->select($binhLuan['TenDangNhap']); 
+        $img = $user['AnhDaiDien'];
+        $ten = $user['TenNguoiDung'];
         
         echo '<div class="panel-footer cmt'.$binhLuan['MaBLMA'].'">
                 <div class="media">
                     <!-- Ảnh đại diện -->
                     <div class="t-comment-avatar media-left">
-                        <img src="'.base_url('assets/images/db/'.$user['AnhDaiDien']).'">
+                        <a href="'.base_url('trangCaNhan/danhGia/'.$binhLuan['TenDangNhap']).'">
+                        <img src="'.($img ? base_url('assets/images/db/'.$user['AnhDaiDien']) : base_url('assets/images/app/user.jpg')).'">
+                        </a>
                     </div>
                     <!-- Nội dung bình luận -->
                     <div class="media-body">
                         <div class="t-comment-heading">
                             <!-- Tên người dùng -->
-                            <div class="t-danhgia-username pull-left">'.$user['TenNguoiDung'].'</div>
+                            <div class="t-danhgia-username pull-left"><a href="'.base_url('trangCaNhan/danhGia/'.$binhLuan['TenDangNhap']).'">'.$user['TenNguoiDung'].'</a></div>
                             <div class="pull-right">
                                 <!-- Ngày tháng -->
                                 <div class="t-danhgia-date">'.date('H:i d/m/Y', strtotime($binhLuan['NgayTaoBLMA'])).'</div>

@@ -1,12 +1,16 @@
 <script src="<?php echo base_url('assets/js/monAnInfo_js.js'); ?>"></script>
 <div class="col-md-12 t-diadiem-info ">
 	<div class="col-md-3">
-		<img class="t-diadiem-img-avatar" src="<?php echo base_url('/assets/images/db/'.$diaDiem_data['AnhDaiDienDD']); ?>">
+		<a href="<?php echo base_url('diaDiem/cacDanhGia/'.$diaDiem_data['MaDiaDiem']); ?>">
+			<img class="t-diadiem-img-avatar" src="<?php echo $diaDiem_data['AnhDaiDienDD'] ? base_url('/assets/images/db/'.$diaDiem_data['AnhDaiDienDD']) : base_url('assets/images/app/place.png'); ?>">
+		</a>
 	</div>
 	<div class="col-md-9 t-divanhbia-monan">
 		<div class="t-divavatarmonan pull-left">
-      		<img src="<?php echo base_url('assets/images/db/'.$monAn['AnhDaiDienMA']); ?>" class="t-imgavatarmonan">
-    	</div>
+			<a href="<?php echo base_url('monAn/cacDanhGia/'.$monAn['MaMonAn']); ?>">
+      			<img src="<?php echo $monAn['AnhDaiDienMA'] ? base_url('assets/images/db/'.$monAn['AnhDaiDienMA']) : base_url('assets/images/app/food.png'); ?>" class="t-imgavatarmonan">
+			</a>
+		</div>
     	<div class="t-detailmonan pull-left">
 			<div class="t-diadiem-name"><?php echo $monAn['TenMonAn'];?></div>
 			<div>Tại <b><?php echo $diaDiem_data['TenDiaDiem'];?></b></div>

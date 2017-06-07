@@ -9,12 +9,14 @@
                 
                 <div class="t-thucdon-item" style="position: relative;">
                     <div class="t-thucdon-item-avatar pull-left">
-                        <img src="<?php echo base_url('assets/images/db/'.$diaDiem['AnhDaiDienDD']); ?>">
+                    <a href="<?php echo base_url('diaDiem/cacDanhGia/'.$diaDiem['MaDiaDiem']); ?>">
+                        <img src="<?php echo $diaDiem['AnhDaiDienDD'] ? base_url('assets/images/db/'.$diaDiem['AnhDaiDienDD']): base_url('assets/images/app/place.png'); ?>">
+                    </a>
                     </div>
                     <div class="t-thucdon-item-content pull-left">
-                        <div class="t-thucdon-item-monan"><?php echo $diaDiem['TenDiaDiem']; ?></div>
+                        <div class="t-thucdon-item-monan"><a href="<?php echo base_url('diaDiem/cacDanhGia/'.$diaDiem['MaDiaDiem']); ?>"><?php echo $diaDiem['TenDiaDiem']; ?></a></div>
                         <div><?php echo $diaDiem['DiaChi']; ?></div>
-                        <div><?php echo $diaDiem['MoTaDD']; ?></div>
+                        <div><i><?php echo $diaDiem['MoTaDD']; ?></i></div>
                         
                     </div>
                     <div class="t-danhgia-diem pull-right" style="margin: 10px;">

@@ -19,7 +19,9 @@
         <?php foreach ($cacMonAn as $monAn): ?>
             <div class="t-thucdon-item" style="position: relative;">
                 <div class="t-thucdon-item-avatar pull-left">
-                    <img src="<?php echo base_url('assets/images/db/'.$monAn['AnhDaiDienMA']); ?>">
+                    <a href="<?php echo base_url('monAn/cacDanhGia/'.$monAn['MaMonAn']); ?>">
+      			        <img src="<?php echo $monAn['AnhDaiDienMA'] ? base_url('assets/images/db/'.$monAn['AnhDaiDienMA']) : base_url('assets/images/app/food.png'); ?>" class="t-imgavatarmonan">
+			        </a>                
                 </div>
                 <div class="t-thucdon-item-content pull-left">
                     <div class="t-thucdon-item-monan"><?php echo $monAn['TenMonAn']; ?></div>

@@ -1,6 +1,8 @@
 <!--Ảnh bìa và mô tả-->
 <div class="t-divanhbia">
-    <img src="<?php echo base_url('assets/images/db/'.$nguoiDung_data['AnhDaiDien'] ); ?>" class="t-infoavatar pull-left">
+    <a href="<?php echo base_url('trangCaNhan/danhGia/'.$nguoiDung_data['TenDangNhap']); ?>">
+        <img src="<?php echo $nguoiDung_data['AnhDaiDien'] ? base_url('assets/images/db/'.$nguoiDung_data['AnhDaiDien']) : base_url('assets/images/app/user.jpg'); ?>" class="t-infoavatar pull-left">
+    </a>
     <div class="t-info pull-left">
         <div class="t-header-info"><?php echo $nguoiDung_data['TenNguoiDung']; ?></div>
         <div class="t-body-infor"><b>@<?php echo $nguoiDung_data['TenDangNhap']; ?></b></div>

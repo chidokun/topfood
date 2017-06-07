@@ -211,7 +211,6 @@ footer {
 	background: url(../../assets/images/app/bg_register_login.jpg) no-repeat scroll center;
 	max-width: 100%;
 	height: 180px;
-	margin-bottom: 20px;
 	vertical-align: middle;
 	position: relative;
 	background-size: cover;
@@ -653,10 +652,11 @@ h1, h2 {
 	color: white;
 }
 .t-danhgia-item-content-heading {
-	font-weight: bold;
+	font-size: 20px;
 	margin-bottom: 5px;
 }
 .t-danhgia-item-content-body {
+	font-size: 15px;
 	margin: 10px 0;
 }
 .t-like-count {
@@ -672,7 +672,7 @@ h1, h2 {
 	width: 16px;
 }
 
-.t-comment-avatar > img{
+.t-comment-avatar  img{
 	width: 40px;
 	height: 40px;
 	border-radius: 50%;
@@ -681,6 +681,7 @@ h1, h2 {
 	overflow: auto;
 }
 .t-comment-body {
+	font-size: 13px;
 	margin: 0 0 10px;
 }
 .t-map {
@@ -691,7 +692,9 @@ h1, h2 {
 	margin: 10px;
 	border: 1px solid #ddd;
 	overflow: auto;
+	box-shadow: 2px 2px 4px #dddddd;
 }
+
 .t-thucdon-item-avatar {
 	margin: 10px;
 }

@@ -1,8 +1,8 @@
 $(document).ready(function() {
     $("#submit").click(function (e) {
         if ($('#anhDaiDienMA').get(0).files.length === 0) {
-            alert("Bạn có thể thay đổi ảnh đại diện của món ăn bất cứ lúc nào ở trang thông tin món ăn");
-        }
+           if (!confirm('Nếu không chọn ảnh đại diện, bạn sẽ không thể thay đổi ảnh đại diện sau này!\nTiếp tục?'))
+                e.preventDefault();        }
     });
 
     $("#loaiMonAn > div").click(function () {

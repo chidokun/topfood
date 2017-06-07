@@ -12,11 +12,16 @@
         <div class="panel panel-default">
 			<div class="panel-heading media" style="overflow: auto;">
 				<div class="t-danhgia-item-avatar media-left">
-					<img src=<?php echo base_url('assets/images/db/'.($this->NguoiDung_model->select($danhGia['TenDangNhap']))['AnhDaiDien']); ?>>
+					<?php $img = $this->NguoiDung_model->select($danhGia['TenDangNhap'])['AnhDaiDien']; ?>
+					<a href="<?php echo base_url('trangCaNhan/danhGia/'.$danhGia['TenDangNhap']); ?>">
+						<img src="<?php echo $img ? base_url('assets/images/db/'.$img) : base_url('assets/images/app/user.jpg') ; ?>">
+					</a>
 				</div>      
 				<div class="t-danhgia-item-heading media-body">
 					<div class="t-danhgia-username">
+					<a href="<?php echo base_url('trangCaNhan/danhGia/'.$danhGia['TenDangNhap']); ?>">
 						<?php echo ($this->NguoiDung_model->select($danhGia['TenDangNhap']))['TenNguoiDung']; ?>
+					</a>
 					</div>
 					<div class="t-danhgia-date">
 						<?php echo date('H:i d/m/Y', strtotime($danhGia['NgayTaoDGDD'])); ?>
@@ -41,7 +46,7 @@
 				<div class="t-like-count pull-left">
 					<img src=<?php echo base_url('assets/images/app/comment.png'); ?>> <?php echo $this->DanhGiaDiaDiem_model->selectTongBinhLuanDanhGia($danhGia['MaDGDD']); ?> bình luận
 				</div>
-				<a href="<?php echo base_url(uri_string().'/'.$danhGia['MaDGDD']); ?>" class="btn btn-default btn-xs pull-right">Xem đánh giá</a>
+				<a href="<?php echo base_url(uri_string().'/'.$danhGia['MaDGDD']); ?>" class="btn btn-default t-btn btn-xs pull-right">Xem đánh giá</a>
 			</div>
 		</div>
     <?php endforeach; ?>
