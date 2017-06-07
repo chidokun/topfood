@@ -12,19 +12,21 @@
     <div class="carousel-inner" style="width:100%; height:100%">
     
     <?php foreach ($diadiemmoi_data as  $diaDiem) : ?>
-      <div class="item" style="height:100%">
-        <div style="background-image: url('./assets/images/db/<?php echo $diaDiem['AnhDaiDienDD']; ?>'); width:100%; height:100%; background-size: cover; background-position: center;"></div>
-        <div class="carousel-caption" >
-          <h3><?php echo $diaDiem['TenDiaDiem']; ?></h3>
-          <p><?php echo $diaDiem['MoTaDD']; ?></p>
+        <div class="item" style="height:100%">
+          <a href="<?php echo base_url('diaDiem/cacDanhGia/'.$diaDiem['MaDiaDiem'] ); ?>">
+            <img src="<?php echo base_url('assets/images/db/'.$diaDiem['AnhDaiDienDD']); ?>" alt="New York" style="width:100%;height:100%;object-fit:cotain ; ">
+          </a>
+          <div class="carousel-caption" >
+            <h3><?php echo $diaDiem['TenDiaDiem']; ?></h3>
+            <p><?php echo $diaDiem['MoTaDD']; ?></p>
+          </div>
         </div>
-      </div>
     <?php endforeach; ?>
+    <!--Chèn class active vào item đầu tiên-->
     <script>
       $(".item:first-of-type").addClass("active");
     </script>
     </div>
-
 
     <!-- Left and right controls -->
     <a class="left carousel-control" href="#myCarousel" data-slide="prev">
@@ -35,4 +37,5 @@
       <span class="glyphicon glyphicon-chevron-right"></span>
       <span class="sr-only">Next</span>
     </a>
-  </div>
+
+</div>

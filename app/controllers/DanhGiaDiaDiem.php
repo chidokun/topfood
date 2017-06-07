@@ -17,7 +17,6 @@ class DanhGiaDiaDiem extends CI_Controller
                     <div class="t-comment-avatar media-left">
                         <img src="'.base_url('assets/images/db/'.$user['AnhDaiDien']).'">
                     </div>
-
                     <!-- Nội dung bình luận -->
                     <div class="media-body">
                         <div class="t-comment-heading">
@@ -34,7 +33,6 @@ class DanhGiaDiaDiem extends CI_Controller
                         </div>
                         <div class="t-comment-body">'.$binhLuan['NoiDungBLDD'].'</div>
                     </div> 
-
                     <!-- Like, count like -->
                     <div class="t-like-panel media-footer">'.($this->session->userdata('logged_in')?
                         '<button class="btn btn-default btn-xs like-comment" value="'.$binhLuan['MaBLDD'].'">
@@ -47,7 +45,6 @@ class DanhGiaDiaDiem extends CI_Controller
                 </div>         
             </div>';
     }
-
     /**
      * Thích một bài đánh giá. Hàm này dùng cho AJAX. Phương thức POST
      *
@@ -61,10 +58,8 @@ class DanhGiaDiaDiem extends CI_Controller
         else {
             $this->DanhGiaDiaDiem_model->unlike($_POST['MaDGDD']);
         }
-
         echo $this->DanhGiaDiaDiem_model->countLike($_POST['MaDGDD']);
     }
-
     /**
      * Thích một bình luận. Hàm này dùng cho AJAX. Phương thức POST
      *
@@ -78,10 +73,8 @@ class DanhGiaDiaDiem extends CI_Controller
         else {
             $this->BinhLuanDD_model->unlike($_POST['MaBLDD']);
         }
-
         echo $this->BinhLuanDD_model->countLike($_POST['MaBLDD']);
     }
-
     /**
      * Xóa một bình luận. Hàm này dùng cho AJAX. Phương thức POST
      *

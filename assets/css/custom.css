@@ -375,9 +375,7 @@ td{
 	margin: 0px auto;
 	font-size:18px; 
 }
-.t-content-info-body-reiew{
-	color: black;
-}
+
 .t-diadiem-info-panel-left{
 	color: black;
 }
@@ -403,12 +401,10 @@ td{
 /* Định dạng div của từng nhóm bài review trong review mới nhất*/
 .t-group-review{
 	width:100%;
-	height:350px;
 	padding-bottom:15px
 }
 /*định dạng div tên địa điểm và điểm trong từng review*/
 .t-content-score-name-review{
-	height:50%; 
 	background-color:white;
 	padding-bottom:7px;
 	color: black;
@@ -425,9 +421,10 @@ td{
 }
 /*Div body nội dung của từng review */
 .t-content-info-body-reiew{
-	height:50%;
+	height:30%;
 	background-color:white;
-	border-top:1px solid #dddddd
+	border-top:1px solid #dddddd;
+	color: black;
 }
 /*Div nội dung chi tiết review*/
 .t-content-info-review{

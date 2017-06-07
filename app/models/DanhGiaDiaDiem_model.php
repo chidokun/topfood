@@ -268,7 +268,11 @@ class DanhGiaDiaDiem_model extends CI_Model
         $this->db->where('MaDiaDiem', $maDiaDiem);
         return $this->db->delete('DANHGIADIADIEM');
     }
-
+    /**
+     * Chọn top 5 đánh giá có lượt like nhiều nhất
+     *
+     * @return void
+     */
     public function selectTop5()
     {
         # code...
@@ -278,5 +282,23 @@ class DanhGiaDiaDiem_model extends CI_Model
         $query = $this->db->get('DanhGiaDiaDiem');
         return  $query->result_array();
 
+    }
+    /**
+     * Chọn đánh giá trong 7 ngày
+     *
+     * @param string $value
+     * @return void
+     */
+    public function selectReviewMoi()
+    {
+        # code...
+        $date = date('Y-m-d h:i:s');
+        $day  = mktime(date("h"), date("i"), date("s"), date("m")  , date("d")-7, date("Y"));
+        $d = date('Y-m-d h:i:s', $day);
+        $this->db->where('NgayTaoDGDD <',$date);
+        $this->db->where('NgayTaoDGDD >',$d);
+        $this->db->limit(5);
+        $query = $this->db->get('DanhGiaDiaDiem');
+        return  $query->result_array();
     }
 }

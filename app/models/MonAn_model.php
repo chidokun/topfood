@@ -210,5 +210,20 @@ class MonAn_model extends CI_Model
 
         return $this->db->delete('IMGMONAN');
     }
+
+    /**
+     * Lấy món ăn theo đtb giảm dần
+     *
+     * @return void
+     */
+    public function selectMonNgon()
+    {
+        # code...
+        $this->db->select('*');
+        $this->db->order_by('DiemTrungBinhMA', 'desc');
+        $this->db->limit(5);
+        $query = $this->db->get('MonAn');
+        return  $query->result_array();
+    }
 }
 ?>

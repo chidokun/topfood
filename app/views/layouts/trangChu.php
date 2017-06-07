@@ -1,11 +1,7 @@
 <div>
     <div class="col-md-8" style="padding: 5px">
-        <div style="margin-bottom:5px; height: 350px; margin-bottom:10px">
+        <div style="margin-bottom:5px; height: 350px; margin-bottom:40px">
             <?php $this->load->view($diadiem_moi); ?>
-        </div>
-
-        <div style="margin-bottom:5px; height:350px;">
-            <?php $this->load->view($diadiem_dexuat); ?>
         </div>
 
         <div style="margin-bottom:5px;">
