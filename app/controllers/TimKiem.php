@@ -1,24 +1,24 @@
 <?php
 class TimKiem extends CI_Controller {
 	public function index() {
-		$type = $_POST["timkiem"];
-		if(isset($_POST['searchbtn']) && $_POST["timkiem"]=='place') {
+		$type = $_GET["timkiem"];
+		if(isset($_GET['searchbtn']) && $_GET["timkiem"]=='place') {
 		
-			$this->diaDiem($_POST["search"]);
+			$this->diaDiem($_GET["search"]);
 		}
-		elseif(isset($_POST['searchbtn']) && $_POST["timkiem"]=='user') {
+		elseif(isset($_GET['searchbtn']) && $_GET["timkiem"]=='user') {
 		
-			$this->nguoiDung($_POST["search"]);
+			$this->nguoiDung($_GET["search"]);
 		}
-		elseif(isset($_POST['searchbtn']) && $_POST["timkiem"]=='food') {
+		elseif(isset($_GET['searchbtn']) && $_GET["timkiem"]=='food') {
 		
-			$this->monAn($_POST["search"]);
+			$this->monAn($_GET["search"]);
 		}
 	}
 	/**
 	 * Tìm kiếm địa điểm
 	 *
-	 * @param array $_POST
+	 * @param array $_GET
 	 * @return void
 	 */
 	public function diaDiem($noiDung)
@@ -33,14 +33,14 @@ class TimKiem extends CI_Controller {
 	/**
 	 * Tìm kiếm người dùng
 	 *
-	 * @param array $_POST
+	 * @param array $_GET
 	 * @return void
 	 */
 	public function nguoiDung($noiDung)
 	{
 		$data['ketQua'] = $this->NguoiDung_model->timKiem($noiDung);
 		$data['noiDung'] = $noiDung;
-		$data['title'] = 'Tìm kiếmngười dùng cho '.$noiDung;
+		$data['title'] = 'Tìm kiếm người dùng cho '.$noiDung;
 		$data["main_content"] = "timKiem";
 		$this->load->view("layouts/main", $data);
 	}
@@ -48,7 +48,7 @@ class TimKiem extends CI_Controller {
 	/**
 	 * Tìm kiếm món ăn
 	 *
-	 * @param array $_POST
+	 * @param array $_GET
 	 * @return void
 	 */
 	public function monAn($noiDung)

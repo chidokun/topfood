@@ -27,7 +27,7 @@
     	<div class="t-diadiem-name"><?php echo $diaDiem_data['TenDiaDiem']; ?></div>
         <div><b>Website</b>: <a href=<?php echo $diaDiem_data['Website']; ?>><?php echo $diaDiem_data['Website']; ?></a></div>
         <div><b>Email</b>: <a href=<?php echo 'mailto:'.$diaDiem_data['EmailDD']; ?>><?php echo $diaDiem_data['EmailDD']; ?></a></div>
-        <div><b>Số điện thoại</b>: <a href=""><?php echo $diaDiem_data['SoDT']; ?></a></div>
+        <div><b>Số điện thoại</b>: <a href="#"><?php echo $diaDiem_data['SoDT']; ?></a></div>
         <div><b>Địa chỉ</b>: <?php echo $diaDiem_data['DiaChi']; ?></div>
     </div>
 </div>

@@ -13,7 +13,7 @@
     
     <?php foreach ($diadiemmoi_data as  $diaDiem) : ?>
       <div class="item" style="height:100%">
-        <img src="<?php echo base_url('assets/images/db/'.$diaDiem['AnhDaiDienDD']); ?>" alt="New York" style="width:100%;height:100%;object-fit:cotain ; ">
+        <div style="background-image: url('./assets/images/db/<?php echo $diaDiem['AnhDaiDienDD']; ?>'); width:100%; height:100%; background-size: cover; background-position: center;"></div>
         <div class="carousel-caption" >
           <h3><?php echo $diaDiem['TenDiaDiem']; ?></h3>
           <p><?php echo $diaDiem['MoTaDD']; ?></p>

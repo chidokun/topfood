@@ -15,7 +15,7 @@
       <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">    
         <div class="t-inline">
             <div class="navbar-form form-inline">
-            <?php echo form_open('timKiem'); ?>  
+            <?php echo form_open('timKiem', 'method="get"'); ?>  
                 <div class="form-group">
                     <select class="form-control" id="timkiem" name='timkiem' >
                          <option value="place">Địa điểm</option>
@@ -42,7 +42,7 @@
           <li class="dropdown">
             <?php $user = $this->NguoiDung_model->select($this->session->userdata('tenDangNhap'));?>
             <a href="#" class="dropdown-toggle" data-toggle="dropdown">Xin chào, <b id="tenNguoiDungNav"><?php echo $user['TenNguoiDung']; ?></b> 
-            <img class="t-avatar-navbar" id="imgNguoiDungNav" src="<?php echo base_url('assets/images/db/'.$user['AnhDaiDien']); ?>">
+            <img class="t-avatar-navbar" id="imgNguoiDungNav" src="<?php echo $user['AnhDaiDien'] ? base_url('assets/images/db/'.$user['AnhDaiDien']) : base_url('assets/images/app/user.jpg'); ?>">
             <b class="caret"></b></a>
             <ul class="dropdown-menu">
                 <li><a href="<?php echo base_url('trangCaNhan/info/'.$this->session->userdata('tenDangNhap')); ?>">Trang cá nhân</a></li>
