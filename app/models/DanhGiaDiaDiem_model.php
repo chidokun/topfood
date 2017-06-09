@@ -304,4 +304,19 @@ class DanhGiaDiaDiem_model extends CI_Model
         $query = $this->db->get('DanhGiaDiaDiem');
         return  $query->result_array();
     }
+
+    public function selectReviewMoi_input($limit)
+    {
+        # code...
+        // $date = date('Y-m-d h:i:s');
+        // $day  = mktime(date("h"), date("i"), date("s"), date("m")  , date("d")-7, date("Y"));
+        // $d = date('Y-m-d h:i:s', $day);
+        // $this->db->where('NgayTaoDGDD <',$date);
+        // $this->db->where('NgayTaoDGDD >',$d);
+        $this->db->select('*');
+        $this->db->order_by('NgayTaoDGDD', 'desc');
+        $this->db->limit($limit);
+        $query = $this->db->get('DanhGiaDiaDiem');
+        return  $query->result_array();
+    }
 }

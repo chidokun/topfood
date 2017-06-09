@@ -250,18 +250,14 @@ class DiaDiem_model extends CI_Model
         return $this->db->get('IMGDIADIEM')->row_array()['MAX'];
     }
     /**
-     * Chọn địa điểm mới tạo trong 7 ngày gần đây
+     * Chọn 5 địa điểm mới ngày gần đây
      *
      * @return void
      */
     public function selectDiaDiemMoi()
     {
-        # code... 
-        $date = date('Y-m-d h:i:s');
-        $day  = mktime(date("h"), date("i"), date("s"), date("m")  , date("d")-7, date("Y"));
-        $d = date('Y-m-d h:i:s', $day);
-        $this->db->where('NgayTaoDD <',$date);
-        $this->db->where('NgayTaoDD >',$d);
+        $this->db->where('TrangThai',1);
+        $this->db->order_by('NgayTaoDD','desc');
         $this->db->limit(5);
         $query = $this->db->get('DiaDiem');
         return  $query->result_array();
