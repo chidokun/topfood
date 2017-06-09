@@ -44,10 +44,11 @@
 		</ul>
 	</div>
 	<div class="col-md-9 t-diadiem-content">
-		<?php if ($diaDiem_data['TrangThai'] == 0): ?>
-			<p class='alert alert-dismissable alert-warning'><b>Cảnh báo</b>: Địa điểm chưa được duyệt.</p>
-		<?php else: ?>
+		<?php if (($diaDiem_data['TrangThai'] == 0 && ($this->session->userdata('tenDangNhap') == $diaDiem_data['TenDangNhap']))||($diaDiem_data['TrangThai'] == 1)) : ?>
 			<?php $this->load->view($layoutDiaDiemContent); ?>
+			
+		<?php else: ?>
+			<p class='alert alert-dismissable alert-warning'><b>Cảnh báo</b>: Địa điểm chưa được duyệt.</p>
 		<?php endif; ?>
 	</div>
 </div>
