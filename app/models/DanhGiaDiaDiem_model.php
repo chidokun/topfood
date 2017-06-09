@@ -302,7 +302,6 @@ class DanhGiaDiaDiem_model extends CI_Model
         return  $query->result_array();
     }
 
-<<<<<<< HEAD
     public function selectReviewMoi_input($limit)
     {
         # code...
@@ -316,9 +315,10 @@ class DanhGiaDiaDiem_model extends CI_Model
         $this->db->limit($limit);
         $query = $this->db->get('DanhGiaDiaDiem');
         return  $query->result_array();
-=======
+    }
+    
     public function countAll() {
         return $this->db->get('DANHGIADIADIEM')->num_rows();
->>>>>>> cec4c233c2eb716f414fb7ed6d425c5f5687e75c
+
     }
 }

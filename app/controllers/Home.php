@@ -10,7 +10,6 @@ class Home extends CI_Controller {
 		//Lấy thông tin các địa điểm được tạo trong vòng 7 ngày 
 		$data['diadiemmoi_data'] = $this->DiaDiem_model->selectDiaDiemMoi();
 
-<<<<<<< HEAD
 		//Lấy thông tin các đánh giá địa điểm được tạo trong vòng 7 ngày 
 		$data['danhgiamoi_data'] = $this->DanhGiaDiaDiem_model->selectReviewMoi();
 
@@ -18,7 +17,7 @@ class Home extends CI_Controller {
 		$data['monan_data'] = $this->MonAn_model->selectMonNgon();
 		// $segment = $this->uri->segment(1);
 		///$segment = intval($segment);
-=======
+
 		//Lấy thông tin các đánh giá địa điểm được tạo
 		$this->load->library('pagination');
 		$perPage = 9;
@@ -47,7 +46,6 @@ class Home extends CI_Controller {
 
 		//Lấy thông tin các món ăn có điểm trung bình cao nhất
 		$data['monan_data'] = $this->MonAn_model->selectMonNgon();
->>>>>>> cec4c233c2eb716f414fb7ed6d425c5f5687e75c
 
 		$data['monngon'] = 'layouts/trangChu/monNgon' ;
 		$data['diadiem_moi'] = 'layouts/trangChu/diaDiemMoi';
