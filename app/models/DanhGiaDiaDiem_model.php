@@ -285,23 +285,24 @@ class DanhGiaDiaDiem_model extends CI_Model
         return  $query->result_array();
 
     }
+    
     /**
-     * Chọn đánh giá trong 7 ngày
+     * Chọn đánh giá
      *
-     * @param string $value
-     * @return void
+     * @param int $perPage Số record mỗi page
+     * @param int $offset Vị trí
+     * @return array
      */
-    public function selectReviewMoi()
+    public function selectReviewMoi($perPage, $offset)
     {
-        # code...
-        // $date = date('Y-m-d h:i:s');
-        // $day  = mktime(date("h"), date("i"), date("s"), date("m")  , date("d")-7, date("Y"));
-        // $d = date('Y-m-d h:i:s', $day);
-        // $this->db->where('NgayTaoDGDD <',$date);
-        // $this->db->where('NgayTaoDGDD >',$d);
         $this->db->select('*');
         $this->db->order_by('NgayTaoDGDD', 'desc');
+        $this->db->limit($perPage, $offset);
         $query = $this->db->get('DanhGiaDiaDiem');
         return  $query->result_array();
+    }
+
+    public function countAll() {
+        return $this->db->get('DANHGIADIADIEM')->num_rows();
     }
 }

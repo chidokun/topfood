@@ -1,5 +1,5 @@
 <div >
-  <p class="panel-heading t-panel-header t-padding-panel" style=" border-bottom: 4px solid orange">Review mới nhất</p>
+  <p class="panel-heading t-panel-header t-padding-panel" style=" border-bottom: 4px solid orange">Đánh giá địa điểm mới nhất</p>
   <div>
       <!--Nhóm bài Review 1-->
       <div class=" t-group-review" style=" width:750px;">
@@ -50,7 +50,8 @@
             </div>
           </a>
           <?php endforeach; ?>
-          <!--/Review 1-->  
+          <!--/Review 1-->
           </div>     
       </div>
+      <div class="t-pagination"><?php echo $paginator; ?></div>
 </div>

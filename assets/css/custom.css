@@ -410,8 +410,7 @@ td{
 }
 /*Định dạng div tên địa điểm trong body của tên địa điểm và điểm từng review*/
 .t-content-name-review{
-	font-weight: bold; 
-	padding-left:10px;
+	font-weight: bold;
 }
 /*Định dạng địa chỉ trong body của tên địa điểm và điểm từng review*/
 .t-content-address-review{
@@ -716,4 +715,21 @@ h1, h2 {
 #ex1Slider .slider-selection {
 	background: #BABABA;
 }
-/* hết phần của tuấn*/
+
+/*pagination*/
+.t-pagination {
+	display: block;
+	clear: both;
+	text-align: center;
+}
+
+.pagination  a {
+	color: #f59f08 !important;
+}
+
+.pagination > .active > a {
+	color: white !important;
+	background-color: #f59f08 !important;
+	border-color: #f59f08 !important;
+}
+

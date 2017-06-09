@@ -12,7 +12,8 @@ $(document).ready(function () {
             e.preventDefault();
         }
         else if ($('#anhDaiDien').get(0).files.length === 0) {
-            alert("Bạn có thể thay đổi ảnh đại diện bất cứ lúc nào ở trang cá nhân");
+            if (!confirm('Nếu không chọn ảnh đại diện, bạn sẽ không thể thay đổi ảnh đại diện sau này!\nTiếp tục?'))
+                e.preventDefault();
         }
     });
 
