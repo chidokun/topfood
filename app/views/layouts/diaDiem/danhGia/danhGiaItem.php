@@ -27,11 +27,16 @@
     <div class="panel-heading media" style="overflow: auto;">
         <!-- Avatar và thông tin người đánh giá -->
         <div class="t-danhgia-item-avatar media-left">
-            <img src=<?php echo base_url('assets/images/db/'.($this->NguoiDung_model->select($danhGia['TenDangNhap']))['AnhDaiDien']); ?>>
+            <?php $img = $this->NguoiDung_model->select($danhGia['TenDangNhap'])['AnhDaiDien']; ?>
+            <a href="<?php echo base_url('trangCaNhan/danhGia/'.$danhGia['TenDangNhap']); ?>">
+                <img src="<?php echo $img ? base_url('assets/images/db/'.$img) : base_url('assets/images/app/user.jpg') ; ?>">
+            </a>
         </div>      
         <div class="t-danhgia-item-heading media-body">
             <div class="t-danhgia-username">
-                <?php echo ($this->NguoiDung_model->select($danhGia['TenDangNhap']))['TenNguoiDung']; ?>
+                <a href="<?php echo base_url('trangCaNhan/danhGia/'.$danhGia['TenDangNhap']); ?>">
+                    <?php echo ($this->NguoiDung_model->select($danhGia['TenDangNhap']))['TenNguoiDung']; ?>
+                </a>
             </div>
             <div class="t-danhgia-date">
                 <?php echo date('H:i d/m/Y', strtotime($danhGia['NgayTaoDGDD'])); ?>
@@ -91,14 +96,16 @@
                           $img = $user['AnhDaiDien'];
                           $ten = $user['TenNguoiDung'];
                     ?>
-                    <img src="<?php echo base_url('assets/images/db/'.$img); ?>">
+                    <a href="<?php echo base_url('trangCaNhan/danhGia/'.$binhLuan['TenDangNhap']); ?>">
+                        <img src="<?php echo $img ? base_url('assets/images/db/'.$img) : base_url('assets/images/app/user.jpg'); ?>">
+                    </a>
                 </div>
 
                 <!-- Nội dung bình luận -->
                 <div class="media-body">
                     <div class="t-comment-heading">
                         <!-- Tên người dùng -->
-                        <div class="t-danhgia-username pull-left"><?php echo $ten; ?></div>
+                        <div class="t-danhgia-username pull-left"><a href="<?php echo base_url('trangCaNhan/danhGia/'.$binhLuan['TenDangNhap']); ?>"><?php echo $ten; ?></a></div>
                         <div class="pull-right">
                             <!-- Ngày tháng -->
                             <div class="t-danhgia-date"><?php echo date('H:i d/m/Y', strtotime($binhLuan['NgayTaoBLDD'])); ?></div>

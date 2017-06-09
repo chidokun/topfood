@@ -1,7 +1,8 @@
 $(document).ready(function () {
     $("#taoDiaDiem").click(function (e) {
         if ($('#anhDaiDienDD').get(0).files.length === 0) {
-            alert("Bạn có thể thay đổi ảnh đại diện của địa điểm bất cứ lúc nào ở trang thông tin địa điểm");
+            if (!confirm('Nếu không chọn ảnh đại diện, bạn sẽ không thể thay đổi ảnh đại diện sau này!\nTiếp tục?'))
+                e.preventDefault();
         }
     });
 

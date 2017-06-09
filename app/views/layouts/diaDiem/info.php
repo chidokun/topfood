@@ -1,6 +1,8 @@
 <div class="col-md-12 t-diadiem-info">
 	<div class="col-md-3">
-		<img class="t-diadiem-img-avatar" src="<?php echo base_url('/assets/images/db/'.$diaDiem_data['AnhDaiDienDD']); ?>">
+		<a href="<?php echo base_url('diaDiem/cacDanhGia/'.$diaDiem_data['MaDiaDiem']); ?>">
+			<img class="t-diadiem-img-avatar" src="<?php echo $diaDiem_data['AnhDaiDienDD'] ? base_url('/assets/images/db/'.$diaDiem_data['AnhDaiDienDD']) : base_url('assets/images/app/place.png'); ?>">
+		</a>	
 	</div>
 	<div class="col-md-9 t-diadiem-info-panel">
 		<div class="pull-left">
@@ -9,7 +11,7 @@
 			<div><span class="glyphicon glyphicon-home"></span> <?php echo $diaDiem_data['DiaChi']; ?></div>
 			<div>
 				<span class="glyphicon glyphicon-time"></span>
-				<?php if (time() < strtotime($diaDiem_data['GioMoCua']) || strtotime($diaDiem_data['GioDongCua']) > time()): ?>
+				<?php if (time() < strtotime($diaDiem_data['GioMoCua']) || time() > strtotime($diaDiem_data['GioDongCua'])): ?>
 					<span style="color:#C43414;font-weight: bold;"> Đã đóng cửa </span>
 				<?php else:	?>
 					<span style="color:#007d03;font-weight: bold;"> Đang mở cửa </span>

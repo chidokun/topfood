@@ -45,7 +45,7 @@
             <img class="t-avatar-navbar" id="imgNguoiDungNav" src="<?php echo $user['AnhDaiDien'] ? base_url('assets/images/db/'.$user['AnhDaiDien']) : base_url('assets/images/app/user.jpg'); ?>">
             <b class="caret"></b></a>
             <ul class="dropdown-menu">
-                <li><a href="<?php echo base_url('trangCaNhan/info/'.$this->session->userdata('tenDangNhap')); ?>">Trang cá nhân</a></li>
+                <li><a href="<?php echo base_url('trangCaNhan/danhGia/'.$this->session->userdata('tenDangNhap')); ?>">Trang cá nhân</a></li>
                 <li><a href="<?php echo base_url('taoDiaDiem'); ?>">Tạo địa điểm</a></li>
                 <li><a href="<?php echo base_url('trangCaNhan/diaDiem/'.$this->session->userdata('tenDangNhap')); ?>">Địa điểm của tôi</a></li>
                 <li class="divider"></li>

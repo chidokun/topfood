@@ -1,12 +1,6 @@
 <?php
 class DangNhap extends CI_Controller
 {
-    public function __construct() {
-        parent::__construct();
-        if($this->session->userdata('logged_in'))
-            redirect(base_url());
-    }
-
     /**
      * Hiển thị trang Đăng nhập và xử lý đăng nhập
      *
@@ -14,6 +8,9 @@ class DangNhap extends CI_Controller
      */
     public function index()
     {
+        if($this->session->userdata('logged_in'))
+            redirect();
+
         $this->form_validation->set_rules('tenDangNhap', 'Tên đăng nhập', 'trim|required|max_length[100]|min_length[2]');
         $this->form_validation->set_rules('matKhau', 'Mật khẩu', 'trim|required|max_length[50]|min_length[6]');
 
@@ -44,15 +41,18 @@ class DangNhap extends CI_Controller
         }
     }
 
+    /**
+     * Xử lý đăng xuất
+     *
+     * @return void
+     */
     public function logout() {
-        $this->session->set_userdata(array(
-                    'tenDangNhap' => '',
-                    'logged_in'   => FALSE,
-                    'maQH'        => ''
-                    ));
+        $this->session->unset_userdata('logged_in');
+        $this->session->unset_userdata('tenDangNhap');
+        $this->session->unset_userdata('maQH');
 
         $this->session->sess_destroy();
-        $this->session->set_flashdata('logged_out', 'Bạn đã đăng xuất');
-        redirect('DangNhap','refresh');
+
+        redirect('dangNhap');      
     }
 }

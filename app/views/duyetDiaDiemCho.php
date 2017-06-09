@@ -23,7 +23,9 @@
             <div class="col-md-8">
                 <div class="row" style="height:140px">
                     <div  style="width:140px; float:left">
-                        <img src="<?php echo base_url('assets/images/db/'.$diaDiemCho['AnhDaiDienDD'] ); ?>" class="t-imgdiadiemcho">
+                        <a href="<?php echo base_url('diaDiem/cacDanhGia/'.$diaDiemCho['MaDiaDiem']); ?>">
+                        <img src="<?php echo $diaDiemCho['AnhDaiDienDD'] ? base_url('assets/images/db/'.$diaDiemCho['AnhDaiDienDD']) : base_url('assets/images/app/user.jpg'); ?>" class="t-imgdiadiemcho">
+                        </a>
                     </div>
                     <div style="float:left;padding-left:140px; height:100%">
                         <div class="t-infodiadiemcho" >
