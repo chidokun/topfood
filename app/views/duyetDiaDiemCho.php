@@ -44,7 +44,7 @@
                 <div class="row" >
                     <?php $thongTinNguoiDung = $this->NguoiDung_model->select($diaDiemCho['TenDangNhap']);?>
                     <a href="<?php echo base_url('trangCaNhan/danhGia/'.$thongTinNguoiDung['TenDangNhap'] ); ?>">
-                        <img src="<?php echo base_url('assets/images/db/'.$thongTinNguoiDung['AnhDaiDien'] ); ?>" class="t-user">
+                        <img src="<?php echo $thongTinNguoiDung['AnhDaiDien'] ? base_url('assets/images/db/'.$thongTinNguoiDung['AnhDaiDien'] ) : base_url('assets/images/app/user.jpg'); ?>" class="t-user">
                     </a>
                     <div style="padding-top: 17px;">
                         <a href="<?php echo base_url('trangCaNhan/danhGia/'.$thongTinNguoiDung['TenDangNhap'] ); ?>" class="t-username" style="font-weight: bold;"><?php echo $thongTinNguoiDung['TenNguoiDung'] ; ?></a> đã tạo địa điểm này.

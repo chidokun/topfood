@@ -292,13 +292,13 @@ class DanhGiaDiaDiem_model extends CI_Model
     public function selectReviewMoi()
     {
         # code...
-        $date = date('Y-m-d h:i:s');
-        $day  = mktime(date("h"), date("i"), date("s"), date("m")  , date("d")-7, date("Y"));
-        $d = date('Y-m-d h:i:s', $day);
-        $this->db->where('NgayTaoDGDD <',$date);
-        $this->db->where('NgayTaoDGDD >',$d);
+        // $date = date('Y-m-d h:i:s');
+        // $day  = mktime(date("h"), date("i"), date("s"), date("m")  , date("d")-7, date("Y"));
+        // $d = date('Y-m-d h:i:s', $day);
+        // $this->db->where('NgayTaoDGDD <',$date);
+        // $this->db->where('NgayTaoDGDD >',$d);
+        $this->db->select('*');
         $this->db->order_by('NgayTaoDGDD', 'desc');
-        $this->db->limit(5);
         $query = $this->db->get('DanhGiaDiaDiem');
         return  $query->result_array();
     }

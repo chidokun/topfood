@@ -23,7 +23,7 @@
 
                   <div class="col-md-10" style="padding:9px 10px ; ">
                     <div class="t-catchuoi t-content-name-review "><?php echo ($this->DiaDiem_model->select($danhGia['MaDiaDiem']))['TenDiaDiem']; ?></div>
-                    <div class="t-catchuoi t-content-address-review" ><span class="glyphicon glyphicon-home" ></span> <?php echo ($this->DiaDiem_model->select($danhGia['MaDiaDiem']))['TenDiaDiem']; ?></div>                  
+                    <div class="t-catchuoi t-content-address-review" ><span class="glyphicon glyphicon-home" ></span> <?php echo ($this->DiaDiem_model->select($danhGia['MaDiaDiem']))['DiaChi']; ?></div>                  
                   </div>
 
               </div>
@@ -34,12 +34,13 @@
               <div style="width:100%; height:30%">
 
                 <div class="col-md-2" style="padding:3px ;">
-                      <img src="<?php echo base_url('assets/images/db/'.($this->NguoiDung_model->select($danhGia['TenDangNhap']))['AnhDaiDien']); ?>" alt="avartar" style="width:40px; height:40px;border-radius: 50%;margin:15px 7px 10px 7px">
+                      <?php $img = $this->NguoiDung_model->select($danhGia['TenDangNhap'])['AnhDaiDien'] ;?>
+                      <img src="<?php echo  $img ? base_url('assets/images/db/'.$img) : base_url('assets/images/app/user.jpg') ; ?>" alt="avartar" style="width:40px; height:40px;border-radius: 50%;margin:15px 7px 10px 7px">
                 </div>
 
                 <div class="col-md-10" style="padding:20px 18px 10px 18px; ">
                   <div  class="t-content-info-review ">
-                      <em style="width:100%" class="t-catchuoidiadiemlike"><?php echo $danhGia['BaiNhanXetDGDD'] ?></em>
+                      <em style="width:100%" class="t-catchuoidiadiemlike"><?php echo $danhGia['BaiNhanXetDGDD']; ?></em>
                   </div> 
                 </div>
 

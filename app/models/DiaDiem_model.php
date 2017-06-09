@@ -267,13 +267,5 @@ class DiaDiem_model extends CI_Model
         return  $query->result_array();
     }
 
-    public function danhGia($maDanhGia)
-    {
-        # code...
-        $this->db->select('*');
-        $this->db->where('MaDGDD',$maDanhGia);
-        $query = $this->db->get('DanhGiaDiaDiem');
-        return  $query->result_array();
-    }
 }
 ?>
