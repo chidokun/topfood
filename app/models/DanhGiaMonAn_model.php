@@ -90,6 +90,7 @@ class DanhGiaMonAn_model extends CI_Model
      */
     public function selectAllDanhGia($maMonAn) {
         $this->db->where('MaMonAn', $maMonAn);
+        $this->db->order_by('NgayTaoDGMA', 'desc');
         $query = $this->db->get('DANHGIAMONAN');
 
         return $query->result_array();
@@ -103,6 +104,7 @@ class DanhGiaMonAn_model extends CI_Model
      */
     public function selectAllDanhGiaNguoiDung($tenDangNhap) {
         $this->db->where('TenDangNhap', $tenDangNhap);
+        $this->db->order_by('NgayTaoDGMA', 'desc');
 
         return $this->db->get('DANHGIAMONAN')->result_array();
     }
