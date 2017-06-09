@@ -220,9 +220,12 @@ class MonAn_model extends CI_Model
     {
         # code...
         $this->db->select('*');
+        $query = $this->db->from('MonAn');
+        $this->db->join('DiaDiem', 'MonAn.MaDiaDiem = DiaDiem.MaDiaDiem');
+        $this->db->where('TrangThai','1');
         $this->db->order_by('DiemTrungBinhMA', 'desc');
         $this->db->limit(5);
-        $query = $this->db->get('MonAn');
+        $query = $this->db->get('');
         return  $query->result_array();
     }
 }

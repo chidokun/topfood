@@ -1,12 +1,12 @@
 <div class="panel panel-default">
-    <div class="panel-heading t-panel-header t-border-panel" style="border-bottom:4px solid orange">Món ngon</div>
+    <div class="panel-heading t-panel-header t-border-panel" style="border-bottom:4px solid orange; font-size:18px;">Món ngon</div>
     <div class="panel-body " style="padding:0px 7px; border:none">
     <!--Vòng lặp-->
         <?php $color =array('red', 'orange', 'green', 'black','blue');$stt=0;
             foreach ($monan_data as  $monan) : ?>
             <div style="height:103px; border-bottom:1px solid #dddddd">
 
-                <a href="<?php echo base_url('dangKy'); ?>" >
+                <a href="<?php echo base_url('monAn/cacDanhGia/'.$monan['MaMonAn']); ?>" >
                     <div class="col-md-2" style="padding: 30px 10px 10px 5px;">
                         <div style="color:#dddddd" class="t-STT-top">0<?php $stt++; echo $stt; ?></div>
                     </div>

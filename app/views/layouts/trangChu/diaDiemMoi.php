@@ -17,8 +17,10 @@
             <img src="<?php echo base_url('assets/images/db/'.$diaDiem['AnhDaiDienDD']); ?>" alt="New York" style="width:100%;height:100%;object-fit:cotain ; ">
           </a>
           <div class="carousel-caption" >
-            <h3><?php echo $diaDiem['TenDiaDiem']; ?></h3>
-            <p><?php echo $diaDiem['MoTaDD']; ?></p>
+            <a href="<?php echo base_url('diaDiem/cacDanhGia/'.$diaDiem['MaDiaDiem'] ); ?>" style="color:white; text-decoration: none;">
+              <h3><?php echo $diaDiem['TenDiaDiem']; ?></h3>
+              <p><?php echo $diaDiem['MoTaDD']; ?></p>
+            </a>
           </div>
         </div>
     <?php endforeach; ?>

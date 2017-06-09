@@ -249,7 +249,11 @@ class DiaDiem_model extends CI_Model
 
         return $this->db->get('IMGDIADIEM')->row_array()['MAX'];
     }
-
+    /**
+     * Chọn địa điểm mới tạo trong 7 ngày gần đây
+     *
+     * @return void
+     */
     public function selectDiaDiemMoi()
     {
         # code... 
@@ -260,6 +264,15 @@ class DiaDiem_model extends CI_Model
         $this->db->where('NgayTaoDD >',$d);
         $this->db->limit(5);
         $query = $this->db->get('DiaDiem');
+        return  $query->result_array();
+    }
+
+    public function danhGia($maDanhGia)
+    {
+        # code...
+        $this->db->select('*');
+        $this->db->where('MaDGDD',$maDanhGia);
+        $query = $this->db->get('DanhGiaDiaDiem');
         return  $query->result_array();
     }
 }
