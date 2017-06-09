@@ -11,7 +11,7 @@
 			<div><span class="glyphicon glyphicon-home"></span> <?php echo $diaDiem_data['DiaChi']; ?></div>
 			<div>
 				<span class="glyphicon glyphicon-time"></span>
-				<?php if (time() < strtotime($diaDiem_data['GioMoCua']) || strtotime($diaDiem_data['GioDongCua']) > time()): ?>
+				<?php if (time() < strtotime($diaDiem_data['GioMoCua']) || time() > strtotime($diaDiem_data['GioDongCua'])): ?>
 					<span style="color:#C43414;font-weight: bold;"> Đã đóng cửa </span>
 				<?php else:	?>
 					<span style="color:#007d03;font-weight: bold;"> Đang mở cửa </span>
