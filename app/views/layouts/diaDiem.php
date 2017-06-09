@@ -44,6 +44,10 @@
 		</ul>
 	</div>
 	<div class="col-md-9 t-diadiem-content">
-		<?php $this->load->view($layoutDiaDiemContent); ?>
+		<?php if ($diaDiem_data['TrangThai'] == 0): ?>
+			<p class='alert alert-dismissable alert-warning'><b>Cảnh báo</b>: Địa điểm chưa được duyệt.</p>
+		<?php else: ?>
+			<?php $this->load->view($layoutDiaDiemContent); ?>
+		<?php endif; ?>
 	</div>
 </div>

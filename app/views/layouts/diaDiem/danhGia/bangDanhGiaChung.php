@@ -1,7 +1,7 @@
 <div class="panel panel-default">
   <div class="panel-heading t-panel-header">Bảng đánh giá chung</div>
   <div class="panel-body">
-    <?php if ($this->session->userdata('logged_in')): ?>
+    <?php if ($this->session->userdata('logged_in') && ($diaDiem_data['TrangThai'] == 1 || $this->session->userdata('maQH') == 0)): ?>
     <div class="btn-group btn-group-justified">
         <a href="<?php echo base_url('diaDiem/vietDanhGia/'.$diaDiem_data['MaDiaDiem']); ?>" class="btn btn-default t-btn-default">Viết đánh giá ngay...</a>
     </div>

@@ -120,6 +120,7 @@ class DanhGiaDiaDiem_model extends CI_Model
      */
     public function selectAllDanhGia($maDiaDiem) {
         $this->db->where('MaDiaDiem', $maDiaDiem);
+        $this->db->order_by('NgayTaoDGDD', 'desc');
         $query = $this->db->get('DANHGIADIADIEM');
 
         return $query->result_array();
@@ -133,7 +134,8 @@ class DanhGiaDiaDiem_model extends CI_Model
      */
     public function selectAllDanhGiaNguoiDung($tenDangNhap) {
         $this->db->where('TenDangNhap', $tenDangNhap);
-
+        $this->db->order_by('NgayTaoDGDD', 'desc');
+        
         return $this->db->get('DANHGIADIADIEM')->result_array();
     }
 

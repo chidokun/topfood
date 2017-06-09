@@ -13,7 +13,9 @@
             <?php echo $this->session->flashdata('duyet_update_failed'); ?>
         </p>
     <?php endif; ?>
-
+    <?php if (count($cacDiaDiemCho) == 0) : ?>
+        <p class='alert alert-dismissable alert-success'>Không có địa điểm mới cần duyệt.</p>
+    <?php else: ?>
     <?php foreach ($cacDiaDiemCho as  $diaDiemCho) : ?>
     <!--Tạo địa điểm chờ 1-->
         <?php echo validation_errors("<p class='alert alert-dismissable alert-warning'><a href='#' class='close' data-dismiss='alert' aria-label='close'>×</a>"); ?>
@@ -63,6 +65,7 @@
     <?php echo form_close(); ?>
     <!--Tạo địa điểm chờ 1-->
     <?php endforeach; ?>
+    <?php endif; ?>
     </div>
 </div>
 <!-- nội dung -->
