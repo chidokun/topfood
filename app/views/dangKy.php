@@ -49,7 +49,7 @@
                 <div href="#" class="btn btn-default">Nữ</div>
                 <div href="#" class="btn btn-default">Khác</div>
             </div>
-            <input type="text" name="gioiTinh" style="display: none;">
+            <input type="text" name="gioiTinh" style="display: none;" value="Nam">
         </div>
 
         <div class="form-group">
