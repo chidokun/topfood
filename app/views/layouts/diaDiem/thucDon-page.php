@@ -16,25 +16,28 @@
                 <?php echo $this->session->flashdata('food_deleted_successful'); ?>
             </p>
 		<?php endif; ?>
-        <?php foreach ($cacMonAn as $monAn): ?>
-            <div class="t-thucdon-item" style="position: relative;">
-                <div class="t-thucdon-item-avatar pull-left">
-                    <a href="<?php echo base_url('monAn/cacDanhGia/'.$monAn['MaMonAn']); ?>">
-      			        <img src="<?php echo $monAn['AnhDaiDienMA'] ? base_url('assets/images/db/'.$monAn['AnhDaiDienMA']) : base_url('assets/images/app/food.png'); ?>" class="t-imgavatarmonan">
-			        </a>                
+        <?php if (count($cacMonAn) == 0) : ?>
+            <p class='alert alert-dismissable alert-success'>Chưa có món ăn</p>
+        <?php else: ?>
+            <?php foreach ($cacMonAn as $monAn): ?>
+                <div class="t-thucdon-item" style="position: relative;">
+                    <div class="t-thucdon-item-avatar pull-left">
+                        <a href="<?php echo base_url('monAn/cacDanhGia/'.$monAn['MaMonAn']); ?>">
+                            <img src="<?php echo $monAn['AnhDaiDienMA'] ? base_url('assets/images/db/'.$monAn['AnhDaiDienMA']) : base_url('assets/images/app/food.png'); ?>" class="t-imgavatarmonan">
+                        </a>                
+                    </div>
+                    <div class="t-thucdon-item-content pull-left">
+                        <div class="t-thucdon-item-monan"><?php echo $monAn['TenMonAn']; ?></div>
+                        <div><i><?php echo $monAn['MaLoaiMonAn']=='0'?'Món ăn':'Thức uống';?></i></div>
+                        <div><?php echo $monAn['MoTaMA']; ?></div>
+                        <div style="color: #890606;"><span class="glyphicon glyphicon-tags"></span> <b><?php echo number_format($monAn['GiaCaMA'],0,',','.').'đ';?></b></div>
+                    </div>
+                    <div class="t-danhgia-diem pull-right" style="margin: 10px;">
+                        <div><?php echo number_format($monAn['DiemTrungBinhMA'],1); ?></div>
+                    </div>
+                    <a style="position: absolute; bottom: 0; right: 0; margin: 10px;" href="<?php echo base_url('monAn/cacDanhGia/'.$monAn['MaMonAn']); ?>" class="btn btn-default btn-xs pull-right">Xem chi tiết</a>
                 </div>
-                <div class="t-thucdon-item-content pull-left">
-                    <div class="t-thucdon-item-monan"><?php echo $monAn['TenMonAn']; ?></div>
-                    <div><i><?php echo $monAn['MaLoaiMonAn']=='0'?'Món ăn':'Thức uống';?></i></div>
-                    <div><?php echo $monAn['MoTaMA']; ?></div>
-                    <div style="color: #890606;"><span class="glyphicon glyphicon-tags"></span> <b><?php echo number_format($monAn['GiaCaMA'],0,',','.').'đ';?></b></div>
-                </div>
-                <div class="t-danhgia-diem pull-right" style="margin: 10px;">
-                    <div><?php echo number_format($monAn['DiemTrungBinhMA'],1); ?></div>
-                </div>
-                <a style="position: absolute; bottom: 0; right: 0; margin: 10px;" href="<?php echo base_url('monAn/cacDanhGia/'.$monAn['MaMonAn']); ?>" class="btn btn-default btn-xs pull-right">Xem chi tiết</a>
-            </div>
-        <?php endforeach; ?>
-        
+            <?php endforeach; ?>
+        <?php endif; ?>
     </div>
 </div>

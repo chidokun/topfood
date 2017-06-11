@@ -3,7 +3,7 @@
     <div class="panel-body">
         <div class="col-md-12" style="padding: 20px 10px 20px;">    
             <?php if (count($cacDiaDiem) == 0) : ?>
-                <p class='alert alert-dismissable alert-success'>Chưa có đánh giá nào.</p>
+                <p class='alert alert-dismissable alert-success'>Bạn chưa có địa điểm nào.</p>
             <?php else: ?>
             <?php foreach ($cacDiaDiem as $diaDiem) : ?>
                 
