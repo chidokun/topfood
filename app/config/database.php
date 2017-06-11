@@ -80,7 +80,7 @@ $connectstr_dbusername = '';
 $connectstr_dbpassword = '';
 
 foreach ($_SERVER as $key => $value) {
-    if (strpos($key, "MYSQLCONNSTR_") !== 0) {
+    if (strpos($key, "MYSQLCONNSTR_localdb") !== 0) {
         continue;
     }
     
@@ -94,7 +94,7 @@ $db['default'] = array(
 	'dsn'	=> '',
 	'hostname' => $connectstr_dbhost,
 	'username' => 'root',
-	'password' => 'root',
+	'password' => '',
 	'database' => 'topfood',
 	'dbdriver' => 'mysqli',
 	'dbprefix' => '',
