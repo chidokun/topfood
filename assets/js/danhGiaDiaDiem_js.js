@@ -38,7 +38,6 @@ function onload() {
         if(key == 13) 
         {
             $(".comment").click();
-            $("#comment").val("");
         }
     });   
 }
@@ -89,6 +88,7 @@ function comment()
             $('.no-comment').remove();
             $('#commentPane').append(result);
             $('#reviewComment').text($('#commentPane > div').length);
+            $("#comment").val("");
             onload();
         }, 
         'text' // dataTyppe

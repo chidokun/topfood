@@ -6,7 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet" href="<?php echo base_url(); ?>assets/css/bootstrap.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-slider/9.8.0/css/bootstrap-slider.min.css">
     <link rel="stylesheet" href="<?php echo base_url(); ?>assets/css/custom.css">
 
     <!-- jQuery library -->
@@ -14,7 +13,6 @@
 
     <!-- Latest compiled JavaScript -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-slider/9.8.0/bootstrap-slider.min.js"></script>
 </head>
 <body>
     <?php $this->load->view('layouts/navBar'); ?>  
@@ -26,7 +24,7 @@
     <footer class="t-footer">
     <div class="container">
         <p class="pull-left">&copy; 2017 TopFood. Mọi quyền được bảo vệ.</p>
-        <p class="pull-right">Giới thiệu | Liên hệ | Điều khoản sử dụng | Chính sách bảo mật</p>
+        <p class="pull-right"><a href="<?php echo base_url('dieuHuong/content_updating'); ?>">Giới thiệu</a> | <a href="<?php echo base_url('dieuHuong/content_updating'); ?>">Liên hệ</a> | <a href="<?php echo base_url('dieuHuong/content_updating'); ?>">Điều khoản sử dụng</a> | <a href="<?php echo base_url('dieuHuong/content_updating'); ?>">Chính sách bảo mật</a></p>
     </div>
     </footer>
 </body>

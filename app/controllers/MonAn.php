@@ -12,6 +12,9 @@ class MonAn extends CI_Controller {
         // lấy thông tin món ăn 
         $data['monAn'] = $this->MonAn_model->select($maMonAn);
 
+        if (count($data['monAn']) == 0)
+            redirect('dieuHuong/not_found');
+
         // lấy thông tin địa điểm
         $data['diaDiem_data'] = $this->DiaDiem_model->select($data['monAn']['MaDiaDiem']);
 
@@ -75,6 +78,9 @@ class MonAn extends CI_Controller {
         // lấy thông tin địa điểm
         $data['diaDiem_data'] = $this->DiaDiem_model->select($maDiaDiem);
 
+        if (count($data['diaDiem_data']) == 0)
+            redirect('dieuHuong/not_found');
+
          // đặt tiêu đề
         $data['title'] = 'Tạo món ăn cho '.$data['diaDiem_data']['TenDiaDiem'];
 
@@ -100,6 +106,9 @@ class MonAn extends CI_Controller {
     public function hinhAnh($maMonAn) {
         // lấy thông tin món ăn 
         $data['monAn'] = $this->MonAn_model->select($maMonAn);
+
+        if (count($data['monAn']) == 0)
+            redirect('dieuHuong/not_found');
 
         // lấy thông tin địa điểm
         $data['diaDiem_data'] = $this->DiaDiem_model->select($data['monAn']['MaDiaDiem']);
@@ -132,6 +141,9 @@ class MonAn extends CI_Controller {
     public function suaMonAn($maMonAn) {
         // lấy thông tin món ăn 
         $data['monAn'] = $this->MonAn_model->select($maMonAn);
+
+        if (count($data['monAn']) == 0)
+            redirect('dieuHuong/not_found');
 
         // lấy thông tin địa điểm
         $data['diaDiem_data'] = $this->DiaDiem_model->select($data['monAn']['MaDiaDiem']);
@@ -193,6 +205,9 @@ class MonAn extends CI_Controller {
 
         // lấy thông tin món ăn 
         $data['monAn'] = $this->MonAn_model->select($maMonAn);
+
+        if (count($data['monAn']) == 0)
+            redirect('dieuHuong/not_found');
 
         // lấy thông tin địa điểm
         $data['diaDiem_data'] = $this->DiaDiem_model->select($data['monAn']['MaDiaDiem']);
@@ -373,6 +388,9 @@ class MonAn extends CI_Controller {
 
         // lấy đánh giá
         $data['danhGia'] = $this->DanhGiaMonAn_model->selectDanhGia($maDanhGia);
+
+        if (count($data['danhGia']) == 0)
+            redirect('dieuHuong/not_found');
 
         // lấy thông tin món ăn 
         $data['monAn'] = $this->MonAn_model->select($data['danhGia']['MaMonAn']);

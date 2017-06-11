@@ -498,12 +498,12 @@ a:active {
 	border-radius: 10px;
 }
 .t-footer-register {
-	position: absolute;
-    left: 0;
-    right: 0;
-    bottom: 10px;
+	position: absolute !important;
+    left: 0 !important;
+    right: 0 !important;
+    bottom: 10px !important;
 	background-image: none !important;
-	color: white;
+	color: white !important;
 }
 
 .t-bg-register {
@@ -732,4 +732,15 @@ h1, h2 {
 	background-color: #f59f08 !important;
 	border-color: #f59f08 !important;
 }
+
+.t-footer a:link, .t-footer a:visited {
+	color: white !important;
+}
+
+.t-footer a:hover {
+	text-decoration: underline !important;
+}
+
+
+
 

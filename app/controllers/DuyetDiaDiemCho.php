@@ -22,13 +22,6 @@ class DuyetDiaDiemCho extends CI_Controller {
      * @return void
      */
     public function duyetDiaDiem($maDiaDiem){
-        # code...
-        // if(!$this->DiaDiemCho_model->updateTrangThai($_POST['maDiaDiem'])){
-        //     echo "Duyệt thất bại";
-        // }
-        // else{
-        //     echo "Duyệt thành công";
-        // }
         if(!isset($_POST['submit'])){
             return;
         }

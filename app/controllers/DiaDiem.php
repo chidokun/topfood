@@ -12,6 +12,9 @@ class DiaDiem extends CI_Controller
         // lấy thông tin địa điểm
         $data['diaDiem_data'] = $this->DiaDiem_model->select($maDiaDiem);
 
+        if (count($data['diaDiem_data']) == 0)
+            redirect('dieuHuong/not_found');
+
         // đặt tiêu đề
         $data['title'] = $data['diaDiem_data']['TenDiaDiem'].' - Đánh giá';
         
@@ -73,6 +76,9 @@ class DiaDiem extends CI_Controller
         // lấy thông tin địa điểm
         $data['diaDiem_data'] = $this->DiaDiem_model->select($maDiaDiem);
 
+        if (count($data['diaDiem_data']) == 0)
+            redirect('dieuHuong/not_found');
+
          // đặt tiêu đề
         $data['title'] = $data['diaDiem_data']['TenDiaDiem'].' - Hình ảnh';
 
@@ -103,6 +109,9 @@ class DiaDiem extends CI_Controller
         // lấy thông tin địa điểm
         $data['diaDiem_data'] = $this->DiaDiem_model->select($maDiaDiem);
 
+        if (count($data['diaDiem_data']) == 0)
+            redirect('dieuHuong/not_found');
+
         // lấy danh sách các món ăn 
         $data['cacMonAn'] = $this->MonAn_model->selectAll($maDiaDiem);
 
@@ -132,6 +141,9 @@ class DiaDiem extends CI_Controller
     {
         // lấy thông tin địa điểm
         $data['diaDiem_data'] = $this->DiaDiem_model->select($maDiaDiem);
+
+        if (count($data['diaDiem_data']) == 0)
+            redirect('dieuHuong/not_found');
 
          // đặt tiêu đề
         $data['title'] = $data['diaDiem_data']['TenDiaDiem'].' - Thông tin chi tiết';
@@ -203,6 +215,9 @@ class DiaDiem extends CI_Controller
         // lấy thông tin địa điểm
         $data['diaDiem_data'] = $this->DiaDiem_model->select($maDiaDiem);
 
+        if (count($data['diaDiem_data']) == 0)
+            redirect('dieuHuong/not_found');
+
          // đặt tiêu đề
         $data['title'] = 'Viết đánh giá cho '.$data['diaDiem_data']['TenDiaDiem'];
 
@@ -244,6 +259,9 @@ class DiaDiem extends CI_Controller
 
         // lấy đánh giá
         $data['danhGia'] = $this->DanhGiaDiaDiem_model->selectDanhGia($maDanhGia);
+
+        if (count($data['danhGia']) == 0)
+            redirect('dieuHuong/not_found');
 
         // lấy thông tin địa điểm
         $maDiaDiem = $data['danhGia']['MaDiaDiem'];
@@ -420,9 +438,13 @@ class DiaDiem extends CI_Controller
         redirect('diaDiem/hinhAnh/'.$_POST['maDiaDiem']);
     }
 
+    /**
+     * Lấy 5 đánh giá địa điểm 
+     *
+     * @return array
+     */
     public function selectTop5()
     {
-        # code...
         return $this->DanhGiaDiaDiem_model->selectTop5();
     }
 }
