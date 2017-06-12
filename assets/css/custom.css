@@ -741,6 +741,14 @@ h1, h2 {
 	text-decoration: underline !important;
 }
 
+.t-footer-register a:link, .t-footer-register a:visited {
+	color: white !important;
+}
+
+.t-footer-register a:hover {
+	text-decoration: underline !important;
+}
+
 
 
 

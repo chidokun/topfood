@@ -22,7 +22,7 @@
       
     </div> <!-- /container -->
 
-    <footer class="t-footer-register t-footer">
+    <footer class="t-footer-register">
     <div class="container">
         <p class="pull-left">&copy; 2017 TopFood. Mọi quyền được bảo vệ.</p>
         <p class="pull-right"><a href="<?php echo base_url('dieuHuong/content_updating'); ?>">Giới thiệu</a> | <a href="<?php echo base_url('dieuHuong/content_updating'); ?>">Liên hệ</a> | <a href="<?php echo base_url('dieuHuong/content_updating'); ?>">Điều khoản sử dụng</a> | <a href="<?php echo base_url('dieuHuong/content_updating'); ?>">Chính sách bảo mật</a></p>
