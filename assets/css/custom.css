@@ -445,18 +445,16 @@ td{
 }
 /*Định dạng div img */
 .t-body-img{
-	padding-top: 1px; 
-	padding-right: 10px; 
-	padding-top:2px;
-	width:30%;
-	height:100%; 
+	margin-right: 10px; 
+	width: 86px;
+	height: 86px; 
 	float: left;
 }
 /*định dạng div thông tin của món ngon và địa điểm thích nhất*/
 .t-div-body-infor{
 	padding:5px 3px; 
 	float:left; 
-	width:70%;
+	width:65%;
 }
 /*định dạng tên trong thông tin của món ngon và địa điểm thích nhất*/
 .t-name-div-body-infor{

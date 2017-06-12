@@ -18,8 +18,8 @@
           </a>
           <div class="carousel-caption" >
             <a href="<?php echo base_url('diaDiem/cacDanhGia/'.$diaDiem['MaDiaDiem'] ); ?>" style="color:white; text-decoration: none;">
-              <h3><?php echo $diaDiem['TenDiaDiem']; ?></h3>
-              <p><?php echo $diaDiem['MoTaDD']; ?></p>
+              <h3 style="text-shadow:2px 2px 4px black"><?php echo $diaDiem['TenDiaDiem']; ?></h3>
+              <p style="text-shadow:2px 2px 4px black"><?php echo $diaDiem['MoTaDD']; ?></p>
             </a>
           </div>
         </div>

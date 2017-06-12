@@ -29,8 +29,8 @@ class Home extends CI_Controller {
         $config['cur_tag_close'] = '</a></li>';
         $config['num_tag_open'] = '<li>';
         $config['num_tag_close'] = '</li>';
-        $config['last_link']  = 'Cuối';
-        $config['first_link'] = 'Đầu';
+        $config['last_link']  = false;
+        $config['first_link'] = false;
         $this->pagination->initialize($config);
         $data['paginator'] = $this->pagination->create_links(); 
 		$offset = $this->uri->rsegment(3) == '' ? 0 : $this->uri->rsegment(3);

@@ -10,7 +10,7 @@
 
     </div>
 
-    <div class="col-md-4" style="padding: 5px 20px 5px 10px">
+    <div class="col-md-4" style="padding: 5px 0px 5px 10px">
         <div style="padding-bottom:25px">
             <?php $this->load->view($topreview); ?>
         </div>
