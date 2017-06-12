@@ -73,11 +73,12 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 $active_group = 'default';
 $query_builder = TRUE;
 
-
+// Azure configuration
 $connectstr_dbhost = '';
 $connectstr_dbname = '';
 $connectstr_dbusername = '';
 $connectstr_dbpassword = '';
+$port = '';
 
 foreach ($_SERVER as $key => $value) {
     if (strpos($key, "MYSQLCONNSTR_localdb") !== 0) {
@@ -90,11 +91,16 @@ foreach ($_SERVER as $key => $value) {
     $connectstr_dbpassword = preg_replace("/^.*Password=(.+?)$/", "\\1", $value);
 }
 
+$connectstr_dbhost = strtok($connectstr_dbhost, ':');
+$port = strtok(":");
+// end Azure configuration
+
 $db['default'] = array(
 	'dsn'	=> '',
 	'hostname' => $connectstr_dbhost,
 	'username' => $connectstr_dbusername,
 	'password' => $connectstr_dbpassword,
+	'port'     => $port,
 	'database' => 'topfood',
 	'dbdriver' => 'mysqli',
 	'dbprefix' => '',
